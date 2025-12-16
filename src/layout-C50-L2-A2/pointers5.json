@@ -1,0 +1,78 @@
+[
+    {
+        "question":"Is this a bill or a receipt? Why?",
+        "answer":["This is a bill because it is generated before the payment is to be made."]
+    },
+    
+    {
+        "question":"What are the listed items?",
+        "answer":["Voice & Data Plan","Device Payment"]
+    },
+    
+    
+    {
+        "question":"How much does each item cost?",
+        "answer":["Voice & Data Plan (80$)","Device Payment (19.99 $)","Total: $99.99"]
+    },
+    
+    {
+        "question":"What is the location of the seller?",
+        "answer":["123 Anywhere St. City, ST 12345"]
+    },
+    
+    
+    {
+        "question":"What are the contact details of the seller?",
+        "answer":["(125) 456 - 7890"]
+    },
+    
+    
+    {
+        "question":"How much tax is to be paid by the buyer?",
+        "answer":["State Tax (6.75)","Local Tax (6.24)","Total: 12.99 $"]
+    },
+    
+    {
+        "question":"Who’s the buyer?",
+        "answer":["John Smith"]
+    },
+    
+    
+    {
+        "question":"Where does the buyer live?",
+        "answer":["456 Citizen Ln.","Town, ST 67890"]
+    },
+    
+    
+    {
+        "question":"Are there any discounted items listed as savings? How much?",
+        "answer":["No"]
+    },
+    
+    
+    {
+        "question":"Are there any fees or other costs? How much?",
+        "answer":["Yes","Regulatory Cost (2.97 $)","Administrative Fee (7.50)","Total: 10.47 $"]
+    },
+    
+    {
+        "question":"Is the previous balance paid? How much?",
+        "answer":["Yes. 120 $."]
+    },
+    
+    
+    {
+        "question":"When is the bill issued? What is the due date?",
+        "answer":["Bill Date: 04/17/2024","Due Date: 05/04/2024"]
+    },
+    
+    {
+        "question":"What is the total amount including fees and taxes?",
+        "answer":["123.45$"]
+    },
+    
+    {
+        "question":"What is the name of the phone company?",
+        "answer":["PhoneCorp"]
+    }
+]

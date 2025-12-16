@@ -1,0 +1,57 @@
+[
+     {
+     
+        "text":"What items are on sale? ",
+        "subText":"Clothes"
+    },
+     {
+     
+        "text":"What kind of discounts are offered?",
+        "subText":"50%, 50% and 30%"
+    },
+    
+    
+    {
+     
+        "text":"Is there an occasion for the discount?",
+        "subText":"No"
+    },
+    
+    {
+     
+        "text":"Does the entire store have discount boards on display?",
+        "subText":"No"
+    }, 
+    
+    
+    {
+     
+        "text":"Would you buy at these discounted rates if the clothes on sale aren’t that great?",
+        "subText":"No"
+    },
+    
+    {
+     
+        "text":"Is it likely that you might buy what you don’t need just because the items are on sale?",
+        "subText":"Yes"
+    },
+    
+    
+    {
+     
+        "text":"Does it seem like a mall or a regular clothing store?",
+        "subText":"Seems like a mall"
+    },
+    
+    {
+     
+        "text":"What may be the reason for this sale?",
+        "subText":"Destocking items"
+    },
+    
+    {
+     
+        "text":"What kind of advertising do you see?",
+        "subText":"Just bold, red signage with clearly visible percentages."
+    }
+]

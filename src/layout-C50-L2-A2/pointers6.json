@@ -1,0 +1,51 @@
+[
+    {
+        "question":"What is the name of the company?",
+        "answer":["Wind Co."]
+    },
+    
+    {
+        "question":"Where is the company located?",
+        "answer":["XYZ TWI, Bahamas"]
+    },
+    
+    
+    {
+        "question":"When is the payment made? ",
+        "answer":["01/11/2030 at 01:02pm"]
+    },
+    
+    {
+        "question":"How is the payment done?",
+        "answer":["Cash"]
+    },
+    
+    
+    {
+        "question":"What is the transaction number?",
+        "answer":["91284EF"]
+    },
+    
+    
+    {
+        "question":"What is the merchant category code?",
+        "answer":["24EA6E70"]
+    },
+    
+    {
+        "question":"What’s the total amount?",
+        "answer":["$346 (Bahamian Dollars)"]
+    },
+    
+    
+    {
+        "question":"Why is it important to keep a bill?",
+        "answer":["It is proof that you’ve discussed the purchase with the seller."]
+    },
+    
+    
+    {
+        "question":"Why is it important to keep a receipt?",
+        "answer":["When the payment is made, the seller as well as buyer can use it for accounting. The buyers can also use it to claim items for refunds or exchanges."]
+    }
+]

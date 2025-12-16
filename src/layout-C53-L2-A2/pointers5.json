@@ -1,0 +1,32 @@
+[
+     {
+     
+        "text":"Do I really need this item?",
+        "subText":"A packet  yes. But not 5 unless your parents are out for vacation and you’ve to make do with stockable food."
+    },
+     {
+     
+        "text":"How would this item improve my day-to-day life?",
+        "subText":"Mushrooms are delicious but also nutritious with fiber and vitamins."
+    },
+    
+    
+    {
+     
+        "text":"Why am I really buying this item? Is it because of my peers? Is it because of an ad? Is it because of my own understanding of my needs?",
+        "subText":"Buying just because I can stock this item and eating it is easy as it’s already ready-to-eat."
+    },
+    
+    {
+     
+        "text":"Is this item stockable? If not, do I really need 5 items?",
+        "subText":"No. Mushrooms are not stockable unless frozen. You don’t need five items unless cooking for a family dinner with guests."
+    }, 
+    
+    
+    {
+     
+        "text":"What is my budget?",
+        "subText":"Good quality mushrooms can cost anywhere from $5 to $15 a packet, based on the variety of mushrooms you’re getting."
+    }
+]

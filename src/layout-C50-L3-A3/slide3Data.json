@@ -1,0 +1,19 @@
+[
+    {
+        "text":"Why does he get surprised seeing Kass’ new camera?",
+        "img":"/C50Images/Kass'_camera.png",
+         "suggestion":"Because he wants the camera too, and wonders how Kass made enough money to buy it."
+    },
+
+    {
+        "text":"How is Kass able to buy it but not Joey?",
+         "img":"/C50Images/Difference.png",
+         "suggestion":"Because she saved her allowance, created a plan, and earned enough money. Joey still has to work on his spending habits."
+    },
+    
+    {
+        "text":"When Joey looks at his account, does he see any money to buy the things he wants?",
+        "img":"/C50Images/Joey's_room.png",
+        "suggestion":"No. He only sees 12 dollars."
+    }
+]

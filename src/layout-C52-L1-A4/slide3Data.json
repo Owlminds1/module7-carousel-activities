@@ -1,0 +1,56 @@
+[
+    {
+        "text":"What does Sonny keep in his allowance jar?",
+        "answer":"Carrots",
+        "img":"/C50Images/Intro.png"
+    } ,
+    
+    {
+        "text":"Are carrots like money in Bunnyland?",
+        "answer":"Yes!",
+        "img":"/C50Images/Allowance.png"
+    },
+     {
+        "text":"How many carrots does Sonny get on Saturdays?",
+        "answer":"3 carrots!",
+        "img":"/C50Images/Buying.png"
+    },
+    
+    {
+        "text":"What are the three things Sonny wants to buy, what he calls everything?",
+        "answer":"A toy rocket, a pogo stick, and a bouncy castle)",
+        "img":"/C50Images/Allowance.png"
+    },
+
+
+    {
+        "text":"What is the problem with wanting everything?",
+        "answer":"Sonny can get only 3 carrots a week, so he will have to choose only one of the items",
+        "img":"/C50Images/BUdget.png"
+    },
+    
+    
+    {
+        "text":"Is the toy rocket and the pogo stick the same cost?",
+        "answer":"No! The toy rocket costs 2 carrots whereas the pogo stick costs 3 carrots",
+        "img":"/C50Images/Choice.png"
+    },
+    
+    {
+        "text":"How much does the bouncy castle cost?",
+        "answer":"The bouncy castle costs 100 carrots!",
+        "img":"/C50Images/Castle.png"
+    },
+    
+    {
+        "text":"What does Sonny finally buy and why?",
+        "answer":"Sonny finally buys a pogo stick because he realises that he already has toys and the castle is ridiculously expensive",
+        "img":"/C50Images/Choices2.png"
+    },
+    
+    {
+        "text":"Do you think Sonny made the right choice?",
+        "answer":"Yes because he really enjoys the pogo stick and now thinks he is a smart spender",
+        "img":"/C50Images/Toys.png"
+    }
+]

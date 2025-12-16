@@ -1,0 +1,38 @@
+[
+   {
+      "text":"PENCIL",
+      "img":"/C53Images/Pencil.jpg",
+      "opt":["NEED","WANT"],
+      "val":"NEED"
+   } ,
+   
+   {
+      "text":"ERASER",
+      "img":"/C53Images/Eraser.jpg",
+      "opt":["NEED","WANT"],
+      "val":"NEED"
+   },
+   
+   {
+      "text":"SHARPNER",
+      "img":"/C53Images/Sharpener.jpg",
+      "opt":["NEED","WANT"],
+      "val":"NEED"
+   },
+   
+   
+   {
+      "text":"GLITTER",
+      "img":"/C53Images/Glitter.jpg",
+      "opt":["NEED","WANT"],
+      "val":"WANT"
+   },
+   
+   
+   {
+      "text":"FANCY SCHOOL BAG",
+      "img":"/C53Images/school_bag.jpg",
+      "opt":["NEED","WANT"],
+      "val":"WANT"
+   }
+]

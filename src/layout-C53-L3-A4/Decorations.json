@@ -1,0 +1,73 @@
+[
+   {
+    "text": "Hats (set of 6)",
+    "price": 10
+   
+  },
+   {
+    "text": "Balloons (set of 6)",
+    "price": 10
+   
+  },
+  
+  
+  {
+    "text": "Paper Plates (set of 6)",
+    "price": 15
+   
+  },
+  
+  {
+    "text": "Plastic Plates (set of 6)",
+    "price": 10
+   
+  },
+  
+  
+  {
+    "text": "Paper Napkins (set of 50)",
+    "price": 10
+   
+  },
+  
+  
+  {
+    "text": "Plastic Cutlery (3 sets of forks, knives, and spoons)",
+    "price": 10
+   
+  },
+  
+  
+  {
+    "text": "Bamboo Cutlery  (3 sets of forks, knives, and spoons)",
+    "price": 20
+   
+  },
+  
+  
+  {
+    "text": "Candles (set of 10)",
+    "price": 5
+   
+  },
+  
+  {
+    "text": "Knife (per piece)",
+    "price": 10
+   
+  },
+  
+  
+  {
+    "text": "Plastic Ribbons (set of 10)",
+    "price": 10
+   
+  },
+  
+  
+  {
+    "text": "Paper Ribbons (set of 10)",
+    "price": 15
+   
+  }
+]

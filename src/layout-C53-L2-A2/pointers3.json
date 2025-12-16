@@ -1,0 +1,32 @@
+[
+     {
+     
+        "text":"Do I really need this item?",
+        "subText":"If you already have a pencil box,  then no. If you don’t, then one would suffice. Two sets are only good if you’re giving to others."
+    },
+     {
+     
+        "text":"How would this item improve my day-to-day life?",
+        "subText":"Two won’t but one would. It would help organise all your stationary items in one place."
+    },
+    
+    
+    {
+     
+        "text":"Why am I really buying this item? Is it because of my peers? Is it because of an ad? Is it because of my own understanding of my needs?",
+        "subText":"You may be buying it because you would really like to keep all your items in one place. But you might be buying two (unless you’re giving) because you saw peers with two pencil boxes or got the wrong impression that more is better."
+    },
+    
+    {
+     
+        "text":"Is this item stockable? If not, do I really need 2 items?",
+        "subText":"Pencil boxes don’t take much space, but in a school bag, keeping one is handy. And yes, pencil boxes last long."
+    }, 
+    
+    
+    {
+     
+        "text":"What is my budget?",
+        "subText":"A good quality pencil box can cost anywhere up to $25. If you’re on a budget, you really shouldn’t be considering anything more than $25."
+    }
+]

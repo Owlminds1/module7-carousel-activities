@@ -1,0 +1,53 @@
+[
+    {
+      "text":"Flour",
+      "suggestion":"Flower"
+   },
+   
+   {
+      "text":"Knight",
+      "suggestion":"Night"
+   } ,
+   
+   {
+      "text":"Buy",
+      "suggestion":"By"
+   },
+   
+   
+   {
+      "text":"Know",
+      "suggestion":"No"
+   },
+   
+   
+   {
+      "text":"Eye",
+      "suggestion":"I"
+   } ,
+   
+   {
+      "text":"Cite",
+      "suggestion":"Site"
+   },
+   
+   {
+      "text":"Hear",
+      "suggestion":"Here"
+   },
+   
+   {
+      "text":"Which",
+      "suggestion":"Witch"
+   },
+   
+   {
+      "text":"Piece",
+      "suggestion":"Peace"
+   },
+   
+   {
+      "text":"Some",
+      "suggestion":"Sum"
+   }
+]

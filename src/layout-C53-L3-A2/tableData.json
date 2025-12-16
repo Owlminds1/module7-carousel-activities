@@ -1,0 +1,91 @@
+[
+    {
+        "text":"5 cartons of milk for a cheaper price",
+        "option":["✔","𐄂"],
+        "val":"✔",
+        "val2":"✔",
+        "suggestion":"STOCKAGE (AS MILK CARTONS HAVE A LONG SHELF LIFE) FRESH MILK CAN BE PURCHASED ONE AT A TIME)",
+        "image":"/C53Images/"
+    },
+    
+    
+    {
+        "text":"4 bars of dishwashing soap at a discounted rate",
+        "option":["✔","𐄂"],
+                "val":"✔",
+        "val2":"",
+        "suggestion":"DISHWASHING SOAP CAN BE USED THROUGHOUT THE YEAR",
+
+        "image":"/C53Images/"
+    },
+    
+    {
+        "text":"1 huge packet of combination chocolates for a cheaper price",
+        "option":["✔","𐄂"],
+         "val":"",
+        "val2":"𐄂",
+        "suggestion":"SWEETS ARE NOT HEALTHY ITEMS TO BUY IN BULK",
+        "image":"/C53Images/"
+    } ,
+    
+    
+    {
+        "text":"1 packet of lentils",
+        "option":["✔","𐄂"],
+                 "val":"✔",
+        "val2":"",
+        "suggestion":"LENTILS ARE HEALTHY BUT SINCE THEY HAVE SPECIFIC SHELF LIFE, IT’S BETTER TO PURCHASE ONE AT A TIME",
+
+        "image":"/C53Images/"
+    },
+    
+    
+    {
+        "text":"1 packet of gluten-free flour",
+        "option":["✔","𐄂"],
+         "val":"✔",
+        "val2":"",
+        "suggestion":"GLUTEN-FREE FLOUR IS HEALTHY BUT SINCE THEY HAVE SPECIFIC SHELF LIFE, IT’S BETTER TO PURCHASE ONE AT A TIME",
+        "image":"/C53Images/"
+    } ,
+    
+    
+    {
+        "text":"3 packets of laundry detergent at a discounted rate ",
+        "option":["✔","𐄂"],
+          "val":"✔",
+        "val2":"",
+        "suggestion":"LAUNDRY DETERGENT CAN BE USED THROUGHOUT THE YEAR",
+        "image":"/C53Images/"
+    },
+    
+    {
+        "text":"2 giant packets of soda (6 pack)",
+        "option":["✔","𐄂"],
+         "val":"",
+        "val2":"𐄂",
+        "suggestion":"SODAS ARE NOT HEALTHY ITEMS TO BUY IN BULK",
+        "image":"/C53Images/"
+    },
+    
+    
+    
+    {
+        "text":"A packet of cashews ",
+        "option":["✔","𐄂"],
+          "val":"✔",
+        "val2":"",
+        "suggestion":"CASHEWS ARE HEALTHY BUT SINCE THEY HAVE SPECIFIC SHELF LIFE, IT’S BETTER TO PURCHASE ONE AT A TIME",
+        "image":"/C53Images/"
+    },
+    
+    
+    {
+        "text":"A packet of almonds",
+        "option":["✔","𐄂"],
+           "val":"✔",
+        "val2":"",
+        "suggestion":"ALMONDS ARE HEALTHY BUT SINCE THEY HAVE SPECIFIC SHELF LIFE, IT’S BETTER TO PURCHASE ONE AT A TIME",
+        "image":"/C53Images/"
+    }
+]

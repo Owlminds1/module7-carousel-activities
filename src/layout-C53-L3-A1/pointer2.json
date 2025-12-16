@@ -1,0 +1,27 @@
+[
+    {
+        "img":"/C53Images/Branding.jpg",
+        "heading":"",
+        "title":"Visual Appeal",
+        "text":["Not showing goods but their emotional impact"],
+        "subText":"Customers’ intent to buy is correlated to how they see themselves using the product. For example: showing happy customers who are product users is a common tactic of visual appeal in images and ads. This allows customers to connect with the image hence impacting emotionally to lure them into buying."
+    },
+
+    {
+        "img":"/C53Images/Vocabulary.jpg",
+        "heading":"",
+        "title":"Vocabulary",
+        "text":["Saying what would resonate with customers"],
+        "subText":"Similar to visual appeal, customers also read or listen to words that resonate. For example: Nike saying “just do it” emotionally connects with customers who are go-getters, doers. Buying Nike shoes reinforces that attitude in such customers and creates brand loyalty."
+    },
+    
+    {
+        "img":"/C53Images/Advertising.jpg",
+        "heading":"",
+        "title":"Demographics",
+        "text":["Profiling customers based on their age group, profession, interests, regular purchases, location, and so on."],
+        "subText":"In today’s modern world, profiling customers is much easier. When you say yes to cookies or purchase items, your preferences for purchase on shopping sites are stored as  information, along with details like your location, gender, address, age and so on. Then companies buy ads on socials such as Facebook and Google. They customise ads to show you knowing you’d like them. This is how sellers gather your data and use it for specified ads."
+    }
+    
+   
+]

@@ -1,0 +1,54 @@
+[
+    {
+        "text":"Online banking doesn’t require an OTP",
+        "option":["✔","𐄂"],
+
+        "val":"𐄂"
+    },
+    
+    
+    {
+        "text":"We can draw two parallel lines across the cheque at the top left corner to ensure safety while using  cheques.",
+        "option":["✔","𐄂"],
+
+        "val":"✔"
+    },
+    
+    {
+        "text":"Echecks require authorisation from the payer",
+        "option":["✔","𐄂"],
+
+        "val":"✔"
+    } ,
+    
+    
+    {
+        "text":"We can only deposit money at the bank",
+        "option":["✔","𐄂"],
+
+        "val":"𐄂"
+    },
+    
+    
+    {
+        "text":"We only need the customer’s account number to transfer funds to another bank account",
+        "option":["✔","𐄂"],
+
+        "val":"𐄂"
+    } ,
+    
+    
+    {
+        "text":"Internet banking is safe thanks to verification codes and brief banking time online.",
+        "option":["✔","𐄂"],
+
+        "val":"✔"
+    },
+    
+    {
+        "text":"Private banks are doing a good job at customer service",
+        "option":["✔","𐄂"],
+
+        "val":"✔"
+    }
+]

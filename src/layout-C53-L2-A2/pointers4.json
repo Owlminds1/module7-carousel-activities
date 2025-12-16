@@ -1,0 +1,32 @@
+[
+     {
+     
+        "text":"Do I really need this item?",
+        "subText":"If you don’t have one, then yes!"
+    },
+     {
+     
+        "text":"How would this item improve my day-to-day life?",
+        "subText":"You can drink water anywhere, anytime!"
+    },
+    
+    
+    {
+     
+        "text":"Why am I really buying this item? Is it because of my peers? Is it because of an ad? Is it because of my own understanding of my needs?",
+        "subText":"Buying simply because hydration is a good thing. It can also be because you just lost a water bottle so need it to carry water when you step out of your home."
+    },
+    
+    {
+     
+        "text":"Is this item stockable?",
+        "subText":"Yes!"
+    }, 
+    
+    
+    {
+     
+        "text":"What is my budget?",
+        "subText":"Avoid plastic bottles. Try getting a steel bottle up to $35."
+    }
+]

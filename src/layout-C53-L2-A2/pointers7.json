@@ -1,0 +1,32 @@
+[
+     {
+     
+        "text":"Do I really need this item?",
+        "subText":"If you don’t have walking shoes, then yes!  If you do, then no unless you’re wanting to get another pair for sports, for example."
+    },
+     {
+     
+        "text":"How would this item improve my day-to-day life?",
+        "subText":"Walking shoes are great to stay fit, healthy, and mobile."
+    },
+    
+    
+    {
+     
+        "text":"Why am I really buying this item? Is it because of my peers? Is it because of an ad? Is it because of my own understanding of my needs?",
+        "subText":"Generally, walking shoes are an essential item because walking is good for our well-being."
+    },
+    
+    {
+     
+        "text":"Is this item stockable? Do I really need this item?",
+        "subText":"Ofcourse! And yes, it’s better to walk using walking shoes than sandals!"
+    }, 
+    
+    
+    {
+     
+        "text":"What is my budget?",
+        "subText":"A good quality pair of walking shoes would cost anywhere between $40 to $60. But you don't need to spend more than $100 unless you’re buying for sports, but the item would be different then!"
+    }
+]

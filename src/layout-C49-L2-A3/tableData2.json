@@ -1,0 +1,35 @@
+[
+    {
+        "text":"Enjoyment",
+        "val":"Light-Sugar-Outcomes"
+    },
+    
+    {
+        "text":"Less Carbohydrates, Less Glucose",
+       "val":"Light-Sugar-Reasons"
+    },
+
+    {
+        "text":"Less Weight, Controlled Sugar",
+       "val":"Light-Sugar-Impact"
+    },
+
+
+
+     {
+        "text":"Addictive Pleasure",
+        "val":"High-SUGAR-Outcomes"
+    },
+    
+    {
+        "text":"Easy to Use",
+       "val":"High-SUGAR-Reasons"
+    },
+
+    {
+        "text":"High Sugar Levels, Constipation, Weight Gain",
+       "val":"High-SUGAR-Impact"
+    }
+    
+    
+]

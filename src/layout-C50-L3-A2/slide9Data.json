@@ -1,0 +1,23 @@
+[
+    {
+        "set":"A",
+        "name":"TOOTHBRUSH",
+        "image":"/C50Images/Toothbrush.jpg",
+        "ratingTable":["TOOTHY","DENTAL","SHINE"]
+    },
+    
+    
+    {
+        "set":"B",
+        "name":"VIDEO GAMES",
+        "image":"/C50Images/VG.jpg",
+        "ratingTable":["KICK","DOT","TRAMP"]
+    },
+    
+    {
+        "set":"C",
+        "name":"SCHOOL BAGS",
+        "image":"/C50Images/School_Bags.jpg",
+        "ratingTable":["TORTOISE","SHARK","FLIPPY"]
+    }
+]

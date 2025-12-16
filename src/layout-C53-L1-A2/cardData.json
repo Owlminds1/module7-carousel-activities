@@ -1,0 +1,82 @@
+[
+    {
+        "text":"Momos",
+        "cost":"$15",
+        "val":"Appetizer"
+    },
+    
+    
+    {
+        "text":"Fried Prawns",
+        "cost":"$12",
+        "val":"Appetizer"
+    },
+    
+    {
+        "text":"Salad",
+        "cost":"$10",
+        "val":"Appetizer"
+    },
+    
+    {
+        "text":"Sauté Mushrooms",
+        "cost":"$15",
+        "val":"Appetizer"
+    },
+    
+    
+    
+    {
+        "text":"Chicken Lasagna",
+        "cost":"$25",
+        "val":"Main Course"
+    },
+    
+    
+    {
+        "text":"Fish Curry",
+        "cost":"$22",
+        "val":"Main Course"
+    },
+    
+    {
+        "text":"Green Beans with Lentils",
+        "cost":"$16",
+        "val":"Main Course"
+    },
+    
+    
+    {
+        "text":"Pizza",
+        "cost":"$20",
+        "val":"Main Course"
+    },
+    
+    
+    {
+        "text":"Fruit Salad",
+        "cost":"$10",
+        "val":"Dessert"
+    },
+    
+    
+    {
+        "text":"Icecream",
+        "cost":"$10",
+        "val":"Dessert"
+    },
+    
+    
+    {
+        "text":"Brownie",
+        "cost":"$7",
+        "val":"Dessert"
+    },
+    
+    
+    {
+        "text":"Fruit Tart",
+        "cost":"$9",
+        "val":"Dessert"
+    }
+]

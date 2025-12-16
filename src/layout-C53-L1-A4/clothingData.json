@@ -1,0 +1,38 @@
+[
+   {
+      "text":"BUY 2 SHOES FOR $500 GET ONE FREE",
+      "img":"/C53Images/shoes.jpg",
+      "opt":["QUALITY","QUANTITY"],
+      "val":"QUANTITY"
+   } ,
+   
+   {
+      "text":"5 PAIRS OF SANDALS FOR $200",
+      "img":"/C53Images/Sandals.jpg",
+      "opt":["QUALITY","QUANTITY"],
+      "val":"QUANTITY"
+   },
+   
+   {
+      "text":"A PAIR OF SHOES FOR $100",
+      "img":"/C53Images/Pair_of_Shoes.jpg",
+      "opt":["QUALITY","QUANTITY"],
+      "val":"QUALITY"
+   },
+   
+   
+   {
+      "text":"A PAIR OF JEANS WITH AN ADD-ON SCARF",
+      "img":"/C53Images/Jeans.jpg",
+      "opt":["QUALITY","QUANTITY"],
+      "val":"QUALITY"
+   },
+   
+   
+   {
+      "text":"BUY THREE DRESSES GET 50% OFF ON THE FOURTH",
+      "img":"/C53Images/Dresses.jpg",
+      "opt":["QUALITY","QUANTITY"],
+      "val":"QUANTITY"
+   }
+]

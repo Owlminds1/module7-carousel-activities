@@ -1,0 +1,35 @@
+[
+    {
+        "text":"More money",
+        "val":"Gratitude-Outcomes"
+    },
+    
+    {
+        "text":"Appreciation",
+       "val":"Gratitude-Reasons"
+    },
+
+    {
+        "text":"Healthy Relationships",
+       "val":"Gratitude-Impact"
+    },
+
+
+
+     {
+        "text":"Feel good at the expense of others’ feeling bad",
+        "val":"Arrogance-Outcomes"
+    },
+    
+    {
+        "text":"Superiority Complex",
+       "val":"Arrogance-Reasons"
+    },
+
+    {
+        "text":"Increasingly distant relationships",
+       "val":"Arrogance-Impact"
+    }
+    
+    
+]

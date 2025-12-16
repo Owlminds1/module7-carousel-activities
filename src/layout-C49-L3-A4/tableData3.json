@@ -1,0 +1,35 @@
+[
+    {
+        "text":"More money",
+        "val":"Savings-Outcomes"
+    },
+    
+    {
+        "text":"Secure the future",
+       "val":"Savings-Reasons"
+    },
+
+    {
+        "text":"Have money for when you really want to use it",
+       "val":"Savings-Impact"
+    },
+
+
+
+     {
+        "text":"Less money",
+        "val":"Spending-Outcomes"
+    },
+    
+    {
+        "text":"Consume more to feel good",
+       "val":"Spending-Reasons"
+    },
+
+    {
+        "text":"May not have money for when it’s essential",
+       "val":"Spending-Impact"
+    }
+    
+    
+]

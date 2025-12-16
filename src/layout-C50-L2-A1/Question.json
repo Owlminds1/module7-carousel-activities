@@ -1,0 +1,22 @@
+[
+  {
+    "question": "The bear who spends all of his money on nice things. But he doesn’t save, invest, or give.",
+    "answer": ["Spender Bear", "Saver Bear", "Investor Bear", "Giver Bear"],
+    "val": "Spender Bear"
+  },
+  {
+    "question": "The bear who saves every dollar she earns. But she doesn’t invest or give.",
+    "answer": ["Spender Bear", "Saver Bear", "Investor Bear", "Giver Bear"],
+    "val": "Saver Bear"
+  },
+  {
+    "question": "The bear who invests every dollar he can find. But he doesn’t save or give.",
+    "answer": ["Spender Bear", "Saver Bear", "Investor Bear", "Giver Bear"],
+    "val": "Investor Bear"
+  },
+  {
+    "question": "The bear who gives all of her money away to everyone she knows. But she doesn’t buy nice things for herself and she doesn’t save or invest for the future.",
+    "answer": ["Spender Bear", "Saver Bear", "Investor Bear", "Giver Bear"],
+    "val": "Giver Bear"
+  }
+]

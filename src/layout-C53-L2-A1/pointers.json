@@ -1,0 +1,24 @@
+[
+    {
+        "img":"/C53Images/Sale.jpg",
+        "title":"Deals & Offers",
+        "text":"Buy 1 Get 1 Free | Free Shipping on items above 250$",
+        "subText":"Sellers come up with deals and offers to get customers to buy more or up to a certain amount to avail the incentives that are offered. This is a classic way for sellers to make enough sales so the offerings and deals still ensure profit."
+    },
+
+    {
+        "img":"/C53Images/Discount.jpg",
+        "title":"Discounts",
+        "text":"20% Discount on Jeans",
+        "subText":"Sellers usually offer discounts on certain products only. These products are usually not as high in sales as some other products or new arrivals. Their objective is to sell everything for cheaper to avoid stocking items for too long."
+    },
+    
+    {
+        "img":"/C53Images/Promos.jpg",
+        "title":"Timely Promotions",
+        "text":"Offers during festivals, special occasions",
+        "subText":"Sellers promote products during festivals or public holidays to ensure that the spending spree of customers can be taken advantage of. This is a high sales season so the goal is to sell as many items as possible. All this while competing with other sellers by offering good rates and discounted prices."
+    }
+    
+   
+]

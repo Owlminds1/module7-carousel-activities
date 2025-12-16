@@ -1,0 +1,14 @@
+[
+   {
+      "title":"SAVINGS",
+      "img":"/C53Images/Savings.jpg",
+      "points":["Buy quality shoes","Buy a math calculator","Buy a school bag","Buy sets of LEGO"]
+   },
+   
+   
+   {
+      "title":"ICE CREAM",
+      "img":"/C53Images/icecream.jpg",
+      "points":["Buy ice-cream twice a week","Try all brands every month","Share some ice cream with peers"]
+   }
+]

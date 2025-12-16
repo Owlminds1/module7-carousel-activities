@@ -1,0 +1,32 @@
+[
+    {
+        "img":"/C53Images/Sale.jpg",
+        "title":"Deals, Offers, Discount",
+       
+        "subText":"As we know, deals, offers, and discounts are offered so that customers feel like they are saving money by buying cheaper. But in reality, such incentives just get customers to buy what they don’t really need!"
+    },
+
+    {
+        "img":"/C53Images/",
+        "title":"Great Customer Service ",
+       
+        "subText":"Sometimes, salespeople are genuine. But other times, they can be overtly sweet and interested in what you’re saying only because they want to sell things!"
+    },
+    
+    {
+        "img":"/C53Images/",
+        "title":"Repeated Suggestions for Purchase",
+      
+        "subText":"Some salespeople can be very insistent on purchasing items. They speak more than they listen, so instead of understanding what you need to buy or respecting that you don’t want to buy something, they insist so they can get a commission!"
+    } ,
+    
+    
+    {
+        "img":"/C53Images/",
+        "title":"Product Comparison with Other Brands",
+      
+        "subText":"Some can be genuine but other times, comparisons with other brands are done to get customers to buy even when the product is not needed! This also reflects poorly on salesmanship to badmouth other brands to show personal brands in a good light. This is often evident when buying gadgets as well as on online shopping websites. Ideally, the product should speak for itself."
+    }
+    
+   
+]

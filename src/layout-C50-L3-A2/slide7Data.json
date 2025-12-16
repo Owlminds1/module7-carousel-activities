@@ -1,0 +1,19 @@
+[
+    {
+        "title":"Service",
+        "text":"how good their customer service is from the point of sale all the way to maintenance.",
+        "img":"/C50Images/Service.jpg"
+    },
+    
+    {
+        "title":"Quality",
+        "text":"how effective and durable their products are",
+        "img":"/C50Images/Quality.jpg"
+    },
+    
+    {
+        "title":"Upgrades",
+        "text":"how regularly the company invests in research & development to improve their products for higher efficiency and durability",
+        "img":"/C50Images/Upgrade.png"
+    }
+]

@@ -1,0 +1,32 @@
+[
+     {
+     
+        "text":"Do I really need this item?",
+        "subText":"No. Video games are usually items you want. We use them to entertain ourselves. But they are not considered needs such as food, for example."
+    },
+     {
+     
+        "text":"How would this item improve my day-to-day life? ",
+        "subText":"Video games make people asocial, aloof, and addictive. Yes, they might improve concentration but not necessarily transferable concentration to other things like studying! The only social life players have are with other players online unless you’re playing with friends in person!"
+    },
+    
+    
+    {
+     
+        "text":"Why am I really buying this item? Is it because of my peers? Is it because of an ad? Is it because of my own understanding of my needs?",
+        "subText":"Buying something like video games is a personal choice to fulfill wants. It does involve peer influence as you want to play what everyone is talking about. But not playing video games doesn’t mean you don’t have anything to discuss!"
+    },
+    
+    {
+     
+        "text":"Is this item stockable? Do I really need a Playstation and an XBox?",
+        "subText":"Yes it is, but no, you don’t need both. Unless you’re into collecting video games and have enough money to buy each kind."
+    }, 
+    
+    
+    {
+     
+        "text":"What is my budget?",
+        "subText":"A playstation can cost anywhere between $500 - $2000. An Xbox costs in a similar range. Then you’ve to add the cost of buying different games."
+    }
+]

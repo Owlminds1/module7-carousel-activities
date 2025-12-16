@@ -1,0 +1,32 @@
+[
+    {
+        "img":"/C53Images/Sale.jpg",
+        "title":"Deals & Offers",
+        "text":"Buy 1 Get 1 Free | Free Shipping on items above 250$",
+        "subText":"Sellers come up with deals and offers to get customers to buy more or up to a certain amount to avail the incentives that are offered. This is a classic way for sellers to make enough sales so the offerings and offers still ensure profit."
+    },
+
+    {
+        "img":"/C53Images/Discount.jpg",
+        "title":"Discounts",
+        "text":"20% Discount on Jeans",
+        "subText":"Sellers usually offer discounts on certain products only. These products are usually not as high in sales as some other products or new arrivals. Their objective is to sell everything for cheaper to avoid stocking items for too long."
+    },
+    
+    {
+        "img":"/C53Images/Promos.jpg",
+        "title":"Timely Promotions",
+        "text":"Offers during festivals, special occasions",
+        "subText":"Sellers promote products during festivals or public holidays to ensure that the spending spree of customers can be taken advantage of. For example, thanksgiving, freedom sale, and black friday are all high sales seasons when the goal is to sell as many items as possible while competing with other sellers by offering good rates and discounted prices. While customers may want to avail such offers, it is important to be mindful about needs and wants. For example, the offer might be that you get a voucher of 500$ if you purchase for over 6000$, but you can totally stop at 4000$ and would still have more savings."
+    } ,
+    
+    
+    {
+        "img":"/C53Images/",
+        "title":"Exchanges",
+        "text":"Exchanging old items for new",
+        "subText":"This is a common strategy of sellers to create refurbished items out of old appliances. But the trick is that when customers avail this scheme, the valuation of the old item is way less than they anticipate. Sometimes, however, it’s better to avail this offer as it means recycling the product than throwing your old appliance in the bin. For example, the pricing value of an old IPhone can be estimated well before purchasing a new model which is then incorporated into the new purchase."
+    }
+    
+   
+]

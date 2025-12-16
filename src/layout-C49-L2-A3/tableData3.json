@@ -1,0 +1,35 @@
+[
+    {
+        "text":"Hydration",
+        "val":"WATER-Outcomes"
+    },
+    
+    {
+        "text":"Oxygen, Better Health",
+       "val":"WATER-Reasons"
+    },
+
+    {
+        "text":"Improved Mental And Emotional Health",
+       "val":"WATER-Impact"
+    },
+
+
+
+     {
+        "text":"Addictive Hydration",
+        "val":"SODA-Outcomes"
+    },
+    
+    {
+        "text":"Sweetness",
+       "val":"SODA-Reasons"
+    },
+
+    {
+        "text":"Weight Gain, High Sugar, Tooth Decay, Smelly Breath, Lower Consumption of Nutritional Food",
+       "val":"SODA-Impact"
+    }
+    
+    
+]

@@ -1,0 +1,56 @@
+[
+    {
+        "image": "/C53Images/Pastry.jpg",
+        "text": "Pastry",
+        "price":10
+    },
+    
+    {
+        "image": "/C53Images/Cashews.jpg",
+        "text": "Cashews",
+        "price":20
+    },
+    
+    {
+        "image": "/C53Images/icecream.jpg",
+        "text": "Icecream",
+        "price":9
+    },
+    
+    {
+        "image": "/C53Images/Cards.jpg",
+        "text": "Playing Cards",
+        "price":50
+    },
+    
+    {
+        "image": "/C53Images/Tshirt.jpg",
+        "text": "T-shirt",
+        "price":25
+    },
+    
+    
+    {
+        "image": "/C53Images/school_bag2.jpg",
+        "text": "School Bag",
+        "price":50
+    },
+    
+    {
+        "image": "/C53Images/Sharpener.jpg",
+        "text": "Pencil Sharpener",
+        "price":5
+    },
+    
+    {
+        "image": "/C53Images/Candy.jpg",
+        "text": "Candy",
+        "price":20
+    },
+    
+    {
+        "image": "/C53Images/Fruit.jpg",
+        "text": "Fruits",
+        "price":25
+    }
+]

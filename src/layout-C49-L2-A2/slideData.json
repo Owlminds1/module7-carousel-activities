@@ -1,0 +1,108 @@
+[
+    {
+        "img":"/C49Images/LI.jpg",
+        "text":"“A group of people who “earn less money than most people.”",
+        "opt":["Low-income","Elite","Intellectuals"],
+        "val":"Low-income"
+    } ,
+    
+    
+    
+    {
+        "img":"/C49Images/DA.jpg",
+        "text":"“A group of people who do not have the privilege of living in healthy conditions or getting an education or having a reasonable standard of living.“",
+        "opt":["Disadvantaged","Privileged","Reserved"],
+        "val":"Disadvantaged"
+    },
+    
+    
+    {
+        "img":"/C49Images/BPL.jpg",
+        "text":"“A group of people “who don't have enough to meet their basic needs.”",
+        "opt":["Below Poverty Line","Middle Class","Indigenous"],
+        "val":"Below Poverty Line"
+    },
+    
+    
+    {
+        "img":"/C49Images/Greed.jpg",
+        "text":"“A group of people who are “the richest, most powerful, best-educated, or best-trained in a society.”",
+        "opt":["High Income","Intellectuals","Elite"],
+        "val":"Elite"
+    },
+    
+    
+    {
+        "img":"/C49Images/AA.jpg",
+        "text":"“Positive steps taken to increase the representation of women and minorities in areas of employment, education, and culture.”",
+        "opt":["Prejudice","Affirmative Action","Racial Bias"],
+        "val":"Affirmative Action"
+    },
+    
+    
+    {
+        "img":"/C49Images/SES.jpg",
+        "text":"“A measure of an individual’s position in a society based on their social class and financial level when relating to how they differ from other groups of people.”",
+        "opt":["Stereotypes","Reservation Quota","Socio-Economic Status"],
+        "val":"Socio-Economic Status"
+    },
+    
+    
+    {
+        "img":"/C49Images/intellectuals.jpg",
+        "text":"“Relating to the ability to think and understand ideas at a high level, or involving ideas.”",
+        "opt":["Doers","Intellectuals","Thinkers"],
+        "val":"Intellectuals"
+    },
+    
+    
+    {
+        "img":"/C49Images/OP.jpg",
+        "text":"“The ability to forget about aspects of who you are because they represent the majority demographics of your country or organization.”",
+        "opt":["Observation","Affirmative Action","Ordinary Privilege"],
+        "val":"Ordinary Privilege"
+    },
+    
+    
+    
+    {
+        "img":"/C49Images/Stereotype.jpg",
+        "text":"“A set idea that people have about what someone or something is like, especially an idea that is wrong.”",
+        "opt":["Stereotype","Thought","Prejudice"],
+        "val":"Stereotype"
+    },
+    
+    
+    
+    {
+        "img":"/C49Images/Prejudice.jpg",
+        "text":"“An unfair and unreasonable opinion or feeling, especially when formed without enough thought or knowledge.”",
+        "opt":["Prejudice","Bias","Intellect"],
+        "val":"Prejudice"
+    },
+    
+    
+    
+    {
+        "img":"/C49Images/SO.jpg",
+        "text":"An “enduring pattern of an individual’s emotional, romantic or physical attraction to other people.”",
+        "opt":["Sexual Orientation","Emotional Intelligence","Love"],
+        "val":"Sexual Orientation"
+    },
+    
+    
+    {
+        "img":"/C49Images/IB.jpg",
+        "text":"“A bias or prejudice that is present but not consciously held or recognized.”",
+        "opt":["Racial Bias","Discrimination","Implicit Bias"],
+        "val":"Implicit Bias"
+    } ,
+    
+    
+    {
+        "img":"/C49Images/quota.jpg",
+        "text":"“The act of reserving a proportional part or share for disadvantaged communities as part of affirmative action in a society.”",
+        "opt":["Equality","Profit","Reservation Quota"],
+        "val":"Reservation Quota"
+    }
+]

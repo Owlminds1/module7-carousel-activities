@@ -1,0 +1,33 @@
+[
+    {
+        "question":"Limited time offer! Buy three sets of schoolbags before the new year to get an attractive price! Terms & Conditions Apply.",
+       "opt":["Deals & Offers","Timely Promotions","Discounts"],
+       "val":"Timely Promotions"
+    },
+     {
+        "question":"Buy two bags and get one free!",
+       "opt":["Deals & Offers","Timely Promotions","Discounts"],
+       "val":"Deals & Offers"
+    },
+    
+    
+    {
+        "question":"20% discount on all furniture items!",
+       "opt":["Deals & Offers","Timely Promotions","Discounts"],
+       "val":"Discounts"
+    } ,
+    
+    
+    {
+        "question":"Thanksgiving sale! Buy any five items in stationery for just 69.99$!",
+       "opt":["Deals & Offers","Timely Promotions","Discounts"],
+       "val":"Timely Promotions"
+    } ,
+    
+    
+    {
+        "question":"Limited time offer! Free shipping and exchanges for all items over 200$!",
+       "opt":["Deals & Offers","Timely Promotions","Discounts"],
+       "val":"Deals & Offers"
+    }
+]

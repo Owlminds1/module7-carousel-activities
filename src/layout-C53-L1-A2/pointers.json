@@ -1,0 +1,27 @@
+[
+    {
+        "img":"/C53Images/Price.jpg",
+        "text":"Price doesn’t always mean deliciousness",
+        "subText":"An item may be expensive or even be served in large quantities, but it may still not be very delicious. An item may be inexpensive or served in small quantities but might surprise us not only with deliciousness, but also healthy nutrients!"
+    },
+    
+    {
+        "img":"/C53Images/Cover.jpg",
+        "text":"Don’t judge a book by its cover",
+        "subText":"The menu is made to attract customers. The items may look very inviting on the cover, but may not be as great. Similarly, an item may not look that attractive, but actually be very good!."
+    },
+    
+    
+    {
+        "img":"/C53Images/Try.jpg",
+        "text":"Be open to trying to increase your aptitude to recognize quality",
+        "subText":"Just as practice makes perfect, trying different things many times makes us aware of what’s good and what’s not. Our palate becomes aware of what’s delicious after trying many types of food."
+    },
+    
+    
+    {
+        "img":"/C53Images/Instinct.jpg",
+        "text":"Trust your instinct",
+        "subText":"We have a natural ability to identify food that is delicious. So be sure to use that instinct. But always make sure that you don’t get tricked by junk food! Always make a healthy choice!"
+    }
+]

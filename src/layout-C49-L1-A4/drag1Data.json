@@ -1,0 +1,40 @@
+[
+    {
+        "id": 1,
+        "text": "Work done with no pay to willingly give towards building the community",
+        "value": "A"
+    },
+    
+    {
+        "id": 2,
+        "text": "Community service makes people feel good about their actions. It helps people who can benefit from the positive actions of others",
+        "value": "B"
+    },
+    
+    
+    {
+        "id": 3,
+        "text": "Plant trees in a plant drive",
+        "value": "C"
+    },
+    
+    {
+        "id": 4,
+        "text": "Participate in community clean-up",
+        "value": "C"
+    },
+    
+    
+    {
+        "id": 5,
+        "text": "Spent time engaging with seniors at a senior home",
+        "value": "C"
+    },
+    
+    
+    {
+        "id": 6,
+        "text": "Build or support indigenous or native communities",
+        "value": "C"
+    }
+]

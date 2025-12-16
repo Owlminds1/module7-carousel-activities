@@ -1,0 +1,53 @@
+[
+    {
+        "text":"Paul wants to buy an apartment but doesn’t want to take a loan. Are recurring deposits and fixed deposits good options?",
+        "option":["YES","NO"],
+        "img":"/C52Images/FD.jpeg",
+
+        "val":"YES"
+    },
+    
+    
+    {
+        "text":"Should you withdraw fixed or recurring deposits before maturity?",
+        "option":["YES","NO"],
+        "img":"/C52Images/FD_Withdraw.jpg",
+
+        "val":"NO"
+    },
+    
+    {
+        "text":"Can anyone do savings through mutual funds?",
+        "option":["YES","NO"],
+        "img":"/C52Images/MF.jpg",
+
+        "val":"YES"
+    } ,
+    
+    
+    {
+        "text":"Are mutual funds risky as the market rates fluctuate?",
+        "option":["YES","NO"],
+          "img":"/C52Images/MF.jpg",
+
+        "val":"YES"
+    },
+    
+    
+    {
+        "text":"Do fixed deposits ensure stability by giving returns as promised?",
+        "option":["YES","NO"],
+        "img":"/C52Images/Banking.jpeg",
+
+        "val":"YES"
+    } ,
+    
+    
+    {
+        "text":"Do salaried individuals have a checking account?",
+        "option":["YES","NO"],
+        "img":"/C52Images/Account.jpg",
+
+        "val":"NO"
+    }
+]

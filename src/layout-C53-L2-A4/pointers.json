@@ -1,0 +1,27 @@
+[
+    {
+        "text":"Hidden costs",
+        "answer":"They will say it’s 50$ but when it all adds up, the cost comes up to $90 because of handling charges, fees, and taxes! Not cool!",
+        "img":"/C53Images/Fees.jpg"
+    },
+    
+    {
+        "text":"T&C Apply",
+        "answer":"They will say free shipping then when you get to check out, the terms and conditions magically appear to say, “add more items up to $200 to avail the offer!” Not cool!",
+        "img":"/C53Images/T&C.jpeg"
+    },
+    
+    
+    {
+        "text":"Free returns but only exchanges",
+        "answer":"They will see free returns i.e. you can return the item and get your money refunded. But when you actually have to return, it turns out you can only exchange a bad quality item for another bad quality item but not get a refund. Sometimes items are also not returnable but are advertised as so. Not cool!",
+        "img":"/C53Images/Exchanges.jpg"
+    },
+    
+    
+    {
+        "text":"Showing something other than the product",
+        "answer":"They will show you images that do not directly relate to the product but somehow provoke a certain personality! Not cool! For example: link Before we see the product (pepsi), we see all kinds of stills from films done by the actor. The connection is made between good products with good acting.",
+        "img":"/C53Images/"
+    }
+]

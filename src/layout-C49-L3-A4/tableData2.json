@@ -1,0 +1,35 @@
+[
+    {
+        "text":"Feel good",
+        "val":"Service-Outcomes"
+    },
+    
+    {
+        "text":"Do good feel good",
+       "val":"Service-Reasons"
+    },
+
+    {
+        "text":"More people benefit from noble actions",
+       "val":"Service-Impact"
+    },
+
+
+
+     {
+        "text":"More money",
+        "val":"Profit-Outcomes"
+    },
+    
+    {
+        "text":"More is better",
+       "val":"Profit-Reasons"
+    },
+
+    {
+        "text":"More people suffer because of others’ desire to want more for themselves",
+       "val":"Profit-Impact"
+    }
+    
+    
+]

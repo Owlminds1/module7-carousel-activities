@@ -1,0 +1,53 @@
+[
+     {
+        "name":"Do you need cash to make a payment by credit card?",
+        "opt":["YES","NO","INSTANTLY","TRADITIONAL, SIGNATURE, INFINITE"],
+        "val":"NO"
+    },
+     {
+        "name":"Do you go to the bank to deposit a cheque?",
+        "opt":["YES","NO","INSTANTLY","TRADITIONAL, SIGNATURE, INFINITE"],
+        "val":"YES"
+    },
+    
+    
+    {
+        "name":"How soon is the money debited when you use a debit card?",
+        "opt":["YES","NO","INSTANTLY","TRADITIONAL, SIGNATURE, INFINITE"],
+        "val":"INSTANTLY"
+    },
+    
+    
+    {
+        "name":"Do you pay transaction fees when using a card?",
+        "opt":["YES","NO","INSTANTLY","TRADITIONAL, SIGNATURE, INFINITE"],
+        "val":"YES"
+    },
+    
+    
+    {
+        "name":"Can a Maestro card process payments like Visa?",
+        "opt":["YES","NO","INSTANTLY","TRADITIONAL, SIGNATURE, INFINITE"],
+        "val":"YES"
+    }, 
+    
+    {
+        "name":"Do credit cards allow you to make a payment anytime without additional fees?",
+        "opt":["YES","NO","INSTANTLY","TRADITIONAL, SIGNATURE, INFINITE"],
+        "val":"NO"
+    },
+    
+    
+    {
+        "name":"Is RuPay an international card used globally?",
+        "opt":["YES","NO","INSTANTLY","TRADITIONAL, SIGNATURE, INFINITE"],
+        "val":"NO"
+    },
+    
+    
+    {
+        "name":"What are the different types of credit cards offered by VISA?",
+        "opt":["YES","NO","INSTANTLY","TRADITIONAL, SIGNATURE, INFINITE"],
+        "val":"TRADITIONAL, SIGNATURE, INFINITE"
+    }
+]

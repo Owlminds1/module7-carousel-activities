@@ -1,0 +1,161 @@
+[
+  {
+    "category":"EDIBLES",
+    "items":[
+      {
+        "name":"CARROTS",
+        "img":"/C50Images/carrots.jpg",
+        "points":10
+      },
+
+        {
+        "name":"CANDY",
+        "img":"/C50Images/Candy.jpg",
+        "points":5
+      },
+      
+      
+      {
+        "name":"BREAD",
+        "img":"/C50Images/bread.jpg",
+        "points":5
+      },
+      
+      
+      {
+        "name":"ICECREAM",
+        "img":"/C50Images/icecream.jpg",
+        "points":6
+      }
+    ]
+  },
+
+
+   {
+    "category":"DRINKS",
+    "items":[
+      {
+        "name":"FRUIT JUICE",
+        "img":"/C50Images/fruit_juice.jpg",
+        "points":10
+      },
+
+        {
+        "name":"CARBONATED DRINK",
+        "img":"/C50Images/Soda.jpg",
+        "points":2
+      },
+      
+      
+      {
+        "name":"WATER",
+        "img":"/C50Images/Water.jpg",
+        "points":10
+      },
+      
+      
+      {
+        "name":"COCONUT WATER",
+        "img":"/C50Images/coconut_water.jpg",
+        "points":10
+      }
+    ]
+  },
+
+
+   {
+    "category":"ACTIONS",
+    "items":[
+      {
+        "name":"PLAYING",
+        "img":"/C50Images/Sports.jpg",
+        "points":10
+      },
+
+        {
+        "name":"VIDEO GAMES",
+        "img":"/C50Images/VG2.jpg",
+        "points":5
+      },
+      
+      
+      {
+        "name":"HOMEWORK",
+        "img":"/C50Images/HW.jpg",
+        "points":10
+      },
+      
+      
+      {
+        "name":"WATCH TV",
+        "img":"/C50Images/TV.jpg",
+        "points":2
+      }
+    ]
+  },
+
+
+   {
+    "category":"INTERACTIONS",
+    "items":[
+      {
+        "name":"READ A BOOK",
+        "img":"/C50Images/Reading.jpg",
+        "points":7
+      },
+
+        {
+        "name":"Set the Table",
+        "img":"/C50Images/set_the_table.jpg",
+        "points":10
+      },
+      
+      
+      {
+        "name":"Quarrel",
+        "img":"/C50Images/Quarrel.jpg",
+        "points":4
+      },
+      
+      
+      {
+        "name":"WATCH TV",
+        "img":"/C50Images/TV.jpg",
+        "points":2
+      }
+    ]
+  },
+  
+  
+  
+  {
+    "category":"PREFERENCES",
+    "items":[
+      {
+        "name":"Learn",
+        "img":"/C50Images/Learning.jpg",
+        "points":10
+      },
+
+        {
+        "name":"Assist Family",
+        "img":"/C50Images/Assisting_family.jpg",
+        "points":10
+      },
+      
+      
+      {
+        "name":"Assist Friends",
+        "img":"/C50Images/assisting_friends.jpg",
+        "points":10
+      },
+      
+      
+      {
+        "name":"Binge Watch Cartoons",
+        "img":"/C50Images/cartoons.jpg",
+        "points":5
+      }
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+[
+   {
+      "title":"LEGO",
+      "img":"/C53Images/Legos.jpg",
+      "points":["More expensive","Build creative skills","Build motor skills","Develop thinking"]
+   },
+   
+   
+   {
+      "title":"POKEMON CARDS",
+      "img":"/C53Images/Pokemon_cards.jpg",
+      "points":["Popular at school","Expensive but not as expensive as LEGO","Will help make friends","Show off"]
+   }
+]

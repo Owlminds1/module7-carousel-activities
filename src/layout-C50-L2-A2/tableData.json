@@ -1,0 +1,101 @@
+[
+    {
+        "text":"How much does each item cost?",
+        "option":["✔","𐄂"]
+    },
+    
+    
+    {
+        "text":"What are the contact details of the seller?",
+        "option":["✔","𐄂"]
+    },
+    
+    {
+        "text":"What are the contact details of the buyer?",
+        "option":["✔","𐄂"]
+    } ,
+    
+    
+    {
+        "text":"How many items will be bought?",
+        "option":["✔","𐄂"]
+    },
+    
+    
+    {
+        "text":"How many items are bought?",
+        "option":["✔","𐄂"]
+    } ,
+    
+    
+    {
+        "text":"How much tax is to be paid by the buyer?",
+        "option":["✔","𐄂"]
+    },
+    
+    {
+        "text":"How much tax is paid by the buyer?",
+        "option":["✔","𐄂"]
+    },
+    
+    
+    
+    {
+        "text":"What items are discounted listed as savings?",
+        "option":["✔","𐄂"]
+    },
+    
+    
+    {
+        "text":"When is the payment done?",
+        "option":["✔","𐄂"]
+    } ,
+    
+    
+    
+    {
+        "text":"What is the bill number?",
+        "option":["✔","𐄂"]
+    },
+    
+    
+    {
+        "text":"What is the receipt number?",
+        "option":["✔","𐄂"]
+    },
+    
+    
+    {
+        "text":"What is the transaction number?",
+        "option":["✔","𐄂"]
+    },
+    
+    
+    {
+        "text":"What is the merchant category code?",
+        "option":["✔","𐄂"]
+    },
+    
+    
+    {
+        "text":"How can the billed amount be paid?",
+        "option":["✔","𐄂"]
+    },
+    
+    {
+        "text":"How is the billed amount paid?",
+        "option":["✔","𐄂"]
+    },
+    
+    
+    {
+        "text":"If a warranty is mentioned, then the details would be listed too.",
+        "option":["✔","𐄂"]
+    },
+    
+    
+    {
+        "text":"What are the terms of sale as per the seller’s policy?",
+        "option":["✔","𐄂"]
+    }
+]

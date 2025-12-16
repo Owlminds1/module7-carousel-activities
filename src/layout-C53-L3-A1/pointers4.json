@@ -1,0 +1,27 @@
+[
+    {
+        
+        "text":"Where do you see this advertising about incentives?",
+        "subText":["Online Media & Shopping Sites","Print Media","Print Media"]
+    },
+
+      {
+        
+        "text":"How do you differentiate between a deal and a timely promotion?",
+        "subText":["A deal is usually some kind of promotional offer without any occasion. It can be done for destockage, or to increase sales. Timely promotions are generally occasional, based on public holidays known to be great for shopping."]
+    },
+
+
+     {
+        
+        "text":"How can the customer become more aware than the seller about such tactics?",
+        "subText":["Customers can identify such strategies by reading labels, paying close attention to terms and conditions written in small fonts, by always asking questions such as: “Is this a need or a want? Do I really have to buy this item? What is my budget?”"]
+    },
+    
+    
+    {
+        
+        "text":"What can we do to ensure that our personal information is not used for marketing purposes?",
+        "subText":["In this day and age, it’s challenging to not have a digital presence. But you can always uncheck boxes when websites ask for your preferences to ensure that data is not stored on sales platforms. "]
+    }
+]

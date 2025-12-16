@@ -1,0 +1,25 @@
+[
+    {
+        "text":"How are Kass and Joey different in their spending habits?",
+        "img":"/C50Images/Difference.png",
+         "suggestion":"Kass saves her allowance where Joey spends most of his."
+    },
+
+    {
+        "text":"What makes Kass happy?",
+        "img":"/C50Images/computer.png",
+         "suggestion":"To see that her total in the savings account is increasing."
+    },
+    
+    {
+        "text":"What does Joey want instead of saving money?",
+        "img":"/C50Images/STEM.png",
+        "suggestion":"Joey wants to buy a video game, a Dino Rumble game, a poster, a T-shirt, and a STEM camp."
+    },
+
+     {
+        "text":"How does he budget for what he wants to buy?",
+        "img":"/C50Images/",
+        "suggestion":"He thinks of adding up all the money he gets from various sources: 5 dollars a week from Mom & Dad with the bonus of 10 dollars every four weeks which totals the amount to 30 dollars."
+    }
+]

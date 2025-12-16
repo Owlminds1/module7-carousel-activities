@@ -1,0 +1,16 @@
+[
+     {
+     
+        "text":"Who do you think this person is? What do you think they are advertising? Who is the audience?",
+        "subText":"Exactly. This person appears to be a sportsplayer. He is promoting shoes. He is likely to be reaching out to sports players who aspire to be like him.",
+        "img":"/C53Images/Shoes_sports.jpg"
+    } ,
+    
+    
+    {
+     
+        "text":"How about this image? What are they advertising? Who are they reaching out to?",
+        "subText":"Exactly. They are reaching out to families who would like to buy shoes.",
+        "img":"/C53Images/shoes_Ad.jpg"
+    }
+]

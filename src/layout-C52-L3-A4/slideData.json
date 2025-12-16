@@ -1,0 +1,59 @@
+[
+    {
+        "question":"If you get an email to make a payment for a transaction you recall, should you do it?",
+        "opt":["YES","NO"],
+        "val":"NO"
+    },
+    
+    
+    {
+        "question":"Is netbanking safer than using a card online?",
+        "opt":["YES","NO"],
+        "val":"YES"
+    },
+    
+    
+    {
+        "question":"Should you check the atm cardholder for sturdiness before using your card in it?",
+        "opt":["YES","NO"],
+        "val":"YES"
+    },
+    
+    {
+        "question":"Should you tear your cash withdrawal receipt at the ATM?",
+        "opt":["YES","NO"],
+        "val":"YES"
+    },
+    
+    {
+        "question":"Should you give out your bank details to others?",
+        "opt":["YES","NO"],
+        "val":"NO"
+    },
+    
+    {
+        "question":"Is it secure to regularly change your login details?",
+        "opt":["YES","NO"],
+        "val":"YES"
+    },
+    
+    {
+        "question":"Should you keep your transaction receipts for any follow-ups if required?",
+        "opt":["YES","NO"],
+        "val":"YES"
+    } ,
+    
+    
+    {
+        "question":"Should you let payment websites store your transaction details?",
+        "opt":["YES","NO"],
+        "val":"NO"
+    },
+    
+    
+    {
+        "question":"Is it attentive to enquire with the bank if your transaction is missing a confirmation receipt?",
+        "opt":["YES","NO"],
+        "val":"YES"
+    }
+]

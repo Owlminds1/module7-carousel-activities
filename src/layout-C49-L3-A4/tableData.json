@@ -1,0 +1,35 @@
+[
+    {
+        "text":"Feel good",
+        "val":"Kindness-Outcomes"
+    },
+    
+    {
+        "text":"Do good feel good",
+       "val":"Kindness-Reasons"
+    },
+
+    {
+        "text":"Equality and shared prosperity",
+       "val":"Kindness-Impact"
+    },
+
+
+
+     {
+        "text":"Feel satisfied",
+        "val":"Greed-Outcomes"
+    },
+    
+    {
+        "text":"More is better",
+       "val":"Greed-Reasons"
+    },
+
+    {
+        "text":"Increased gap between privilege and a lack of privilege",
+       "val":"Greed-Impact"
+    }
+    
+    
+]

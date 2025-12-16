@@ -1,0 +1,13 @@
+[
+    {
+        "text":"What are the four different types of money users?",
+        "answer":["Spender Bear","Saver Bear","investor Bear","Giver Bear"],
+        "img":"/C50Images/Four_Money__Bears.png"
+    },
+
+     {
+        "text":"What do Mimi and JJ say about money?",
+        "answer":["The bear [mimi] says, “we can spend it to buy things.”","The bear [JJ] says, “we can put money in our piggy bank.”"],
+        "img":"/C50Images/Mimi_and_JJ.png"
+    }
+]

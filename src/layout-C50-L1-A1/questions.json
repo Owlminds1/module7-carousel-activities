@@ -1,0 +1,37 @@
+[
+     {
+        "item":"PLAYING SPORTS",
+        "question":["You can only play after you have completed your homework.","You can only play in a safe community.","You have to wear sturdy shoes and tie your laces before you step out."],
+        "image":"/C50Images/Sports.jpg",
+        "btnVal":["I think I can do it","I think I might be able to do it","I think I am not too sure"]
+    },
+    
+    
+    {
+        "item":"BALLONS",
+        "question":["You can only have the pink balloon first.","If you’re able to keep the pink balloon safe while playing for at least 3 days, then you get two more balloons.","You can choose the colors."],
+        "image":"/C50Images/Balloons.jpg",
+        "btnVal":["I think I can do it","I think I might be able to do it","I think I am not too sure"]
+    },
+    
+    
+    {
+        "item":"CHOCOLATE",
+        "question":["You can only have chocolate after two days.","If you’re able to practice patience, then you get two chocolates and an ice cream.","You can choose the flavors."],
+        "image":"/C50Images/Chocolate.jpg",
+        "btnVal":["I think I can do it","I think I might be able to do it","I think I am not too sure"]
+    },   
+    {
+        "item":"TOYS",
+        "question":["You can only have a small toy or wait until your next birthday for a big toy.","If you’re able to keep it until your next birthday, then you get two more toys of your choice.","You can choose based on the budget."],
+        "image":"/C50Images/Toys.jpg",
+        "btnVal":["I think I can do it","I think I might be able to do it","I think I am not too sure"]
+    },
+
+    {
+        "item":"STORY TIME",
+        "question":["You get to listen to a bedtime story every weekend.","If you’re able to sleep on time for at least two weeks, then you can listen to a bedtime story everyday.","You can choose the theme."],
+        "image":"/C50Images/Storytime.jpg",
+        "btnVal":["I think I can do it","I think I might be able to do it","I think I am not too sure"]
+    }
+]

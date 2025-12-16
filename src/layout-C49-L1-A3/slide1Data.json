@@ -1,0 +1,22 @@
+[
+    {
+        "text":"We can perform community service to give our time to something noble",
+        "img":"/C49Images/service.jpg"
+    },
+
+    {
+        "text":"We can donate items to share with others who have less than us",
+        "img":"/C49Images/items.jpg"
+    },
+
+    {
+        "text":"We can donate money to share with others who can use it for basic needs",
+        "img":"/C49Images/donate.jpg"
+    },
+
+
+     {
+        "text":"We can raise funds to donate to charitable causes",
+        "img":"/C49Images/raise_funds.jpg"
+    }
+]

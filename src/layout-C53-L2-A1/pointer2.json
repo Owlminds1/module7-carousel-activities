@@ -1,0 +1,27 @@
+[
+    {
+        "img":"/C53Images/Branding.jpg",
+        "heading":"Branding",
+        "title":"Visual Appeal",
+        "text":["Not showing goods but their emotional impact"],
+        "subText":"Customers’ intent to buy is correlated to how they see themselves using the product. For example: showing happy customers who are product users is a common tactic of visual appeal in images and ads. This allows customers to connect with the image hence impacting emotionally to lure them into buying."
+    },
+
+    {
+        "img":"/C53Images/Vocabulary.jpg",
+        "heading":"Vocabulary",
+        "title":"Vocabulary",
+        "text":["Saying what would resonate with customers"],
+        "subText":"Similar to visual appeal, customers also read or listen to words that resonate. For example: Nike saying “just do it” emotionally connects with customers who are go-getters, doers. Buying Nike shoes reinforces that attitude in such customers and creates brand loyalty."
+    },
+    
+    {
+        "img":"/C53Images/Advertising.jpg",
+        "heading":"Advertising",
+        "title":"",
+        "text":["Online Media","Print Media","Broadcast"],
+        "subText":"All such visual appeal and vocabulary can be noticed in channels such as online media, print media, and broadcast networks. This creates hype, interest, and word of mouth to try the product."
+    }
+    
+   
+]

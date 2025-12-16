@@ -1,0 +1,30 @@
+[
+    {
+        "text":"“The system that allows you to put in or take out money from a bank account by using the internet.”",
+        "val":"Net Banking"
+    },
+    
+    
+    {
+        "text":"“A transfer of funds (as from one bank account to another) by electronic or formerly by telegraphic means” Examples: WISE, PAYPAL, WESTERN UNION",
+        "val":"Wire Transfers"
+    } ,
+    
+    
+    {
+        "text":"“A way of storing a user’s digital cash and online shopping information.” Examples: GPay, PayTM, PayPal, Apple Pay",
+        "val":"E-wallets"
+    },
+    
+    
+    {
+        "text":"“The act of sending, receiving, or managing money using a mobile phone.”",
+        "val":"Mobile Banking"
+    },
+    
+    
+    {
+        "text":"“A form or check indicating a credit against future purchases or expenditures” Examples:  gift vouchers, meal vouchers, travel vouchers, purchase vouchers",
+        "val":"Vouchers"
+    }
+]

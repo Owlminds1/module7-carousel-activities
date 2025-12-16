@@ -1,0 +1,31 @@
+[
+    {
+        "title":"Sum Of",
+        "text":"Here you write the amount in words so no one can easily change it.  Example: “Fifty Dollars Only”. "
+    },
+    
+    
+    
+    {
+        "title":"Amount in Numbers",
+        "text":"The same amount written in digits. Example: $50.00."
+    },
+    
+    
+    {
+        "title":"Acc. No( Account Number)",
+        "text":"Shows from which account the money will be taken."
+    },
+    
+    
+    {
+        "title":"Please Sign Above",
+        "text":"The cheque is valid only if the account holder signs here. "
+    } ,
+    
+    
+    {
+        "title":"MICR Code",
+        "text":"(Numbers at the Bottom): These special numbers are read by bank computers to know details like bank branch and account. Think of it like the cheque’s secret barcode."
+    }
+]

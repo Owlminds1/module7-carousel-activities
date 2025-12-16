@@ -1,0 +1,30 @@
+[
+  {
+    "id": "shoes-1",
+    "image": "/C53Images/",
+    "text": "50$ per piece",
+    "val": "",
+    "price": 50
+  },
+  {
+    "id": "shoes-2",
+    "image": "/C53Images/",
+    "text": "40% off on shoes above 150$",
+    "val": "",
+    "price": 150
+  },
+  {
+    "id": "shoes-3",
+    "image": "/C53Images/",
+    "text": "100$ per piece",
+    "val": "",
+    "price": 100
+  },
+  {
+    "id": "shoes-4",
+    "image": "/C53Images/",
+    "text": "A pair of socks at no extra cost on shoes over 100$",
+    "val": "",
+    "price": 100
+  }
+]

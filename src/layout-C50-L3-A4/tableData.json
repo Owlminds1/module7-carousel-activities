@@ -1,0 +1,35 @@
+[
+   {
+    "text":"FOOD",
+    "img":"/C50Images/Food.jpg"
+   } ,
+   
+   
+   {
+    "text":"SPORTS",
+     "img":"/C50Images/Sports.jpg"
+   } ,
+   
+   
+   {
+    "text":"STATIONARY",
+    "img":"/C50Images/prep.jpg"
+   },
+   
+   
+   {
+    "text":"CLOTHES",
+    "img":"/C50Images/Clothes2.jpg"
+   },
+   
+   
+   {
+    "text":"SHOES",
+    "img":"/C50Images/shoes2.jpg"
+   },
+   
+   {
+    "text":"OUTINGS",
+    "img":"/C50Images/Outing.jpg"
+   }
+]

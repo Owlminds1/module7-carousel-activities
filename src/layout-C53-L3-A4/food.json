@@ -1,0 +1,73 @@
+[
+   {
+    "text": "Cake (per pound)",
+    "price": 45
+   
+  },
+   {
+    "text": "Vegan Cake (per pound)",
+    "price": 60
+   
+  },
+  
+  
+  {
+    "text": "Chocolate Pastries (set of two)",
+    "price": 10
+   
+  },
+  
+  {
+    "text": "Fruit Pastries (set of four)",
+    "price": 15
+   
+  },
+  
+  
+  {
+    "text": "Vegan Pastries (set of four)",
+    "price": 15
+   
+  },
+  
+  
+  {
+    "text": "Fruits (mix)",
+    "price": 25
+   
+  },
+  
+  
+  {
+    "text": "Fruit Juice (1 pack)",
+    "price": 10
+   
+  },
+  
+  
+  {
+    "text": "Soda (6 pack)",
+    "price": 30
+   
+  },
+  
+  {
+    "text": "Candy (a pack of 30)",
+    "price": 10
+   
+  },
+  
+  
+  {
+    "text": "Gluten-free cookies (a pack of 20)",
+    "price": 10
+   
+  },
+  
+  
+  {
+    "text": "Crisps (a pack)",
+    "price": 8
+   
+  }
+]

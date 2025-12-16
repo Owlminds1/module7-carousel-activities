@@ -1,0 +1,30 @@
+[
+  {
+    "id": "food-1",
+    "image": "/C53Images/",
+    "text": "4 cans of beans",
+    "val": "(5$ per piece, 4 for 15$)",
+    "price": 15
+  },
+  {
+    "id": "food-2",
+    "image": "/C53Images/",
+    "text": "2 packets of mushrooms",
+    "val": "(5$ per pack; 2 for 9$)",
+    "price": 9
+  },
+  {
+    "id": "food-3",
+    "image": "/C53Images/",
+    "text": "Packet of cashews",
+    "val": "(25$ per pack)",
+    "price": 25
+  },
+  {
+    "id": "food-4",
+    "image": "/C53Images/",
+    "text": "3 packs of juice",
+    "val": "(10$ per pack, 3 for 25$)",
+    "price": 25
+  }
+]

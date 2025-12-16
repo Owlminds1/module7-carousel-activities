@@ -1,0 +1,31 @@
+[
+    {
+        "title":"Authorization",
+        "text":"The bank must get an authorization from the customer for debiting the funds via an online form or a signed document."
+    },
+    
+    
+    
+    {
+        "title":"Gathering information",
+        "text":"The payee (getting the funds) must gather all the information such as routing numbers and transfer codes along with the account number to submit it for the transaction"
+    },
+    
+    
+    {
+        "title":"Processing",
+        "text":"The payee processes the transfer using a payment gateway."
+    },
+    
+    
+    {
+        "title":"Initiation and Verification",
+        "text":"The bank initiates the process of payment confirming the processing time and obtaining the necessary verification from the respective banks of the payer and the payee."
+    } ,
+    
+    
+    {
+        "title":"Transfer of Funds and Confirmation",
+        "text":"The bank completes the transfer and sends a confirmation receipt to the payer and the payee by email or message. "
+    }
+]

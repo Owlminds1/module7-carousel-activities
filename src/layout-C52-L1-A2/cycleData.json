@@ -1,0 +1,58 @@
+[
+    
+    {
+        "top":"25%",
+        "left":"3%",
+        "bottom":"",
+        "right":"",
+        "val":"Customer discovers the products",
+        "bg":"",
+        "className":"cycle-item1",
+        "color":"#F04149"
+    },
+
+     {
+        "top":"0%",
+        "left":"40%",
+        "bottom":"",
+        "right":"",
+        "val":"Customer chooses the products",
+        "bg":"",
+        "className":"cycle-item2",
+        "color":"#D5C814"
+    },
+
+
+      {
+        "top":"25%",
+        "left":"",
+        "bottom":"",
+        "right":"2%",
+        "val":"Customer reviews the products",
+        "bg":"",
+        "className":"cycle-item3",
+        "color":"#48D0DC"
+    },
+
+       {
+        "top":"",
+        "left":"",
+        "bottom":"10%",
+        "right":"12%",
+        "val":"Customer likes the products so tells friends & families",
+        "bg":"",
+        "className":"cycle-item4",
+        "color":"#2187D4"
+    } ,
+    
+    {
+        "top":"",
+        "left":"",
+        "bottom":"8%",
+        "right":"58%",
+        "val":"Customer likes the products so tells friends & families",
+        "bg":"",
+        "className":"cycle-item5",
+        "color":"#65E284"
+    }
+]

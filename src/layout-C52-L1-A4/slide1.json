@@ -1,0 +1,24 @@
+[
+   {
+      "text": "A drawing book ",
+      "price": "[45$]",
+      "img": "/C52Images/Drawing_Book.jpg"
+   },
+   {
+      "text": "A dress",
+      "price": "[40$]",
+      "img": "/C52Images/Dress.jpg"
+   },
+
+   {
+      "text": "A set of color pencils",
+      "price": "[35$]",
+      "img": "/C52Images/Color_Pencils.jpg"
+   },
+   
+   {
+      "text": "A piece of chocolate",
+      "price": "[20$]",
+      "img": "/C52Images/Chocolate.jpg"
+   }
+]

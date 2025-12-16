@@ -1,0 +1,126 @@
+[
+    
+    {
+        "item":"TOOTHBRUSH",
+        "price":10,
+        "val":"essentials",
+        "image":"/C50Images",
+        "quantity":1
+    },
+    
+    {
+        "item":"JEWELLERY",
+        "price":200,
+        "val":"non-essentials",
+        "image":"/C50Images",
+        "quantity":0
+    },
+    
+    {
+        "item":"SCHOOL BOOKS",
+        "price":50,
+        "val":"essentials",
+        "image":"/C50Images",
+        "quantity":2
+    },
+    
+    {
+        "item":"CANDY",
+        "price":50,
+        "val":"non-essentials",
+        "image":"/C50Images",
+        "quantity":0
+    },
+    
+    
+    {
+        "item":"CARROTS",
+        "price":10,
+        "val":"essentials",
+        "image":"/C50Images",
+        "quantity":3
+    },
+    
+    {
+        "item":"SHAVING CREAM",
+        "price":90,
+        "val":"non-essentials",
+        "image":"/C50Images",
+        "quantity":0
+    },
+    
+    {
+        "item":"SCHOOLBAG",
+        "price":70,
+        "val":"essentials",
+        "image":"/C50Images",
+        "quantity":1
+    },
+    
+    {
+        "item":"LENTILS",
+        "price":20,
+        "val":"essentials",
+        "image":"/C50Images",
+        "quantity":1
+    },
+    
+    {
+        "item":"FRUITS",
+        "price":10,
+        "val":"essentials",
+        "image":"/C50Images",
+        "quantity":3
+    } ,
+    
+    
+    {
+        "item":"TOOTHPASTE",
+        "price":10,
+        "val":"essentials",
+        "image":"/C50Images",
+         "quantity":1
+    },
+    
+    {
+        "item":"WATER BOTTLE",
+        "price":10,
+        "val":"essentials",
+        "image":"/C50Images",
+         "quantity":3
+    },
+    
+    
+    {
+        "item":"SPEAKE",
+        "price":300,
+        "val":"non-essentials",
+        "image":"/C50Images",
+        "quantity":0
+        
+    },
+    
+    {
+        "item":"VIDEO GAMES",
+        "price":400,
+        "val":"non-essentials",
+        "image":"/C50Images",
+        "quantity":0
+    },
+    
+    {
+        "item":"HIGH HEELS",
+        "price":250,
+        "val":"non-essentials",
+        "image":"/C50Images",
+        "quantity":0
+    },
+    
+    {
+        "item":"CARBONATED DRINKS",
+        "price":30,
+        "val":"non-essentials",
+        "image":"/C50Images",
+        "quantity":0
+    }
+]

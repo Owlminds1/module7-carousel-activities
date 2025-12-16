@@ -1,0 +1,38 @@
+[
+   {
+      "text":"CHEESE",
+      "img":"/C53Images/Cheese.jpg",
+      "opt":["NEED","WANT"],
+      "val":"WANT"
+   } ,
+   
+   {
+      "text":"LENTILS",
+      "img":"/C53Images/Lentils.jpg",
+      "opt":["NEED","WANT"],
+      "val":"NEED"
+   },
+   
+   {
+      "text":"CUPCAKES",
+      "img":"/C53Images/Cupcakes.jpg",
+      "opt":["NEED","WANT"],
+      "val":"WANT"
+   },
+   
+   
+   {
+      "text":"WATER",
+      "img":"/C53Images/Water.jpg",
+      "opt":["NEED","WANT"],
+      "val":"NEED"
+   },
+   
+   
+   {
+      "text":"FRUITS",
+      "img":"/C53Images/Fruit.jpg",
+      "opt":["NEED","WANT"],
+      "val":"NEED"
+   }
+]

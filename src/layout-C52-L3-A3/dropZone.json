@@ -1,0 +1,53 @@
+[
+    {
+        "method":"Net Banking",
+        "img":"/C52Images/Online_Banking.jpg",
+        "about":"The system that allows you to put in or take out money from a bank account by using the internet.”",
+        "RECURRING_PAYMENTS":"YES [ONLY DIRECT DEBIT]",
+        "REFUDS":"YES",
+        "CONFIRMATION":"YES, IN SOMETIME"
+       
+    },
+    
+    {
+        "method":"Wire Transfers",
+        "img":"/C52Images/Banking.jpg",
+        "about":"“A transfer of funds (as from one bank account to another) by electronic or formerly by telegraphic means” Examples: WISE, PAYPAL, WESTERN UNION",
+         "RECURRING_PAYMENTS":"YES",
+        "REFUDS":"YES",
+        "CONFIRMATION":"YES, IMMEDIATE"
+      
+    },
+    
+    {
+        "method":"E-wallets",
+        "img":"/C52Images/DW.png",
+         "about":"“A way of storing a user’s digital cash and online shopping information.” Examples: GPay, PayTM, PayPal, Apple Pay",
+         "RECURRING_PAYMENTS":"YES",
+        "REFUDS":"YES",
+        "CONFIRMATION":"YES, IMMEDIATE"
+      
+    },
+    
+    
+    {
+        "method":"Mobile Banking",
+        "img":"/C52Images/Wire_Transfer.jpg",
+         "about":"“The act of sending, receiving, or managing money using a mobile phone.”",
+         "RECURRING_PAYMENTS":"NO",
+        "REFUDS":"YES",
+        "CONFIRMATION":"YES, IN SOMETIME"
+      
+    },
+    
+    
+    {
+        "method":"Vouchers",
+        "img":"/C52Images/Voucher.png",
+         "about":"“A form or check indicating a credit against future purchases or expenditures” Examples:  gift vouchers, meal vouchers, travel vouchers, purchase vouchers",
+         "RECURRING_PAYMENTS":"NO",
+        "REFUDS":"NO",
+        "CONFIRMATION":"YES, IN SOMETIME"
+      
+    }
+]

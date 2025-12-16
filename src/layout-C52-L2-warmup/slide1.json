@@ -1,0 +1,53 @@
+[
+    {
+      "text":"Bread",
+      "suggestion":"Beard"
+   },
+   
+   {
+      "text":"Angel",
+      "suggestion":"Angle"
+   } ,
+   
+   {
+      "text":"Bare",
+      "suggestion":"Bear"
+   },
+   
+   
+   {
+      "text":"Seal",
+      "suggestion":"Sale"
+   },
+   
+   
+   {
+      "text":"Lamp",
+      "suggestion":"Palm"
+   } ,
+   
+   {
+      "text":"Shore",
+      "suggestion":"Horse"
+   },
+   
+   {
+      "text":"Flow",
+      "suggestion":"Wolf"
+   },
+   
+   {
+      "text":"Asleep",
+      "suggestion":"Please"
+   },
+   
+   {
+      "text":"Super",
+      "suggestion":"Purse"
+   },
+   
+   {
+      "text":"Earth",
+      "suggestion":"Heart"
+   }
+]

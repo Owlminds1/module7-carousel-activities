@@ -1,0 +1,40 @@
+[
+     {
+      "text":"This creature’s name starts with C. It is the fastest land mammal and can run up to 70 miles per hour.",
+   "suggestion":"Cheetah"
+
+},
+
+  {
+      "text":"This creature’s name starts with Y. It can live at 20,000 ft above sea level.",
+   "suggestion":"Yak"
+
+},
+
+{
+      "text":"This creature’s name starts with L. It  weighs 470 pounds more than a Cheetah.",
+   "suggestion":"Lion"
+
+},
+
+
+{
+      "text":"This creature’s name starts with B&W. It is the largest mammal on earth.",
+   "suggestion":"Blue Whale"
+
+},
+
+
+{
+      "text":"This creature’s name starts with K. It gets most of the water from the leaves it eats.",
+   "suggestion":"Koala"
+
+},
+
+
+{
+      "text":"This creature’s name starts with C. It can lift six times its own weight.",
+   "suggestion":"Chimpanzee"
+
+}
+]

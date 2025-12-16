@@ -1,0 +1,30 @@
+[
+  {
+    "id": "clothes-1",
+    "image": "/C53Images/",
+    "text": "T-shirts on sale",
+    "val": "(15$ per piece)",
+    "price": 15
+  },
+  {
+    "id": "clothes-2",
+    "image": "/C53Images/",
+    "text": "Trousers",
+    "val": "(Buy 1 get one free; 30$ per piece)",
+    "price": 30
+  },
+  {
+    "id": "clothes-3",
+    "image": "/C53Images/",
+    "text": "Jeans",
+    "val": "(15$ per piece)",
+    "price": 15
+  },
+  {
+    "id": "clothes-4",
+    "image": "/C53Images/",
+    "text": "Buy 2 Get 15% off on the 3rd dress",
+    "val": "(30$ per piece)",
+    "price": 30
+  }
+]

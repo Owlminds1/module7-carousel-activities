@@ -1,0 +1,42 @@
+[
+    {
+        "title":"Bank Name",
+        "text":" Shows which bank issued the cheque."
+    },
+    
+    
+    
+    {
+        "title":"Branch Name",
+        "text":" Tells which branch of the bank this cheque belongs to."
+    },
+    
+    
+    {
+        "title":"IFSC Code",
+        "text":"A special code that helps the bank identify exactly where the cheque came from. It’s like the bank’s home address code."
+    },
+    
+    
+    {
+        "title":"Date Box (DD/MM/YYYY)",
+        "text":"This is where you write the date when you’re using the cheque. Example: If today is August 18, 2025, you write 18/08/2025."
+    } ,
+    
+    
+    {
+        "title":"Payee Line",
+        "text":"This line is for writing the name of the person or business who will get the money. Example: “John Smith” or “Star Bookstore”. "
+    },
+    
+    {
+        "title":"OR BEARER",
+        "text":"Think of a bearer cheque like a golden ticket, whoever is holding it can take it to the bank and get the money. "
+    } ,
+    
+    
+    {
+        "title":"Why it’s risky",
+        "text":"If a bearer cheque is lost, someone else could cash it. "
+    }
+]

@@ -1,0 +1,14 @@
+[
+   {
+      "title":"CANTEEN",
+      "img":"/C53Images/Canteen.png",
+      "points":["Patties","Cold Drinks","Pastries","Mini Pizza","Waffles"]
+   },
+   
+   
+   {
+      "title":"HOMEMADE LUNCH",
+      "img":"/C53Images/Lunch.jpg",
+      "points":["Salad","Fruits","Yoghurt","Beetroot with a piece of bread"]
+   }
+]

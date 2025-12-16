@@ -1,0 +1,35 @@
+[
+    {
+        "text":"Healthy",
+        "val":"RAGI-Outcomes"
+    },
+    
+    {
+        "text":"Gluten-free, Vitamins, Minerals, Fiber",
+       "val":"RAGI-Reasons"
+    },
+
+    {
+        "text":"Better Digestion, Holistic Strength",
+       "val":"RAGI-Impact"
+    },
+
+
+
+     {
+        "text":"Delicious",
+        "val":"ALL-PURPOSE-Outcomes"
+    },
+    
+    {
+        "text":"Easy to Use",
+       "val":"ALL-PURPOSE-Reasons"
+    },
+
+    {
+        "text":"High Sugar Levels, Constipation, Weight Gain",
+       "val":"ALL-PURPOSE-Impact"
+    }
+    
+    
+]

@@ -1,0 +1,35 @@
+[
+    {
+        "question":"What did Dad write in the checkbook?",
+        "answer":"Date, the store’s name, and total amount in words and numbers, along with the date, check number, and the amount in the register."
+    },
+    
+    
+    {
+        "question":"What kind of bank account does Amy have?",
+        "answer":"Checking account"
+    },
+    
+    
+    {
+        "question":"What kind of card does Amy have? How does the transaction take place with the bank?",
+        "answer":"Amy has a debit card. It’s faster than writing a check. The bank takes money from the account when the debit card is used, then gives the money to the store."
+    },
+    
+    
+    {
+        "question":"What did the dad use at the cash register? How does the transaction take place with the bank?",
+        "answer":"He used a credit card. The bank pays the store when the credit card is used, then Dad pays the bank when the credit card bill is generated."
+    },
+    
+    {
+        "question":"What card does Kyle use for the video game?",
+        "answer":"He uses his Dad’s great buy store card which gives him a 10$ discount as well."
+    } ,
+    
+    
+    {
+        "question":"What can you do at an ATM?",
+        "answer":"You can withdraw cash, make deposits, and transfer money between accounts."
+    }
+]

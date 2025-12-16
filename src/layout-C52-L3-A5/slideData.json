@@ -1,0 +1,43 @@
+[
+    {
+        "question":"You need to buy a refrigerator but it costs 400$. You only have 300$.",
+        "title":"What would you choose?",
+        "opt":["Borrow Money","Do recurring payments (EMI)","Opt for recurring deposits for savings to buy items"],
+        "val":"Opt for recurring deposits for savings to buy items",
+        "img":"/C52Images/Fridge.png"
+    },
+    
+    
+    {
+        "question":"You are too anxious about using cards online. But you have to buy an item that is only purchasable online.",
+        "title":"What would you choose?",
+        "opt":["Debit Card","Credit Card","Netbanking","Digital Wallet"],
+        "val":"Netbanking",
+        "img":"/C52Images/Banking.jpg"
+    },
+    
+    
+    {
+        "question":"You’ve to withdraw money from the ATM.",
+        "title":"What would you verify and do?",
+        "opt":["Your card to be used","The card holder’s sturdiness","The card holder’s sturdiness and erase fingerprints by pressing buttons on the number pad after the transaction","Check if there’s a security personnel"],
+        "val":"The card holder’s sturdiness and erase fingerprints by pressing buttons on the number pad after the transaction",
+        "img":"/C52Images/ATM.png"
+    },
+    
+    {
+        "question":"Your friend has asked you to purchase a voucher for an anniversary.",
+          "title":"What would you choose?",
+        "opt":["Gift Vouchers","Meal Vouchers","Travel Vouchers","Purchase Vouchers"],
+        "val":"Gift Vouchers",
+        "img":"/C52Images/Voucher.png"
+    },
+    
+    {
+        "question":"You have to make a payment at a POS terminal to buy some apples.",
+           "title":"What would you choose?",
+        "opt":["Cash","Gift Voucher","Apple Pay","Debit Card"],
+        "val":"Cash",
+        "img":"/C52Images/Apple.jpg"
+    }
+]
