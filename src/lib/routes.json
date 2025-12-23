@@ -18,6 +18,11 @@
         "link": "C49-L2-A3",
         "activity": "Choices and outcomes"
     },
+    
+    {
+        "link": "C49-L2-A4",
+        "activity": "Random Acts of Kindness"
+    },
     {
         "link": "C49-L2-A5",
         "activity": "Thank you note"
@@ -157,6 +162,17 @@
     
     
     {
+        "link": "C52-L3-A1",
+        "activity": "Banking: Video QnA"
+    } ,
+    
+    {
+        "link": "C52-L3-A2",
+        "activity": "Banking Vocabulary"
+    } ,
+    
+    
+    {
         "link": "C52-L3-A3",
         "activity": "Digital payments"
     } ,
@@ -258,6 +274,11 @@
     {
         "link": "C53-L3-A3",
         "activity": "Tips and Tricks"
+    },
+    
+    {
+        "link": "C53-L3-A4",
+        "activity": "Shopping list"
     },
     
     
