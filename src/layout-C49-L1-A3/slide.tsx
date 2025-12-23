@@ -5,17 +5,18 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import  { useEffect, useRef, useState } from "react";
-import MyImage from "@/components/myImage";
+
 
 import Slide1Data from "@/src/layout-C49-L1-A3/slide1Data.json"
 import Image from "next/image";
+import CupSlide from "./cupSlide";
 
 
 
 const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
-  const [correctBg, setCorrectBg] = useState<HTMLAudioElement>();
+  
 
 
   const handlePrev = () => {
@@ -30,16 +31,14 @@ const Slide = () => {
    
   };
 
-  useEffect(() => {
-    setCorrectBg(new Audio("/sound/correct.mp3"));
-  }, []);
+ 
 
  
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex justify-center items-center p-5 flex-col gap-5">
       <div>
-        <h4 className="text-3xl font-bold text-black">
+        <h4 className="text-3xl font-bold text-black text-center">
           {activeSlide === 0
             ? "TURNING PRIVILEGE INTO KINDNESS"
             : activeSlide === 1
@@ -48,6 +47,13 @@ const Slide = () => {
             ? "LET’S BE KIND!"
             : ""}
         </h4>
+        <p className="text-black text-center text-lg font-medium">
+          {activeSlide === 2 ? "You’ve to pledge five acts of kindness this week that resonate with you personally. Choose two items from each category and then one of your choice." :""}
+        </p> 
+        
+        <p className="text-black text-center text-lg font-medium">
+          {activeSlide === 2 ? "Fill up the cup of kindness with your actions." :""}
+        </p>
       </div>
 
       <div className=" w-[90%] flex justify-center items-center flex-col gap-3  ">
@@ -107,6 +113,13 @@ const Slide = () => {
                 </div>
               </div>
                
+            </SwiperSlide>  
+            
+             <SwiperSlide>
+             
+
+          <CupSlide/>
+               
             </SwiperSlide>
 
      
@@ -128,7 +141,7 @@ const Slide = () => {
           <span
             onClick={handleNext}
             className={` ${
-              activeSlide < 1 
+              activeSlide < 2 
                 ? "visible"
                 : "invisible"
             }  cursor-pointer text-black text-4xl border border-black rounded-full p-3  bg-yellow-400`}

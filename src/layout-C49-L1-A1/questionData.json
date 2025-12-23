@@ -1,0 +1,36 @@
+[
+    {
+        "question":"A student distributes the most expensive birthday candy to the class",
+        "val":"YES",
+        "answerData":["YES","NO"]
+    },
+
+     {
+        "question":"Some people at the airport get to board the flight first",
+        "val":"YES",
+        "answerData":["YES","NO"]
+    },
+
+     {
+        "question":"SAll students eat the same lunch in school",
+        "val":"NO",
+        "answerData":["YES","NO"]
+    },
+
+     {
+        "question":"The principal allows only some students to bring their mobile phones to school",
+        "val":"YES",
+        "answerData":["YES","NO"]
+    },
+     {
+        "question":"Students pay high fees to go to a good school",
+        "val":"YES",
+        "answerData":["YES","NO"]
+    },
+
+     {
+        "question":"All students board the same school transport",
+        "val":"NO",
+        "answerData":["YES","NO"]
+    }
+]
