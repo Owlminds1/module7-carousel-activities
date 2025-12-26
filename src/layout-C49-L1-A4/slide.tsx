@@ -90,10 +90,23 @@ const Slide = () => {
             
              <div className="col-span-6 w-full ">
           <ul className="list-disc space-y-4 px-3">
-            <li className="text-lg text-black font-medium">Imagine you have $500 to give to each charity.</li>
-            <li className="text-lg text-black font-medium">On the LHS you will see the items that can be bought with this amount</li>
-            <li className="text-lg text-black font-medium">Distribute the items according to the work of each charity</li>
-          </ul>
+  <li className="text-lg text-black font-medium">
+    Imagine you have $500 to give to each charity.
+  </li>
+
+  <li className="text-lg text-black font-medium">
+    Actions that help create a better environment belong to environmental charities. 
+   
+  </li>
+  <li className="text-lg text-black font-medium">
+ Actions that help other humans belong to humanitarian charities.   
+  </li>
+
+  <li className="text-lg text-black font-medium">
+    Distribute the items according to the work of each charity.
+  </li>
+</ul>
+
             </div>
 
           </div>

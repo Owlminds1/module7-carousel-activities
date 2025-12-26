@@ -4,15 +4,16 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import React, { useEffect, useRef, useState } from "react";
+import  { useEffect, useRef, useState } from "react";
 import MyImage from "@/components/myImage";
 
 import SlideData from "@/src/layout-C49-L2-A5/pointers.json";
+import PdfSlide from "./pdfSlide";
 
 const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(1);
 
   const handlePrev = () => {
     swiperRef?.current?.slidePrev();
@@ -104,97 +105,9 @@ const Slide = () => {
 
          <SwiperSlide>
   <div className="grid grid-cols-12 place-items-center p-2">
-    <div className="col-span-12 w-[60%] flex flex-col gap-5 text-black text-lg leading-relaxed">
+    <div className="col-span-12 w-full flex flex-col gap-5 text-black text-lg leading-relaxed">
 
-      <p>
-        <strong>Dear Parents</strong>  <input 
-          type="text" 
-          className="border-b border-gray-500 mx-1 px-2 focus:outline-none"
-          placeholder="Enter Name"
-        />,
-      </p>
-
-      <p>
-        I’m so grateful and feel privileged that you’re my parents.
-      </p>
-
-      <p>
-        Growing up, I have always felt happy to call you my parents.
-        You 
-        <input 
-          type="text" 
-          className="border-b border-gray-500 mx-1 px-2 focus:outline-none"
-          placeholder="action"
-        />
-        which helps me to 
-        <input 
-          type="text" 
-          className="border-b border-gray-500 mx-1 px-2 focus:outline-none"
-          placeholder="impact"
-        />.
-        Not only do you 
-        <input 
-          type="text" 
-          className="border-b border-gray-500 mx-1 px-2 focus:outline-none"
-          placeholder="action"
-        />
-        but you also 
-        <input 
-          type="text" 
-          className="border-b border-gray-500 mx-1 px-2 focus:outline-none"
-          placeholder="action"
-        />,
-        ensuring that I am able to 
-        <input 
-          type="text" 
-          className="border-b border-gray-500 mx-1 px-2 focus:outline-none"
-          placeholder="impact"
-        />.
-      </p>
-
-      <p>
-        When I see kids around me, I feel that I have the best parents in the world.
-        It’s because you 
-        <input 
-          type="text" 
-          className="border-b border-gray-500 mx-1 px-2 focus:outline-none"
-          placeholder="action"
-        />
-        allowing me to 
-        <input 
-          type="text" 
-          className="border-b border-gray-500 mx-1 px-2 focus:outline-none"
-          placeholder="impact"
-        />.
-      </p>
-
-      <p>
-        I wouldn’t trade my parents for any other! It’s because you 
-        <input 
-          type="text" 
-          className="border-b border-gray-500 mx-1 px-2 focus:outline-none"
-          placeholder="action"
-        />
-        making sure that I’m  
-        <input 
-          type="text" 
-          className="border-b border-gray-500 mx-1 px-2 focus:outline-none"
-          placeholder="impact"
-        />.
-      </p>
-
-      <p>I love you always.</p>
-      <p>I hope I can become as awesome as you are.</p>
-      <p>Thank you for being my parents.</p>
-
-      <p className="mt-6">
-        <strong>Your Name</strong><br />
-        <input 
-          type="text" 
-          className="border-b border-gray-500 mt-2 w-1/2 px-2 focus:outline-none"
-          placeholder="Write your name"
-        />
-      </p>
+ <PdfSlide/>
 
     </div>
   </div>

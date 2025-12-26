@@ -13,7 +13,7 @@ import Welldone from "@/components/wellDone";
 const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(1);
 
   const handlePrev = () => {
     swiperRef?.current?.slidePrev();
@@ -76,7 +76,7 @@ const Slide = () => {
                     {SlideData.slice(0, visibleCount).map((i, index) => (
                       <li
                         key={index}
-                        className="text-lg font-medium text-black"
+                        className="text-lg font-bold text-black"
                       >
                         {i}
                       </li>

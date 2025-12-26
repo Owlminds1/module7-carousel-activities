@@ -19,7 +19,7 @@ const Slide = () => {
   const [visibleCount, setVisibleCount] = useState(0);
   const [visibleCount2, setVisibleCount2] = useState(0);
   const [visibleCount3, setVisibleCount3] = useState(0);
-  const [visibleCount4, setVisibleCount4] = useState(0);
+  const [visibleCount4, setVisibleCount4] = useState(3);
 
   const handlePrev = () => {
     swiperRef.current?.slidePrev();
@@ -117,7 +117,7 @@ const Slide = () => {
 
                   {SlideData.length > visibleCount && (
                     <p className="text-gray-800 italic font-normal">
-                      (Enter to show more points)
+                      (Click Enter to reveal suggested pointers.)
                     </p>
                   )}
                 </div>
@@ -147,7 +147,7 @@ const Slide = () => {
 
                   {Slide2Data.length > visibleCount2 && (
                     <p className="text-gray-800 italic font-normal">
-                      (Enter to show more points)
+                      (Click Enter to reveal suggested pointers.)
                     </p>
                   )}
                 </div>
@@ -182,7 +182,7 @@ const Slide = () => {
 
                   {Slide3Data.length > visibleCount3 && (
                     <p className="text-gray-800 italic font-normal">
-                      (Enter to show more points)
+                      (Click Enter to reveal suggested pointers.)
                     </p>
                   )}
                 </div>
@@ -230,21 +230,15 @@ const Slide = () => {
                     ))}
                   </ul>
 
+
+
                   {Slide4Data.length > visibleCount4 && (
                     <p className="text-gray-800 italic font-normal">
-                      (Enter to show more points)
+                      (Click Enter to reveal suggested pointers.)
                     </p>
                   )}
                 </div>
-              </div>
-            </SwiperSlide>
 
-
-             <SwiperSlide>
-              <div className="grid grid-cols-12 place-items-center p-2 gap-8">
-                <div className="col-span-12 w-full flex justify-center items-center ">
-                  <MyImage path="/C49Images/privilege_1.jpg" />
-                </div>
                 <div className=" col-span-12 w-full flex justify-center items-center flex-col gap-5 ">
                 <form  className="flex w-full justify-center items-center flex-col gap-8">
                  <div className="flex gap-1 justify-center items-center flex-col w-full">
@@ -280,6 +274,9 @@ const Slide = () => {
                 </div>
               </div>
             </SwiperSlide>
+
+
+           
           </Swiper>
         </div>
 
@@ -296,7 +293,7 @@ const Slide = () => {
           <span
             onClick={handleNext}
             className={` ${
-              activeSlide < 10 ? "visible" : "invisible"
+              activeSlide < 4 ? "visible" : "invisible"
             }  cursor-pointer text-black text-4xl border border-black rounded-full p-3  bg-yellow-400`}
           >
             <FaArrowRight />

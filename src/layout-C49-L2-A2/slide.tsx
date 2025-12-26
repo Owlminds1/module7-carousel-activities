@@ -20,7 +20,7 @@ const Slide = () => {
   const [activeBtnIndex, setActiveBtnIndex] = useState<{[cardIndex:number]:number}>({});
 
   const [activeSlide, setActiveSlide] = useState(0);
-  const [visibleCount4, setVisibleCount4] = useState(0);
+  const [visibleCount4, setVisibleCount4] = useState(1);
 
 
   useEffect(()=>{
@@ -86,11 +86,9 @@ setCorrect(()=>new Audio("/sound/correct.mp3"))
             : ""}
         </h4>
         <p className="text-black text-lg text-center ">
-          {/* {activeSlide === 2
-            ? "THEN SELECT THE CORRECT RESPONSE FOR EACH STATEMENT"
-            : activeSlide === 3
-            ? "ANSWER THE FOLLOWING QUESTIONS ABOUT THE IMAGE OF DISCOUNTS."
-            : ""} */}
+          {activeSlide === 3
+            ? "Answer the Questions (orally)."
+            :  ""}
         </p>
       </div>
 
@@ -155,6 +153,10 @@ setCorrect(()=>new Audio("/sound/correct.mp3"))
                     </div>
                   </div>
                 ))}
+
+                <div className="col-span-12">
+                  <p className="font-medium text-md italic text-gray-600 my-5">All are definitions cited or paraphrased from dictionaries such as Cambridge, Merriam-Webster, or think-tank websites such as the UN.</p>
+                </div>
               </div>
             </SwiperSlide>
 

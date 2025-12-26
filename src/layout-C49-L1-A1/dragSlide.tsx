@@ -1,85 +1,105 @@
 "use client";
-
+import { useEffect, useState } from "react";
+import cardData from "@/src/layout-C49-L1-A1/dragData.json";
 import Image from "next/image";
 
-import masterList from "@/src/layout-C49-L1-A1/dragData.json";
-import dropZone from "@/src/layout-C49-L1-A1/drop.json";
-import { useEffect, useState } from "react";
-
-type ItemType = {
-  label: string;
+// ✅ Correct & CLEAN type (LOWERCASE only)
+type CardType = {
+  name: string;
   img: string;
-  type: string;
+  type: "need" | "want";
+  flipped: boolean;
+  locked: boolean;
 };
 
-const DragSlide = () => {
-  const [shuffle, setShuffle] = useState<ItemType[]>(masterList);
-  const [dropItems, setDropItems] = useState<{ [key: number]: ItemType[] }>({});
+const FlipCard = () => {
+  const [cards, setCards] = useState<CardType[]>([]);
+  const [selected, setSelected] = useState<number[]>([]);
 
+  // 🔀 Prepare cards (shuffle + normalize + add flags)
   useEffect(() => {
-    setShuffle((prev) => [...prev].sort(() => Math.random() - 0.5));
-  }, []);
-
-  const handleDragStart = (e: React.DragEvent, item: ItemType) => {
-    e.dataTransfer.setData("drag", JSON.stringify(item));
-  };
-
-  const handleDrop = (e: React.DragEvent, item: string, index: number) => {
-    const dragItem = JSON.parse(e.dataTransfer.getData("drag"));
-
-    if (dragItem.type === item) {
-      setDropItems((prev) => ({
-        ...prev,
-
-        [index]: prev[index] ? [...prev[index], dragItem] : [dragItem],
+    const preparedCards: CardType[] = [...cardData]
+      .sort(() => Math.random() - 0.5)
+      .map((item) => ({
+        name: item.name,
+        img: item.img,
+        type: item.type.toLowerCase() as "need" | "want", // ✅ MAIN FIX
+        flipped: false,
+        locked: false,
       }));
 
+    setCards(preparedCards);
+  }, []);
 
-setShuffle((prev)=>[...prev].filter((i)=>i.label !== dragItem.label))
+  // 🖱️ Flip handler
+  const handleFlip = (index: number) => {
+    if (cards[index].flipped || cards[index].locked) return;
+    if (selected.length === 2) return;
 
-    }
+    const updated = [...cards];
+    updated[index].flipped = true;
+    setCards(updated);
+
+    setSelected((prev) => [...prev, index]);
   };
 
-  return (
-    <div className="grid grid-cols-12  gap-3 w-full">
-      <div className={`${shuffle.length === 0 ? "col-span-0" :"col-span-4 w-full shadow p-2 flex justify-center items-center gap-2 flex-wrap"} `}>
-        {shuffle.map((item, index) => (
-          <div
-            draggable
-            onDragStart={(e) => handleDragStart(e, item)}
-            key={index}
-            className="border hover:cursor-grab active:cursor-grabbing flex justify-center items-center flex-col active:scale-95 transition-all duration-150"
-          >
-            <div draggable className="w-30 h-20 relative ">
-              <Image objectFit="cover" objectPosition="top center"  src={item.img} fill alt="images" />
-            </div>
-            <h4 className="text-sm capitalize p-1 text-center text-black">{item.label}</h4>
-          </div>
-        ))}
-      </div>
-      <div className={`${shuffle.length === 0 ? "col-span-12" :"col-span-8"}  w-full shadow gap-1  grid grid-cols-12 `}>
-        {dropZone.map((drop, dIndex) => (
-          <div
-            onDragOver={(e) => e.preventDefault()}
-            onDrop={(e) => handleDrop(e, drop, dIndex)}
-            key={dIndex}
-            className="col-span-6 w-full min-h-[300px] border "
-          >
-            <h3 className="w-full bg-violet-900 p-1 text-center">{drop}</h3>
+  // ✅❌ Match logic
+  useEffect(() => {
+    if (selected.length !== 2) return;
 
-            <div className="flex justify-center items-center flex-wrap p-3 gap-2">
-              {dropItems[dIndex]?.map((i, idx) => (
-               <div
-         
-            key={idx}
-            className="border hover:cursor-grab active:cursor-grabbing flex justify-center items-center flex-col active:scale-95 transition-all duration-150"
+    const [first, second] = selected;
+
+    if (cards[first].type === cards[second].type) {
+      // ✅ MATCH → lock cards
+      const updated = [...cards];
+      updated[first].locked = true;
+      updated[second].locked = true;
+      setCards(updated);
+      setSelected([]);
+    } else {
+      // ❌ NOT MATCH → flip back
+      setTimeout(() => {
+        const updated = [...cards];
+        updated[first].flipped = false;
+        updated[second].flipped = false;
+        setCards(updated);
+        setSelected([]);
+      }, 1000);
+    }
+  }, [selected]);
+
+  return (
+    <div className="min-h-screen bg-[#F8FCFA] flex justify-center items-center p-5">
+      <div className="grid grid-cols-12 gap-4 ">
+        {cards.map((item, index) => (
+          <div
+            key={index}
+            onClick={() => handleFlip(index)}
+            className="col-span-3 w-[200px] h-[200px] relative cursor-pointer [perspective:1000px]"
           >
-            <div className="w-30 h-20 relative bg-amber-400">
-              <Image objectFit="cover" objectPosition="top center" src={i.img} fill alt="images" />
-            </div>
-            <h4 className="text-sm capitalize p-1 text-center text-black">{i.label}</h4>
-          </div>
-              ))}
+            <div
+              className={`w-full h-full transition-transform duration-700
+                [transform-style:preserve-3d]
+                ${item.flipped ? "[transform:rotateY(180deg)]" : ""}`}
+            >
+              {/* FRONT – IMAGE */}
+              <div className="absolute w-full h-full bg-white border rounded-lg flex justify-center items-center [backface-visibility:hidden]">
+                <div className="h-full w-full relative">
+                  <Image
+                  src={item.img}
+                 fill
+                  alt={item.name}
+                  objectFit="cover"
+                  objectPosition="top"
+                />
+                </div>
+              </div>
+
+              {/* BACK – NEED / WANT */}
+              <div className="absolute w-full h-full bg-violet-900 text-white rounded-lg flex justify-center items-center text-2xl font-bold
+                [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                {item.type.toUpperCase()}
+              </div>
             </div>
           </div>
         ))}
@@ -88,4 +108,4 @@ setShuffle((prev)=>[...prev].filter((i)=>i.label !== dragItem.label))
   );
 };
 
-export default DragSlide;
+export default FlipCard;

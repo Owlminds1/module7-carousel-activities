@@ -4,21 +4,30 @@ import React, { useState, useEffect } from "react";
 import tableData from "@/src/layout-C49-L3-A4/tableData3.json";
 import Image from "next/image";
 import { SwiperClass } from "swiper/react";
+import Welldone from "@/components/wellDone";
 
 type myProps = {
   swiperRef:React.RefObject<SwiperClass | null>;
 }
 
 export default function Table3Slide({swiperRef}:myProps) {
-  const [shuffle, setShuffle] = useState<{ text: string; val: string }[]>([]);
-  const [dragItem, setDragItem] = useState<{ text: string; val: string } | null>(null);
-
-  // Store dropped items by box id
-  const [dropItems, setDropItems] = useState<{ [key: string]: string[] }>({});
-
+   const [shuffle, setShuffle] = useState<{ text: string; val: string }[]>(() =>
+    [...tableData].sort(() => Math.random() - 0.5)
+  );
+  
+    const [dragItem, setDragItem] = useState<{ text: string; val: string } | null>(null);
+    const [open,setOpen] =useState(false)
+  
+    // Store dropped items by box id
+    const [dropItems, setDropItems] = useState<{ [key: string]: string[] }>({});
+  
   useEffect(() => {
-    setShuffle([...tableData].sort(() => Math.random() - 0.5));
-  }, []);
+    if (shuffle.length === 0) {
+      setOpen(true);
+    }
+    swiperRef.current?.updateAutoHeight()
+  }, [shuffle]);
+  
 
   // HANDLE DRAG
   const handleDragStart = (item: { text: string; val: string }) => {
@@ -72,7 +81,7 @@ export default function Table3Slide({swiperRef}:myProps) {
         <div className="col-span-4 border"></div>
         <div className="col-span-4 flex flex-col justify-center items-center border">
           <div className="w-20 h-20 relative">
-            <Image src="/C49Images/Savings.jpg" fill alt="Savings" />
+            <Image src="/C49Images/Savings.jpg" objectFit="cover"  fill alt="Savings" />
           </div>
             <h4 className="text-black ">Savings</h4>
         </div>
@@ -80,7 +89,7 @@ export default function Table3Slide({swiperRef}:myProps) {
         {/* ALL-PURPOSE IMAGE */}
          <div className="col-span-4 flex flex-col justify-center items-center border">
           <div className="w-20 h-20 relative">
-            <Image src="/C49Images/Spending.jpg" fill alt="Spending" />
+            <Image src="/C49Images/Spending.jpg" objectFit="cover" fill alt="Spending" />
           </div>
             <h4 className="text-black ">Spending</h4>
         </div>
@@ -158,7 +167,7 @@ export default function Table3Slide({swiperRef}:myProps) {
             <p key={i} className="border text-center text-black  p-1">{t}</p>
           ))}
         </div>
-
+<Welldone open={open} setOpen={setOpen}/>
       </div>
     </div>
   );

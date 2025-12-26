@@ -4,21 +4,30 @@ import React, { useState, useEffect } from "react";
 import tableData from "@/src/layout-C49-L3-A4/tableData.json";
 import Image from "next/image";
 import { SwiperClass } from "swiper/react";
+import Welldone from "@/components/wellDone";
 
 type myProps = {
   swiperRef:React.RefObject<SwiperClass | null>;
 }
 
 export default function TableSlide({swiperRef}:myProps) {
-  const [shuffle, setShuffle] = useState<{ text: string; val: string }[]>([]);
+ const [shuffle, setShuffle] = useState<{ text: string; val: string }[]>(() =>
+  [...tableData].sort(() => Math.random() - 0.5)
+);
+
   const [dragItem, setDragItem] = useState<{ text: string; val: string } | null>(null);
+  const [open,setOpen] =useState(false)
 
   // Store dropped items by box id
   const [dropItems, setDropItems] = useState<{ [key: string]: string[] }>({});
 
-  useEffect(() => {
-    setShuffle([...tableData].sort(() => Math.random() - 0.5));
-  }, []);
+useEffect(() => {
+  if (shuffle.length === 0) {
+    setOpen(true);
+  }
+  swiperRef.current?.updateAutoHeight()
+}, [shuffle]);
+
 
   // HANDLE DRAG
   const handleDragStart = (item: { text: string; val: string }) => {
@@ -46,6 +55,7 @@ export default function TableSlide({swiperRef}:myProps) {
     setDragItem(null);
   };
 
+
   return (
     <div className="w-full grid grid-cols-12 gap-5">
 
@@ -72,7 +82,7 @@ export default function TableSlide({swiperRef}:myProps) {
         <div className="col-span-4 border"></div>
         <div className="col-span-4 flex flex-col justify-center items-center border">
           <div className="w-20 h-20 relative">
-            <Image src="/C49Images/Kindness2.jpg" fill alt="ragi" />
+            <Image src="/C49Images/Kindness2.JPG" objectFit="cover" fill alt="Kindness" />
           </div>
             <h4 className="text-black ">Kindness</h4>
         </div>
@@ -80,7 +90,7 @@ export default function TableSlide({swiperRef}:myProps) {
         {/* ALL-PURPOSE IMAGE */}
          <div className="col-span-4 flex flex-col justify-center items-center border">
           <div className="w-20 h-20 relative">
-            <Image src="/C49Images/Greed.jpg" fill alt="ragi" />
+            <Image src="/C49Images/Greed.jpg" objectFit="cover" fill alt="ragi" />
           </div>
             <h4 className="text-black ">Greed</h4>
         </div>
@@ -160,6 +170,8 @@ export default function TableSlide({swiperRef}:myProps) {
         </div>
 
       </div>
+
+      <Welldone open={open} setOpen={setOpen}/>
     </div>
   );
 }
