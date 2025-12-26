@@ -4,8 +4,8 @@ import React, { useEffect, useRef, useState } from "react";
 
 import DragData from "@/src/layout-C49-L1-A4/drag1Data.json";
 import DropZone1 from "@/src/layout-C49-L1-A4/dropZone1.json";
-import MyImage from "@/components/myImage";
 import Image from "next/image";
+import Welldone from "./wellDone";
 
 type Item = {
   id: number;
@@ -16,7 +16,7 @@ type Item = {
 export default function DragSlide() {
   const [shuffle, setShuffle] = useState<Item[]>(DragData);
   const [dropItems, setDropItems] = useState<{ [key: number]: string[] }>({});
-
+const  [ open ,setOpen]=useState(false)
   // Shuffle items on first load
 
   useEffect(() => {
@@ -39,8 +39,16 @@ export default function DragSlide() {
       }));
 
       setShuffle((prev)=>prev.filter((i)=>i.text !== dragItem.text))
+     
     }
   };
+
+  useEffect(() => {
+  if (shuffle.length === 0) {
+    setOpen(true);
+  }
+}, [shuffle]);
+
 
   return (
     <div className="grid grid-cols-12 gap-6 p-6 w-full">
@@ -98,6 +106,8 @@ export default function DragSlide() {
           </div>
         ))}
        
+
+       <Welldone open={open} setOpen={setOpen}/>
       </div>
     </div>
   );

@@ -84,15 +84,30 @@ const Slide = () => {
 
 
                   <div className="col-span-6 w-full flex justify-center items-center  flex-col gap-3 p-3 ">
-               <ul className="list-disc space-y-2 ">
-                <li className="text-black text-lg ">
+               <ul className="list-disc space-y-2  w-full">
+                <li className="text-black text-lg font-bold ">
                   Now can you reflect on all the points to define three actions you’d do as your random acts of kindness? 
-                </li> <li className="text-black text-lg ">
+                </li>
+                
+                
+                
+                
+               </ul>
+
+               <textarea  placeholder="write here..." rows={4} className="border w-full rounded-lg p-2 text-black "/>
+
+                              <ul className="list-disc space-y-2 w-full ">
+              
+                
+                
+                
+                 <li className="text-black text-lg  font-bold">
                  Describe how others would feel if you were to do those acts of kindness.
                 </li>
                </ul>
 
                <textarea  placeholder="write here..." rows={4} className="border w-full rounded-lg p-2 text-black "/>
+
                 </div>
               </div>
             </SwiperSlide>

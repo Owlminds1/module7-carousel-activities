@@ -1,60 +1,60 @@
 [
     {
-        "label": "WATER",
+        "name": "WATER",
         "img": "/C49Images/water.jpg",
         "type": "Need"
     },
     {
-        "label": "HEALTHY FOOD",
+        "name": "HEALTHY FOOD",
         "img": "/C49Images/healthy_food.jpg",
         "type": "Need"
     },
     {
-        "label": "SWIMSUIT",
+        "name": "SWIMSUIT",
         "img": "/C49Images/swimsuit.jpg",
         "type": "Need"
     },
     {
-        "label": "CLOCK",
+        "name": "CLOCK",
         "img": "/C49Images/clock.jpg",
         "type": "Need"
     },
     {
-        "label": "SCHOOLBAG",
+        "name": "SCHOOLBAG",
         "img": "/C49Images/schoolbag.jpg",
         "type": "Need"
     },
 
      {
-        "label": "GARDEN",
+        "name": "GARDEN",
         "img": "/C49Images/garden.jpg",
         "type": "Want"
     },
     
     
     {
-        "label": "CANDY",
+        "name": "CANDY",
        "img": "/C49Images/candy.jpg",
         "type": "Want"
     },
     
     
     {
-        "label": "BEACHBALL",
+        "name": "BEACHBALL",
         "img": "/C49Images/beachball.jpg",
         "type": "Want"
     },
     
     
     {
-        "label": "SMARTWATCH",
+        "name": "SMARTWATCH",
         "img": "/C49Images/smartwatch.jpg",
         "type": "Want"
     },
     
     
     {
-        "label": "POKEMON CARDS",
+        "name": "POKEMON CARDS",
        "img": "/C49Images/PC.jpg",
         "type": "Want"
     }

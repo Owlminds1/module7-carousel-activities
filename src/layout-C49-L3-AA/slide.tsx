@@ -94,7 +94,7 @@ const Slide = () => {
                       className="outline-0 border-b border-black  text-center p-1"
                       placeholder="write here..."
                     />{" "}
-                    (reebok sneakers), but after this class I understood that
+                    (new sneakers), but after this class I understood that
                     it’s actually a want! So now, I’d rather choose{" "}
                     <input
                       type="text"

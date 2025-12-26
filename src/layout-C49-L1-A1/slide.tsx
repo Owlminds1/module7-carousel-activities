@@ -4,10 +4,10 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import  { useEffect, useRef, useState } from "react";
+import  {  useRef, useState } from "react";
 import MyImage from "@/components/myImage";
 
-import DragSlide from "./dragSlide";
+import FlipCard from "./dragSlide";
 
 const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
@@ -125,21 +125,10 @@ const Slide = () => {
             <div className="grid grid-cols-12 gap-5 w-full place-items-center p-5">
          
               
-              <div className="col-span-12 w-[60%] flex justify-center items-center">
- <ul className="list-disc  space-y-3 px-2">
-                    <li className="text-lg font-medium text-black">
-                  Coloring the items. Use the brush stroke tool  with your cursor to fill the color into the items. Needs are colored red and wants are colored blue. 
-                    </li>
-
-                    <li className="text-lg font-medium text-black">
-               If not possible, then the flippable images can appear on a grid and students can identify needs and wants by flipping two cards within the same category but on opposite sides: need or want
-                    </li>
-                  </ul>
-              </div> 
               
               
               <div className="col-span-12 w-full flex justify-center items-center">
-<DragSlide/>
+<FlipCard/>
               </div>
 
 

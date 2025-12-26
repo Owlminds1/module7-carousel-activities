@@ -62,11 +62,6 @@ const Slide = () => {
              :""}
         </h1>
 
-        <p className="text-black text-lg">
-          {activeSlide >= 1
-            ? "Review the ML consisting of statements for both columns"
-            : ""}
-        </p>
 
         <p className="text-black text-lg">
           {activeSlide >= 1

@@ -4,18 +4,15 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import React, { useEffect, useRef, useState } from "react";
-import MyImage from "@/components/myImage";
+import  { useEffect, useRef, useState } from "react";
 
 import SlideData from "@/src/layout-C49-L2-A5/pointers.json";
-import Welldone from "@/components/wellDone";
 import Link from "next/link";
 import Image from "next/image";
 
 const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(0);
 
   const handlePrev = () => {
     swiperRef?.current?.slidePrev();
@@ -27,16 +24,7 @@ const Slide = () => {
     setActiveSlide(swiper.activeIndex);
   };
 
-  useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.key === "Enter") {
-        setVisibleCount((prev) => (prev < SlideData.length ? prev + 1 : prev));
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyPress);
-    return () => window.removeEventListener("keydown", handleKeyPress);
-  }, []);
+ 
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex justify-center items-center p-5 flex-col gap-5">
@@ -64,7 +52,7 @@ const Slide = () => {
           >
             <SwiperSlide>
               <div className=" min-h-[200px] w-full flex justify-center items-center ">
-                 <Link className="text-white text-center bg-violet-900 px-8 py-2 min-w-[150px] rounded-lg" href="https://www.canva.com/design/DAGu1IRi0HU/PaLZpM-j40ERtaxVjDzmXg/edit" target="blank" >VIDEO</Link>
+                 <Link className="text-white text-center bg-violet-900 px-8 py-2 min-w-[150px] rounded-lg" href="https://www.canva.com/design/DAGu1IRi0HU/k22ttm8FP98T9TrAj3VSDQ/watch?utm_content=DAGu1IRi0HU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5eaf42f258" target="blank" >VIDEO</Link>
                 </div>
             </SwiperSlide>
 

@@ -61,7 +61,7 @@ const Slide = () => {
             <SwiperSlide>
               <div className="  w-full text-center flex justify-center items-center min-h-[200px] ">
                 <Link
-                  href="https://www.canva.com/design/DAGvGfXqfJU/quxQehAznR9yIDSJKBoZDQ/edit?ui=eyJBIjp7Ik8iOnsiQiI6dHJ1ZX19fQ"
+                  href="https://www.canva.com/design/DAGvGfXqfJU/piHRP1KfSqZr7NfLMDDzLQ/watch?utm_content=DAGvGfXqfJU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=haf57e1d9ff"
                   className="text-white bg-violet-900 rounded-lg min-w-[100px] px-8 py-2 cursor-pointer"
                   target="blank"
                 >
@@ -90,9 +90,9 @@ const Slide = () => {
                     </ul>
                    </div>
 
-                    <h4 className="text-lg  text-left text-black font-bold">
+                    {/* <h4 className="text-lg  text-left text-black font-bold">
                       {i.question}
-                    </h4>
+                    </h4> */}
                     <div className="flex justify-center items-center gap-3">
                       {i.btnVal.map((btn, btnIndex) => (
                         <button
