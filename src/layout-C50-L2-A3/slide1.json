@@ -1,0 +1,130 @@
+[
+  {
+    "col1": "Notebook",
+    "col2": "80",
+    "col3": "5%",
+    "col4": "10%",
+    "col5": "HighCo"
+
+  },
+  {
+    "col1": "Colors",
+    "col2": "100",
+    "col3": "5%",
+    "col4": "0%",
+    "col5": "JoyCo"
+
+  },
+
+   {
+    "col1": "Pen",
+    "col2": "50",
+    "col3": "10%",
+    "col4": "0%",
+    "col5": "JoyCo"
+
+  },
+  
+  {
+    "col1": "Educational Books",
+    "col2": "80",
+    "col3": "10%",
+    "col4": "10%",
+    "col5": "HighCo"
+
+  },
+  
+  {
+    "col1": "Sharpener",
+    "col2": "30",
+    "col3": "10%",
+    "col4": "0%",
+    "col5": "HighCo"
+
+  },
+  
+  
+  {
+    "col1": "School Bag",
+    "col2": "65",
+    "col3": "5%",
+    "col4": "2%",
+    "col5": "JoyCo"
+
+  },
+  
+  {
+    "col1": "Sketchpad",
+    "col2": "50",
+    "col3": "10%",
+    "col4": "0%",
+    "col5": "JoyCo"
+
+  },
+  
+  {
+    "col1": "Educational Books",
+    "col2": "In Progress!",
+    "col3": "In Progress!",
+    "col4": "In Progress!",
+    "col5": "JoyCo"
+
+  },
+  
+  
+  {
+    "col1": "Sharpener",
+    "col2": "60",
+    "col3": "5%",
+    "col4": "0%",
+    "col5": "JoyCo"
+
+  },
+  
+  {
+    "col1": "Educational Videos",
+    "col2": "200",
+    "col3": "20%",
+    "col4": "10%",
+    "col5": "HighCo"
+
+  },
+  
+  {
+    "col1": "Educational Videos",
+    "col2": "In Progress!",
+    "col3": "In Progress!",
+    "col4": "In Progress!",
+    "col5": "JoyCo"
+
+  } ,
+  
+  
+  {
+    "col1": "Pen",
+    "col2": "45",
+    "col3": "15%",
+    "col4": "5%",
+    "col5": "HighCo"
+
+  },
+  
+  {
+    "col1": "School Bag",
+    "col2": "55",
+    "col3": "15%",
+    "col4": "10%",
+    "col5": "HighCo"
+
+  },
+  
+  
+  {
+    "col1": "Colors",
+    "col2": "80",
+    "col3": "10%",
+    "col4": "5%",
+    "col5": "HighCo"
+
+  }
+]
