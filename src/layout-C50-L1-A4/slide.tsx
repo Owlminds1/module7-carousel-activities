@@ -71,9 +71,9 @@ const Slide = () => {
 <SwiperSlide>
   <div className="flex justify-center items-center ">
     <ul className="list-disc space-y-3 ">
-      <li className="text-black text-lg">Choose one of the items in each category</li>
-      <li className="text-black text-lg">Explain orally why this item is wiser to choose compared to other items</li>
-      <li className="text-black text-lg">Place your choice in your choice basket to see how many points you get</li>
+      <li className="text-black text-lg">Choose one of the items in each category.</li>
+      <li className="text-black text-lg">Explain orally why this item is wiser to choose compared to other items.</li>
+      <li className="text-black text-lg">Place your choice in your choice basket to see how many points you get.</li>
       <li className="text-black text-lg">Count the total number of points to see how wise you are!</li>
     </ul>
   </div>

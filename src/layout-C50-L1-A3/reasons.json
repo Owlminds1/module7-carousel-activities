@@ -1,0 +1,54 @@
+[
+    {
+        "text":"Hydration",
+          "val":"Water-reasons"
+        
+    },
+    
+    {
+        "text":"Timeliness",
+       "val":"Homework-reasons"
+    },
+
+
+
+
+
+     {
+        "text":"Regularly Studying",
+       "val":"Preparing-reasons"
+    },
+
+
+
+
+     {
+        "text":"Get Enough Sleep",
+       "val":"Sleeping-reasons"
+    },
+
+
+
+    {
+        "text":"Giving is Goodness",
+       "val":"Being-reasons"
+    },
+
+
+
+    {
+        "text":"Staying Organized",
+       "val":"Planning-reasons"
+    },
+
+
+
+    
+
+     {
+        "text":"Learning",
+       "val":"Reading-reasons"
+    }
+    
+    
+]

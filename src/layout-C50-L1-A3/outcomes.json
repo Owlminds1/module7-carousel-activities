@@ -1,0 +1,65 @@
+[
+   
+    
+    {
+        "text":"Life",
+     "val":"Water-Outcomes"
+    },
+
+   
+
+
+
+     {
+        "text":"Achievement",
+        "val":"Homework-Outcomes"
+    },
+
+
+   
+
+
+     {
+        "text":"Good Grades",
+        "val":"Preparing-Outcomes"
+    }
+,
+
+   
+
+
+
+     {
+        "text":"Fresh Mornings",
+        "val":"Sleeping-Outcomes"
+    } ,
+    
+ 
+
+
+     {
+        "text":"Kind Community",
+        "val":"Being-Outcomes"
+    },
+    
+  
+
+
+
+     {
+        "text":"Timely Completion",
+        "val":"Planning-Outcomes"
+    },
+
+
+   
+
+
+
+     {
+        "text":"Focus",
+        "val":"Reading-Outcomes"
+    }
+    
+    
+]

@@ -13,6 +13,7 @@ const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeBtnIndex, setActiveBtnIndex] = useState<number | null>(null);
+  const [showReason,setShowReason]=useState(false)
   
   const [bgCorrect, setBgCorrect] = useState<HTMLAudioElement>();
 
@@ -26,18 +27,23 @@ const Slide = () => {
   const handleSlideChange = (swiper: SwiperClass) => {
     setActiveSlide(swiper.activeIndex);
     setActiveBtnIndex(null);
+    setShowReason(false)
   };
 
   const handleCheck = (answer: string, val: string, index: number) => {
     setActiveBtnIndex(index);
 
     if (val === answer) {
+      setShowReason(true)
       bgCorrect?.play();
     }
   };
 
-  // FUNCTION: returns true if slide is a reason slide (odd slide index)
-  const isReasonSlide = (index: number) => index % 2 === 1;
+useEffect(()=>{
+  swiperRef.current?.updateAutoHeight()
+
+},[showReason])
+ 
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex justify-center items-center p-5 flex-col gap-5">
@@ -66,11 +72,11 @@ const Slide = () => {
               <SwiperSlide key={idx}>
                 <div className="grid grid-cols-12 gap-3 place-items-center p-5">
 
-                  {/* Show image ONLY on question slides */}
+              
                   <div className="col-span-12 w-full flex justify-center">
-                    {!isReasonSlide(idx) && item.image && (
+                 
                       <MyImage path={item.image} />
-                    )}
+               
                   </div>
 
                   <div className="col-span-12 w-full flex flex-col items-center gap-5">
@@ -78,8 +84,14 @@ const Slide = () => {
                       {item.question}
                     </h4>
 
-                    {/* Buttons only on question slides */}
-                    {!isReasonSlide(idx) && (
+{
+  showReason && 
+                     <h4 className=" animate-fadeIn text-lg w-[60%] text-center text-violet-900 italic font-medium">
+                      {item.Reasons}
+                    </h4>
+}
+
+                 
                       <div className="flex justify-center gap-3">
                         {item.btnVal.map((btn, btnIndex) => (
                           <button
@@ -99,7 +111,7 @@ const Slide = () => {
                           </button>
                         ))}
                       </div>
-                    )}
+                   
                   </div>
                 </div>
               </SwiperSlide>
