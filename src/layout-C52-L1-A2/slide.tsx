@@ -5,7 +5,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { act, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import SlideData from "@/src/layout-C52-L1-A2/pointers.json";
 import Slide3Data from "@/src/layout-C52-L1-A2/slide3Data.json";
@@ -18,6 +18,7 @@ const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
 
   const [activeSlide, setActiveSlide] = useState(0);
+  const [show, setShow] = useState(false);
 
   const [visibleCount, setVisibleCount] = useState(0);
   const [visibleCount3, setVisibleCount3] = useState(0);
@@ -34,7 +35,7 @@ const Slide = () => {
 
   const handleSlideChange = (swiper: SwiperClass) => {
     setActiveSlide(swiper.activeIndex);
-    scroll(0,0)
+    scroll(0, 0);
   };
 
   // FIXED ENTER LOGIC
@@ -275,14 +276,14 @@ const Slide = () => {
                 </div>
 
                 <div className="col-span-6 w-full flex flex-col gap-5 ">
-                <div>
-  <h3 className="font-bold text-lg text-black">
-                    What will you buy?{" "}
-                  </h3>
-                  <h4 className="font-medium text-black">
-                    When you decide which apples to buy, you can give details:
-                  </h4>
-                </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-black">
+                      What will you buy?{" "}
+                    </h3>
+                    <h4 className="font-medium text-black">
+                      When you decide which apples to buy, you can give details:
+                    </h4>
+                  </div>
                   {Slide5Data.slice(0, visibleCount5).map((i, index) => (
                     <ul key={index} className="list-disc space-y-2">
                       <li className="text-lg font-medium text-black animate-fadeIn">
@@ -291,18 +292,26 @@ const Slide = () => {
                     </ul>
                   ))}
 
-                  {visibleCount5 > Slide5Data.length - 1 && (
-                    <div className="mt-5">
-                      <h3 className="font-bold text-xl text-black ">
-                        SUGGESTIVE RESPONSES:
-                      </h3>
-                      <p className="text-lg text-black ">
-                        The best item would be A. These apples are decently
-                        priced, have good customer reviews, and are freshly
-                        sold.
-                      </p>
-                    </div>
-                  )}
+                  {visibleCount5 > Slide5Data.length - 1 &&
+                    (show ? (
+                      <div className="mt-5">
+                        <h3 className="font-bold text-xl text-black ">
+                          SUGGESTIVE RESPONSES:
+                        </h3>
+                        <p className="text-lg text-black ">
+                          The best item would be A. These apples are decently
+                          priced, have good customer reviews, and are freshly
+                          sold.
+                        </p>
+                      </div>
+                    ) : (
+                      <button
+                        className="text-white bg-violet-900 px-5 py-2 rounded-lg cursor-pointer"
+                        onClick={() => setShow(true)}
+                      >
+                        Check Answer
+                      </button>
+                    ))}
 
                   {visibleCount5 < Slide5Data.length && (
                     <p className="text-gray-800 italic text-center">

@@ -145,7 +145,7 @@ export default function SlideB() {
                 </ul>
         <div className=" rounded-xl p-5  text-lg leading-10">
           <p className="text-black text-lg  leading-10">
-            I’d choose{" "}
+         I’d choose
             <span
               className="bg-blue-50 px-2 text-violet-900 capitalize"
               onDragOver={(e) => e.preventDefault()}
@@ -153,7 +153,7 @@ export default function SlideB() {
             >
               {blanks.gift || "______"}
             </span>{" "}
-            for Tiara because she loves{" "}
+           because I know she loves
             <span
               className="bg-blue-50 px-2 text-violet-900 capitalize"
               onDragOver={(e) => e.preventDefault()}
@@ -162,7 +162,7 @@ export default function SlideB() {
               {blanks.noun || "______"}
             </span>
             .
-            This item will definitely be an{" "}
+         This item will definitely be an
             <span
               className="bg-blue-50 px-2 text-violet-900 capitalize"
               onDragOver={(e) => e.preventDefault()}
@@ -170,7 +170,7 @@ export default function SlideB() {
             >
               {blanks.quality || "______"}
             </span>{" "}
-            gift as it is of a good quality{" "}
+          gift as it is of a good quality
             <span
               className="bg-blue-50 px-2 text-violet-900 capitalize"
               onDragOver={(e) => e.preventDefault()}
@@ -179,7 +179,7 @@ export default function SlideB() {
               {blanks.brand || "______"}
             </span>
             .
-            I am sure she will{" "}
+           I am sure she will
             <span
               className="bg-blue-50 px-2 text-violet-900 capitalize"
               onDragOver={(e) => e.preventDefault()}
@@ -187,7 +187,7 @@ export default function SlideB() {
             >
               {blanks.appreciate || "______"}
             </span>{" "}
-            me because it will remind her of our{" "}
+            me for giving this present because it will remind her of our
             <span
               className="bg-blue-50 px-2 text-violet-900 capitalize"
               onDragOver={(e) => e.preventDefault()}
@@ -195,7 +195,7 @@ export default function SlideB() {
             >
               {blanks.memory || "______"}
             </span>{" "}
-            whenever she uses it!
+           whenever she uses it!
           </p>
         </div>
       </div>

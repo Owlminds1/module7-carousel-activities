@@ -37,16 +37,15 @@ const Slide = () => {
     <div className="min-h-screen bg-[#F8FAFC] flex justify-center items-center p-5 flex-col gap-5">
       <div>
         <h4 className="text-3xl font-bold text-center text-black">
-        Anagrams
+        Find another word
         </h4>
 
-        {/* <p className="text-black text-lg ">
-          {activeSlide <= SlideData.length
-            ? "You’ve to choose a birthday gift for your friend Tiara."
-            : activeSlide === 5
-            ? "What would you choose? Think about"
-            : ""}
-        </p> */}
+        <p className="text-black text-lg ">
+ Find a different word using the same letters.
+        </p>
+        
+        <p className="text-zinc-600 italic text-lg ">
+For example: if you see tops, you can say: pots        </p>
       </div>
 
       <div className="w-[60%] flex justify-center items-center flex-col gap-3">

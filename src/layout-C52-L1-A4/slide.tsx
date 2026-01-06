@@ -146,21 +146,20 @@ const Slide = () => {
                 <div className="w-full col-span-12 flex flex-col justify-center items-center gap-6 p-3">
                   <div className=" rounded-xl p-5 w-[80%]  text-lg leading-10">
                     <p className="text-black text-xl  leading-10">
-                      I’d choose ______{" "}
+I’d choose  ______{" "}
                       <span className="font-bold">(any of the items) </span>
-                      for Tiara because she loves ______{" "}
+                      because I know she loves ______{" "}
                       <span className="font-bold">
                         {" "}
                         (any of the corresponding nouns){" "}
                       </span>
                       . This item will definitely be an ______{" "}
                       <span className="font-bold">(awesome) </span>
-                      gift as it is of a good quality ______{" "}
-                      <span className="font-bold">(brand) </span>. I am sure she
-                      will ______ <span className="font-bold">(thank) </span>
-                      me because it will remind her of our ______{" "}
+                     gift as it is of a good quality ______{" "}
+                      <span className="font-bold">(brand) </span>.  I am sure she will ______ <span className="font-bold">(thank) </span>
+                      me for giving this present because it will remind her of our ______{" "}
                       <span className="font-bold">(friendship) </span>
-                      whenever she uses it!
+                     whenever she uses it!
                     </p>
                   </div>
                 </div>

@@ -2,8 +2,52 @@
 
 import Image from "next/image";
 import TableDropdown from "./tableDropDown";
+import { useEffect, useState } from "react";
+
 
 const RatingTable = () => {
+
+const [values, setValues] = useState({
+    Water: "",
+    Diamond: "",
+    Pizza: "",
+    Sushi: "",
+  });
+
+  const [open, setOpen] = useState(false);
+
+  // ✅ Correct answers (CLIENT GIVEN)
+  const correctAnswers = {
+    Water: "Low",   // Canada
+    Diamond: "High",     // India
+    Pizza: "Low",    // Germany
+    Sushi: "High",        // Japan
+  };
+
+  const handleChange = (key: keyof typeof values, value: string) => {
+    setValues((prev) => ({
+      ...prev,
+      [key]: value,
+    }));
+  };
+
+  // Decide color status
+  const getStatus = (key: keyof typeof values) => {
+    if (!values[key]) return "neutral";
+    return values[key] === correctAnswers[key] ? "correct" : "wrong";
+  };
+
+  // 🎉 Celebration only when ALL correct
+  useEffect(() => {
+    const allCorrect = (Object.keys(correctAnswers) as Array<
+      keyof typeof correctAnswers
+    >).every((key) => values[key] === correctAnswers[key]);
+
+    if (allCorrect) {
+      setOpen(true);
+    }
+  }, [values]);
+  
   return (
     <div className="grid grid-cols-12 w-full border border-black text-sm">
       {/* HEADERS */}
@@ -29,7 +73,8 @@ const RatingTable = () => {
         Easily Accessible
       </div>
       <div className="border w-full min-h-[50px]  flex justify-center items-center col-span-4 border-black p-2 text-center">
-        <TableDropdown />
+        <TableDropdown onChange={(val) => handleChange("Water", val)}
+          status={getStatus("Water")} />
       </div>
 
       {/* ================== */}
@@ -43,7 +88,8 @@ const RatingTable = () => {
         Rarely Accessible
       </div>
       <div className="border w-full min-h-[50px]  flex justify-center items-center col-span-4 border-black p-2 text-center">
-        <TableDropdown />
+        <TableDropdown onChange={(val) => handleChange("Diamond", val)}
+          status={getStatus("Diamond")} />
       </div>
 
       {/* ================== */}
@@ -57,7 +103,8 @@ const RatingTable = () => {
         Easily Accessible
       </div>
       <div className="border w-full min-h-[50px]  flex justify-center items-center col-span-4 border-black p-2 text-center">
-        <TableDropdown />
+        <TableDropdown onChange={(val) => handleChange("Pizza", val)}
+          status={getStatus("Pizza")} />
       </div>
 
       {/* ================== */}
@@ -71,7 +118,8 @@ const RatingTable = () => {
         Sometimes Accessible
       </div>
       <div className="border w-full min-h-[50px]  flex justify-center items-center col-span-4 border-black p-2 text-center">
-        <TableDropdown />
+         <TableDropdown onChange={(val) => handleChange("Sushi", val)}
+          status={getStatus("Sushi")} />
       </div>
     </div>
   );

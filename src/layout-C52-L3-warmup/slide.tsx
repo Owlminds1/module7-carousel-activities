@@ -35,13 +35,12 @@ const Slide = () => {
           Homophones
         </h4>
 
-        {/* <p className="text-black text-lg ">
-          {activeSlide <= SlideData.length
-            ? "You’ve to choose a birthday gift for your friend Tiara."
-            : activeSlide === 5
-            ? "What would you choose? Think about"
-            : ""}
-        </p> */}
+        <p className="text-black text-lg  text-center">
+          For every word, give and spell a word that sounds similar but has another meaning. 
+<br /> Words that sound similar are called homophones.
+        </p>
+
+        
       </div>
 
       <div className="w-[60%] flex justify-center items-center flex-col gap-3">

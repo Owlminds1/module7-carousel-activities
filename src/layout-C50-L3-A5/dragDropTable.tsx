@@ -1,10 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { RefObject, useEffect, useState } from "react";
 import DragDataJson from "@/src/layout-C50-L3-A5/drag.json";
 import Welldone from "./wellDone";
 import { SwiperClass } from "swiper/react";
+import { MdDeleteForever } from "react-icons/md";
+
 
 type myprops={
   swiperRef: RefObject<SwiperClass | null>;
@@ -32,14 +33,12 @@ const DragDropTable = ({swiperRef}:myprops) => {
   const [shuffleData,setShuffleData]=useState(DragData)
   const [droppedItems, setDroppedItems] = useState<DroppedItem[]>([]);
 
-useEffect(()=>{
-setShuffleData((prev)=>[...prev].sort(()=>Math.random()- 0.5))
-},[])
+
 
 useEffect(()=>{
    swiperRef.current?.updateAutoHeight()
 },[droppedItems])
-  const usableBudget = 80; // 100 - 20 savings
+  const usableBudget = 200; // 100 - 20 savings
 
   // DRAG START
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>, item: DragItem) => {
@@ -119,6 +118,26 @@ const handleQtyChange = (idx: number, value: number) => {
 
 
 
+// REMOVE ITEM (on double click)
+const handleRemoveItem = (idx: number) => {
+  const itemToRemove = droppedItems[idx];
+
+  // remove from dropped list
+  const updatedDropped = droppedItems.filter((_, i) => i !== idx);
+  setDroppedItems(updatedDropped);
+
+  // add back to left list
+  setShuffleData((prev) => [...prev, itemToRemove]);
+};
+
+// useEffect(()=>{
+// setShuffleData((prev) =>
+//   prev.some((i) => i.item === itemToRemove.item)
+//     ? prev
+//     : [...prev, itemToRemove]
+// );
+
+// },[])
 
 
   return (
@@ -144,24 +163,25 @@ const handleQtyChange = (idx: number, value: number) => {
 
       {/* RIGHT TABLE */}
       <div
-      className="col-span-12 grid grid-cols-12 auto-rows-min shadow border"
+      className="col-span-12 grid grid-cols-10 auto-rows-min shadow border"
         onDragOver={handleDragOver}
         onDrop={handleDrop}
       >
         {/* HEADERS */}
-        <div className="col-span-3 border bg-violet-900 text-white p-2 font-bold text-center">ITEM</div>
-        <div className="col-span-3 border bg-violet-900 text-white p-2 font-bold text-center">QTY</div>
-        <div className="col-span-3 border bg-violet-900 text-white p-2 font-bold text-center">TOTAL</div>
+        <div className="col-span-2 border bg-violet-900 text-white p-2 font-bold text-center">ITEM</div>
+        <div className="col-span-2 border bg-violet-900 text-white p-2 font-bold text-center">QTY</div>
+        <div className="col-span-2 border bg-violet-900 text-white p-2 font-bold text-center">TOTAL</div>
         <div className="col-span-3 border bg-violet-900 text-white p-2 font-bold text-center">REASON</div>
+        <div className="col-span-1 "></div>
 
         {/* ROWS */}
         {droppedItems.map((item, idx) => (
           <div className="contents" key={idx}>
             {/* ITEM */}
-            <div className="col-span-3 text-black border p-3 text-center font-bold">{item.item}</div>
+            <div className="col-span-2 text-black border p-3 text-center font-bold">{item.item}</div>
 
             {/* QTY INPUT */}
-            <div className="col-span-3 text-black border p-3 text-center">
+            <div className="col-span-2 text-black border p-3 text-center">
               <input
               title="qty"
                 type="number"
@@ -172,10 +192,10 @@ const handleQtyChange = (idx: number, value: number) => {
             </div>
 
             {/* TOTAL */}
-            <div className="col-span-3 text-black border p-3 text-center font-bold">${item.total}</div>
+            <div className="col-span-2 text-black border p-3 text-center font-bold">${item.total}</div>
 
             {/* REASON */}
-            <div className="col-span-3 text-black border p-3 text-center">
+            <div className="col-span-3 text-black border p-1 text-center">
               <textarea
               rows={2}
                 placeholder="Enter reason..."
@@ -183,13 +203,21 @@ const handleQtyChange = (idx: number, value: number) => {
              
               />
             </div>
+            
+             <div className="col-span-1 flex justify-center items-center text-black border p-3 text-center">
+              <MdDeleteForever
+              className="text-red-700 text-2xl hover:scale-110 active:scale-95 transition-all duration-500 font-bold cursor-pointer"
+               onClick={() => handleRemoveItem(idx)}
+              />
+              
+            </div>
           </div>
         ))}
 
 
 
-        <div className="col-span-12 p-5 text-black border  border-dashed border-violet-900 text-center">Drop items here…</div>
-        <div className="col-span-12 p-5 text-black  text-center bg-violet-200 font-bold  text-xl "> Total Spend : ${droppedItems.reduce((sum,item)=> sum+item.total,0)}</div>
+        <div className="col-span-10 p-5 text-black border  border-dashed border-violet-900 text-center">Drop items here…</div>
+        <div className="col-span-10 p-5 text-black  text-center bg-violet-200 font-bold  text-xl "> Total Spend : ${droppedItems.reduce((sum,item)=> sum+item.total,0)}</div>
       </div>
       <Welldone open={open} setOpen={setOpen} text={message}/>
     </div>
