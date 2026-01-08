@@ -4,7 +4,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import  {  useRef, useState } from "react";
+import { useRef, useState } from "react";
 import MyImage from "@/components/myImage";
 
 import FlipCard from "./dragSlide";
@@ -15,19 +15,14 @@ const Slide = () => {
 
   const handlePrev = () => {
     swiperRef?.current?.slidePrev();
- 
   };
   const handleNext = () => {
     swiperRef?.current?.slideNext();
   };
   const handleSlideChange = (swiper: SwiperClass) => {
     setActiveSlide(swiper.activeIndex);
-  
   };
 
-  
-
- 
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex justify-center items-center p-5 flex-col gap-5">
       <div>
@@ -61,92 +56,105 @@ const Slide = () => {
                   <MyImage path="/C49Images/needs_and_wants.jpg" />
                 </div>
                 <div className=" col-span-6 w-full flex justify-center items-center flex-col gap-5 ">
-                  <h3 className="text-black font-bold text-lg">What Is A Need?</h3>
-                  <p className="text-black/80 w-full ">“A situation when something is necessary or must be done:</p>
+                  <h3 className="text-black font-bold text-lg">
+                    What Is A Need?
+                  </h3>
+                  <p className="text-black/80 w-full ">
+                    “A situation when something is necessary or must be done:
+                  </p>
                   <ul className="list-disc w-full space-y-3 px-2">
                     <li className="text-lg font-medium text-black">
-                    To satisfy/meet/fulfil a need
+                      To satisfy/meet/fulfil a need
                     </li>
 
                     <li className="text-lg font-medium text-black">
-                     Need for something”
+                      Need for something”
                     </li>
                   </ul>
                   <p className="text-black/80 w-full ">For example: water</p>
 
-
-
-                     <h3 className="text-black font-bold text-lg">What Is A Want?</h3>
-                  <p className="text-black/80 w-full">“A situation in which there is not enough of something” thus creating a want</p>
-                    <p className="text-black/80 w-full ">For example: toys</p>
-                 
-
-                 
+                  <h3 className="text-black font-bold text-lg">
+                    What Is A Want?
+                  </h3>
+                  <p className="text-black/80 w-full">
+                    “A situation in which there is not enough of something” thus
+                    creating a want
+                  </p>
+                  <p className="text-black/80 w-full ">For example: toys</p>
                 </div>
-                <div className="col-span-12 text-black/60 text-center py-3 italic">Definitions from Oxford learners’ dictionary</div>
+                <div className="col-span-12 text-black/60 text-center py-3 italic">
+                  Definitions from Oxford learners’ dictionary
+                </div>
               </div>
             </SwiperSlide>
 
-             <SwiperSlide>
-            <div className="grid grid-cols-12 w-full place-items-center">
-         
-              
-              <div className="col-span-12 w-full flex justify-center items-center">
-
-                  <iframe width="600" height="400" src="https://www.youtube.com/embed/FVXKig5tlXQ?si=e3GWMZob4RWjqGXB" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            <SwiperSlide>
+              <div className="grid grid-cols-12 w-full place-items-center">
+                <div className="col-span-12 w-full flex justify-center items-center">
+                  <iframe
+                    width="600"
+                    height="400"
+                    src="https://www.youtube.com/embed/FVXKig5tlXQ?si=e3GWMZob4RWjqGXB"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                </div>
               </div>
-              
-            </div>
             </SwiperSlide>
-            
-            
-            
-             <SwiperSlide>
-            <div className="grid grid-cols-12 w-full p-5 place-items-center">
-         
-              
-              <div className="col-span-12 w-full flex justify-center items-center">
- <ul className="list-disc  space-y-3 px-2">
+
+            <SwiperSlide>
+              <div className="grid grid-cols-12 w-full gap-6 p-5 place-items-center">
+                <div className="col-span-12 w-full flex justify-center items-center">
+                  <ul className="list-disc w-[60%]  space-y-3 px-2">
                     <li className="text-lg font-medium text-black">
-                   Use the boxes to draw three different things you need
+                      Grab a sheet of paper and fold it in the middle.
                     </li>
 
                     <li className="text-lg font-medium text-black">
-                 Use the boxes to draw three different things you want
+                      On each side, draw three square boxes.
+                    </li>
+
+                    <li className="text-lg font-medium text-black">
+                     On the left side, draw objects that you think are Wants in the three boxes. On the right side, draw three objects that you think are Needs in the boxes.
                     </li>
                   </ul>
+                
+                </div>
+                <div className="col-span-12 w-[60%] ">
+                    <div className="grid grid-cols-12 w-full">
+                    <div className="col-span-6 w-full font-bold text-lg border border-black text-black text-center ">Wants</div>
+                    <div className="col-span-6 w-full font-bold text-lg border border-black text-black text-center ">Needs</div> 
+                    
+                    <div className="col-span-6 border-black w-full font-bold text-lg border text-black text-center p-5 flex justify-center items-center gap-3">
+                      <div className="w-5 h-5 border border-black"></div>
+                      <div className="w-5 h-5 border border-black"></div>
+                      <div className="w-5 h-5 border border-black"></div>
+                    </div>
+
+                      <div className="col-span-6 border-black w-full font-bold text-lg border text-black text-center p-5 flex justify-center items-center gap-3">
+                      <div className="w-5 h-5 border border-black"></div>
+                      <div className="w-5 h-5 border border-black"></div>
+                      <div className="w-5 h-5 border border-black"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              
-            </div>
             </SwiperSlide>
 
+            <SwiperSlide>
+              <div className="grid grid-cols-12 gap-5 w-full place-items-center p-5">
+                <div className="col-span-12 w-full flex justify-center items-center">
+                  <FlipCard />
+                </div>
 
-              <SwiperSlide>
-            <div className="grid grid-cols-12 gap-5 w-full place-items-center p-5">
-         
-              
-              
-              
-              <div className="col-span-12 w-full flex justify-center items-center">
-<FlipCard/>
+                <div className="col-span-12 w-full my-3 italic text-center text-black/60">
+                  Source: OpenUse Twinkle Worksheets
+                </div>
               </div>
-
-
-
-
-
-              <div className="col-span-12 w-full my-3 italic text-center text-black/60">
-                Source: OpenUse Twinkle Worksheets
-              </div>
-              
-            </div>
             </SwiperSlide>
-
-         
-
-            
           </Swiper>
-
         </div>
 
         {/* slide buttons  */}
@@ -162,9 +170,7 @@ const Slide = () => {
           <span
             onClick={handleNext}
             className={` ${
-              activeSlide < 3
-                ? "visible"
-                : "invisible"
+              activeSlide < 3 ? "visible" : "invisible"
             }  cursor-pointer text-black text-4xl border border-black rounded-full p-3  bg-yellow-400`}
           >
             <FaArrowRight />

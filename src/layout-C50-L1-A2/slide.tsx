@@ -86,7 +86,7 @@ useEffect(()=>{
 
 {
   showReason && 
-                     <h4 className=" animate-fadeIn text-lg w-[60%] text-center text-violet-900 italic font-medium">
+                     <h4 className=" animate-fadeIn text-xl w-[60%] text-center text-violet-900 italic font-medium">
                       {item.Reasons}
                     </h4>
 }
