@@ -16,10 +16,10 @@ import MenuCardSLide from "./menuCardSLide";
 const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
 
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(0);
-  const [visibleCount2, setVisibleCount2] = useState(0);
-  const [visibleCount3, setVisibleCount3] = useState(0);
+  const [activeSlide, setActiveSlide] = useState(1);
+  const [visibleCount, setVisibleCount] = useState(1);
+  const [visibleCount2, setVisibleCount2] = useState(1);
+  const [visibleCount3, setVisibleCount3] = useState(1);
 
   const handlePrev = () => {
     swiperRef.current?.slidePrev();
@@ -86,6 +86,12 @@ const Slide = () => {
         <p className="text-black text-lg text-center ">
           {activeSlide === 1
             ? "Let’s apply these tips to ordering at a restaurant!"
+            : ""}
+        </p>
+        
+         <p className="text-black text-lg text-center ">
+          {activeSlide === 1
+            ? "You go to a restaurant with your parents. You’ve the liberty to order any item you want for a total budget of $50. You’ve to think about"
             : ""}
         </p>
       </div>

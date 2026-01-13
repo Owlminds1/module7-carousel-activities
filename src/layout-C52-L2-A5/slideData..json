@@ -1,7 +1,7 @@
 [
     {
         "text":"Rafael’s bank is different from the bank of his brother. He has to transfer some money for his brother’s birthday as soon as possible.",
-        "img":"/C52Images/",
+        "img":"/C52Images/Wire_Transfer.jpg",
         "question":"What would he choose?",
         "opt":["Cheque","IMPS","PayPal"],
         "val":"IMPS"
@@ -9,7 +9,7 @@
     
     {
         "text":"Rainer has to send some money to his friend in a different country as a consultation fee. But it’s the weekend so the bank service is not open.",
-        "img":"/C52Images/",
+        "img":"/C52Images/Banking.jpg",
         "question":"What would he choose?",
         "opt":["Try apps like WISE and PayPal","Send a cheque","Wait until the bank is open"],
         "val":"Try apps like WISE and PayPal"
@@ -17,7 +17,7 @@
     
     {
         "text":"Tina has to send some money internationally from her bank.",
-        "img":"/C52Images/",
+        "img":"/C52Images/Details.png",
         "question":"What would she need?",
         "opt":["Bank Account Number","Bank Account Number, IBAN number and Swift Code, Details of the recipient","IBAN number and Swift Code"],
         "val":"Bank Account Number, IBAN number and Swift Code, Details of the recipient"
@@ -27,7 +27,7 @@
     
     {
         "text":"Sonny has to send money to himself from one bank to another but he has very little time.",
-        "img":"/C52Images/",
+        "img":"/C52Images/Payment.png",
         "question":" What would he choose?",
         "opt":["Instant transfer","Cheque","Cash"],
         "val":"Instant transfer"

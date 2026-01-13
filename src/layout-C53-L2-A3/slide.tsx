@@ -18,6 +18,9 @@ import TableSlide3 from "./tableSlide3";
 import TableSlide1 from "./tableSlide";
 import TableSlide2 from "./tableSlide2";
 import Image from "next/image";
+import SetA from "./setA-sugg";
+import SetB from "./setB-sugg";
+import SetC from "./setC-sugg";
 
 const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
@@ -88,18 +91,26 @@ const Slide = () => {
     ? "ASSESSING VALUE (LOYALTY)"
     : activeSlide >= 3 && activeSlide <= 5
     ? "THINKING ABOUT VALUE"
-    : activeSlide >= 6 && activeSlide <= 8
+    : activeSlide === 6
     ? "PRODUCT REVIEW"
-    : ""}
+    : activeSlide ===7 ? "Suggestive responses": activeSlide === 8
+    ? "PRODUCT REVIEW"
+    : activeSlide ===9 ? "Suggestive responses": activeSlide === 10
+    ? "PRODUCT REVIEW"
+    : activeSlide ===11 ? "Suggestive responses": ""}
 </h4>
 
 
       <p className="text-black text-lg text-center ">
   {activeSlide >= 3 && activeSlide <= 5
     ? "Here are some things to look out for when buying products:"
-    : activeSlide >= 6 && activeSlide <= 8
-    ? "Let’s select a product based on preferences. You will have to justify each choice."
-    : ""}
+    : activeSlide === 6
+    ? " Let’s select a product based on preferences. You will have to justify each choice. There’s no right answer, just a reasonable response would suffice. "
+    : activeSlide ===7 ? "": activeSlide === 8
+    ? " Let’s select a product based on preferences. You will have to justify each choice. There’s no right answer, just a reasonable response would suffice. "
+    : activeSlide ===9 ? "": activeSlide === 10
+    ? " Let’s select a product based on preferences. You will have to justify each choice. There’s no right answer, just a reasonable response would suffice. "
+    : activeSlide ===11 ? "": ""}
 </p>
 
       </div>
@@ -189,12 +200,12 @@ const Slide = () => {
 
             <SwiperSlide>
               <div className="grid grid-cols-12 w-full place-items-center p-2">
-                <div className="col-span-12 w-[60%]">
+                <div className="col-span-12 flex flex-col gap-4 justify-center items-center w-[60%]">
                   <h4 className="text-xl text-black text-center">
                     <span className="font-bold">a{`)`} </span> Things are not
                     what they seem.
                   </h4>
-                  <p className="text-black/80 text-center text-lg ">
+                  <p className="text-black/90 text-center text-lg ">
                     It is the job of advertising and marketing to make a product
                     look better than it really is. Very few brands rely on
                     authenticity i.e. being genuine in their communication to
@@ -222,12 +233,12 @@ const Slide = () => {
                 <div className="col-span-6 w-full flex flex-col  justify-center items-center gap-2">
                   {
                     showQuestion &&
-                  <h3 className="text-black text-lg font-bold">{item.text}</h3>
+                  <h3 className="text-black text-xl font-bold">{item.text}</h3>
                   }
                   <ul className="list-disc ">
                     {
                       showAnswer && 
-                    <li className="text-lg text-black/80 animate-fadeIn">
+                    <li className="text-lg text-black/90 animate-fadeIn">
                     {item.subText}
                     </li>
                     }
@@ -252,11 +263,11 @@ const Slide = () => {
 
             <SwiperSlide>
               <div className="grid grid-cols-12 w-full place-items-center p-2">
-                <div className="col-span-12 w-[60%]">
+                <div className="col-span-12 flex flex-col gap-4 justify-center items-center w-[60%]">
                   <h4 className="text-xl text-black text-center">
                     <span className="font-bold">b{`)`} </span> The value of the product varies according to the profiles of the buyers.
                   </h4>
-                  <p className="text-black/80 text-center text-lg ">
+                  <p className="text-black/90 text-center text-lg ">
                    Different buyers have different needs. The same product can have varieties to suit the requirements of diverse buyers.
                   </p>
                 </div>
@@ -281,12 +292,12 @@ const Slide = () => {
                 <div className="col-span-6 w-full flex flex-col  justify-center items-center gap-2">
                   {
                     showQuestion &&
-                  <h3 className="text-black text-lg font-bold">{item.text}</h3>
+                  <h3 className="text-black text-xl font-bold">{item.text}</h3>
                   }
                   <ul className="list-disc ">
                     {
                       showAnswer && 
-                    <li className="text-lg text-black/80 animate-fadeIn">
+                    <li className="text-lg text-black/90 animate-fadeIn">
                     {item.subText}
                     </li>
                     }
@@ -318,11 +329,11 @@ const Slide = () => {
 
               <SwiperSlide>
               <div className="grid grid-cols-12 w-full place-items-center p-2">
-                <div className="col-span-12 w-[60%]">
+                <div className="col-span-12 flex flex-col gap-4 justify-center items-center w-[60%]">
                   <h4 className="text-xl text-black text-center">
-                    <span className="font-bold">c{`)`} </span>Accessibility to a product affects its value
+                    <span className="font-bold text-xl">c{`)`} </span>Accessibility to a product affects its value
                   </h4>
-                  <p className="text-black/80 text-center text-lg ">
+                  <p className="text-black/90 text-center text-lg ">
                 The cost of the product doesn’t define its value. Some products are expensive but not useful, whereas other products are affordable but very useful and valuable.
                   </p>
                 </div>
@@ -346,7 +357,7 @@ const Slide = () => {
                    <div className="relative w-50 h-50 ">
                    <Image fill alt="image" src="/C53Images/Water.jpg" />
                  </div>
-                  <h3 className="text-black   text-lg text-center w-full">{item.titel1}</h3>
+                  <h3 className="text-black   text-xl text-center w-full">{item.titel1}</h3>
                  </div>
                  
 
@@ -402,11 +413,27 @@ const Slide = () => {
             </SwiperSlide>
             
             <SwiperSlide>
+              <SetA/>
+            </SwiperSlide>
+
+
+            
+            <SwiperSlide>
               <TableSlide2/>
             </SwiperSlide>
             
+
+ <SwiperSlide>
+              <SetB/>
+            </SwiperSlide>
+
               <SwiperSlide>
               <TableSlide3/>
+            </SwiperSlide>
+
+
+            <SwiperSlide>
+              <SetC/>
             </SwiperSlide>
 
          
@@ -430,7 +457,7 @@ const Slide = () => {
           <span
             onClick={handleNext}
             className={`${
-              activeSlide < 8 ? "visible" : "invisible"
+              activeSlide < 11 ? "visible" : "invisible"
             } cursor-pointer text-black text-4xl border border-black rounded-full p-3 bg-yellow-400`}
           >
             <FaArrowRight />

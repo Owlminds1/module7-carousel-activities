@@ -1,0 +1,55 @@
+[
+  {
+    "text":"SCHOOLBAG",
+    "val":"NEEDS",
+    "image":"/C49Images/"
+  },
+  
+  {
+    "text":"PING PONG RACKET",
+    "val":"",
+    "image":"/C49Images/"
+  },
+  
+  {
+    "text":"WATER",
+    "val":"NEEDS",
+    "image":"/C49Images/"
+  },
+  
+  {
+    "text":"POKEMAN CARDS",
+    "val":"",
+    "image":"/C49Images/"
+  },
+  
+  {
+    "text":"CLOTHES",
+    "val":"NEEDS",
+    "image":"/C49Images/"
+  },
+  
+  {
+    "text":"VIDEO GAMES",
+    "val":"",
+    "image":"/C49Images/"
+  },
+  
+  {
+    "text":"NUTRITIONAL FOOD",
+    "val":"NEEDS",
+    "image":"/C49Images/"
+  },
+  
+  {
+    "text":"GLITTER",
+    "val":"",
+    "image":"/C49Images/"
+  },
+  
+  {
+    "text":"HOME",
+    "val":"NEEDS",
+    "image":"/C49Images/"
+  }
+]

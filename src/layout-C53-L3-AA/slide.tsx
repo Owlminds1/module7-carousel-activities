@@ -63,9 +63,15 @@ const handleDel = (index: number) => {
             : "SUGGESTIVE SHOPPING LIST"}
         </h4>
 
-        <p className="text-black text-lg ">
+        <p className="text-black text-xl text-center ">
           {activeSlide === 1
             ? "Edit the shopping list to make it suitable with only needs and not wants. Add your comments about the original list."
+            : ""}
+        </p> 
+        
+        <p className="text-black text-xl text-center ">
+          {activeSlide === 1
+            ? "Revise the shopping list to make it suitable with only needs and not wants. Make comments about items on the list based on needs and wants."
             : ""}
         </p>
       </div>
@@ -232,10 +238,7 @@ const handleDel = (index: number) => {
                
                 </div>
 
-                <div className="col-span-12 w-[50%]">
-                  <h3 className="font-bold text-black text-lg ">Comments:</h3>
-                  <p className="text-black text-md font-medium">Most items are for more than one person. Many are too expensive. These are not needs but wants. To focus on the needs, I’d revise this way.</p>
-                </div>
+               
               </div>
             </SwiperSlide>
 
@@ -299,6 +302,14 @@ const handleDel = (index: number) => {
                     1
                   </div>
 
+                </div>
+
+
+                 <div className="col-span-12 w-[60%]">
+                  <h3 className="font-bold text-black text-lg ">Comments:</h3>
+                  <p className="text-black text-md font-medium">Most items are for more than one person. Many are too expensive. These are not needs but wants. To focus on the needs, I’d revise this way.</p>
+
+                  <textarea placeholder="write your comment here"  className="w-full text-black  p-2 rounded-lg border-2 mt-3 outline-0" rows={3} />
                 </div>
               </div>
             </SwiperSlide>

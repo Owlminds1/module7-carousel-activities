@@ -48,7 +48,7 @@ const FirstSlide = () => {
     <div className="grid grid-cols-12 gap-3 w-full place-items-start ">
         
 <div className="col-span-12 w-full flex justify-center items-center">
-    <MyImage path="/C52Images/DP.jpeg"/>
+    <MyImage path="/C52Images/A3-Slide1.png"/>
 </div>
 
 
@@ -88,7 +88,7 @@ const FirstSlide = () => {
           RECURRING PAYMENTS?
         </div>
         <div className="col-span-2 bg-violet-900 p-2 text-sm  text-nowrap text-white text-center font-bold w-full ">
-          REFUDS?
+          REFUNDS?
         </div>
         <div className="col-span-2 bg-violet-900 p-2 text-sm  text-nowrap text-white text-center font-bold w-full ">
           CONFIRMATION

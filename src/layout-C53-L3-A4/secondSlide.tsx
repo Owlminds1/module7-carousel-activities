@@ -89,20 +89,20 @@ const SecondSlide = () => {
 
       {/* Decorations Table */}
       <div className="grid grid-cols-12 w-[80%] place-items-center">
-        <div className="col-span-6 p-1 text-center text-white bg-violet-900 font-bold w-full">Decorations Items</div>
-        <div className="col-span-2 p-1 text-center text-white bg-violet-900 font-bold w-full">Price ($)</div>
-        <div className="col-span-2 p-1 text-center text-white bg-violet-900 font-bold w-full">Quantity</div>
-        <div className="col-span-2 p-1 text-center text-white bg-violet-900 font-bold w-full">TOTAL</div>
+        <div className="col-span-6 p-2 text-center text-white bg-violet-900 font-bold w-full">Decorations Items</div>
+        <div className="col-span-2 p-2 text-center text-white bg-violet-900 font-bold w-full">Price ($)</div>
+        <div className="col-span-2 p-2 text-center text-white bg-violet-900 font-bold w-full">Quantity</div>
+        <div className="col-span-2 p-2 text-center text-white bg-violet-900 font-bold w-full">TOTAL</div>
 
         {Decorations.map((item, index) => (
           <React.Fragment key={index}>
-            <div className="col-span-6 p-1 border w-full flex justify-between items-center px-3 text-black">
+            <div className="col-span-6 text-xl p-1 border w-full flex justify-between items-center px-3 text-black">
               {item.text}
               <input
                 title="click"
-              type="checkbox" className="w-4 h-4 accent-violet-900 cursor-pointer" checked={decChecked[index]} onChange={() => handleDecCheck(index)} />
+              type="checkbox" className="w-5 h-5  accent-violet-900  cursor-pointer" checked={decChecked[index]} onChange={() => handleDecCheck(index)} />
             </div>
-            <div className="col-span-2 border p-1 w-full text-center text-black">{item.price}</div>
+            <div className="col-span-2 border p-1 w-full text-center text-xl text-black">{item.price}</div>
             <div className="col-span-2 border p-1 w-full text-center">
               <input
                 title="Quantity"
@@ -112,30 +112,30 @@ const SecondSlide = () => {
                 value={decQty[index]}
                 disabled={!decChecked[index]}
                 onChange={(e) => handleDecChange(index, Number(e.target.value))}
-                className="w-full text-black px-2 outline-0"
+                className="w-full text-black text-xl px-2 outline-0"
               />
             </div>
-            <div className="col-span-2 border p-1 text-black w-full text-center">{decTotal[index]}</div>
+            <div className="col-span-2 border  text-xl p-1 text-black w-full text-center">{decTotal[index]}</div>
           </React.Fragment>
         ))}
       </div>
 
       {/* Food Table */}
       <div className="grid grid-cols-12 w-[80%] place-items-center">
-        <div className="col-span-6 p-1 text-center text-white bg-violet-900 font-bold w-full">Food Items</div>
-        <div className="col-span-2 p-1 text-center text-white bg-violet-900 font-bold w-full">Price ($)</div>
-        <div className="col-span-2 p-1 text-center text-white bg-violet-900 font-bold w-full">Quantity</div>
-        <div className="col-span-2 p-1 text-center text-white bg-violet-900 font-bold w-full">TOTAL</div>
+        <div className="col-span-6 p-2 text-center text-white bg-violet-900 font-bold w-full">Food Items</div>
+        <div className="col-span-2 p-2 text-center text-white bg-violet-900 font-bold w-full">Price ($)</div>
+        <div className="col-span-2 p-2 text-center text-white bg-violet-900 font-bold w-full">Quantity</div>
+        <div className="col-span-2 p-2 text-center text-white bg-violet-900 font-bold w-full">TOTAL</div>
 
         {Foods.map((item, index) => (
           <React.Fragment key={index}>
-            <div className="col-span-6 p-1 border w-full flex justify-between items-center px-3 text-black">
+            <div className="col-span-6 text-xl p-1 border w-full flex justify-between items-center px-3 text-black">
               {item.text}
               <input 
               title="click"
-              type="checkbox" className="w-4 h-4 accent-violet-900 cursor-pointer" checked={foodChecked[index]} onChange={() => handleFoodCheck(index)} />
+              type="checkbox" className="w-5 h-5 accent-violet-900 cursor-pointer" checked={foodChecked[index]} onChange={() => handleFoodCheck(index)} />
             </div>
-            <div className="col-span-2 border text-black p-1 w-full text-center">{item.price}</div>
+            <div className="col-span-2 text-xl border text-black p-1 w-full text-center">{item.price}</div>
             <div className="col-span-2 border p-1 w-full text-center">
               <input
               title="Quantity"
@@ -145,10 +145,10 @@ const SecondSlide = () => {
                 value={foodQty[index]}
                 disabled={!foodChecked[index]}
                 onChange={(e) => handleFoodChange(index, Number(e.target.value))}
-                className="w-full px-2 text-black outline-0"
+                className="w-full px-2 text-xl text-black outline-0"
               />
             </div>
-            <div className="col-span-2 border text-black p-1 w-full text-center">{foodTotal[index]}</div>
+            <div className="col-span-2 text-xl border text-black p-1 w-full text-center">{foodTotal[index]}</div>
           </React.Fragment>
         ))}
       </div>

@@ -15,8 +15,8 @@ const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
 
   const [activeSlide, setActiveSlide] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(0);
-  const [visibleCount2, setVisibleCount2] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(1);
+  const [visibleCount2, setVisibleCount2] = useState(1);
 
   const handlePrev = () => {
     swiperRef.current?.slidePrev();
@@ -37,35 +37,26 @@ const Slide = () => {
       if (current === 0) {
         setVisibleCount((prev) => (prev < SlideData.length ? prev + 1 : prev));
       }
-      
-      if (current === 1) {
-        setVisibleCount2((prev) => (prev < Slide2Data.length ? prev + 1 : prev));
-      }
-    }; window.addEventListener("keydown", handleKeyPress);
-    return () => window.removeEventListener("keydown", handleKeyPress);
-  }, [
-    ,
-    visibleCount,
 
-    activeSlide,
-  ]);
+      if (current === 1) {
+        setVisibleCount2((prev) =>
+          prev < Slide2Data.length ? prev + 1 : prev
+        );
+      }
+    };
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
+  }, [, visibleCount, activeSlide]);
 
   // Auto height update
   useEffect(() => {
     swiperRef.current?.updateAutoHeight();
-  }, [
-    visibleCount,
-  
-    activeSlide,
-  ]);
+  }, [visibleCount, activeSlide]);
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex justify-center items-center p-5 flex-col gap-5">
       <div>
-        <h4 className="text-3xl font-bold text-center text-black">
-    Locate
-        </h4>
-
+        <h4 className="text-3xl font-bold text-center text-black">Locate</h4>
       </div>
 
       <div className="w-[90%] flex justify-center items-center flex-col gap-3">
@@ -80,74 +71,79 @@ const Slide = () => {
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             onSlideChange={handleSlideChange}
           >
-        
-             
-           <SwiperSlide >
-                <div className="grid grid-cols-12 w-full  gap-5 place-items-center p-2">
-                  <div className="col-span-6 w-full min-h-[100px] flex justify-center items-center ">
-                    <MyImage path="/C53Image" />
-                  </div>
-
-                  <div className="col-span-6 w-full min-h-[100px] flex flex-col justify-center items-center ">
-                    <ul className="list-disc space-y-2">
-                      {SlideData.slice(0, visibleCount).map((item, index) => (
-                        <li key={index} className="text-black text-lg  ">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-
-                       <div className="col-span-12 text-center w-full">
-                  {SlideData.length > visibleCount && (
-                    <p className="text-gray-800 mt-3 text-center italic font-normal">
-                      (Enter to show more points)
-                    </p>
-                  )}
+            <SwiperSlide>
+              <div className="grid grid-cols-12 w-full  gap-5 place-items-center p-2">
+                <div className="col-span-6 w-full min-h-[100px] flex justify-center items-center ">
+                  <MyImage path="/C53Image" />
                 </div>
-                  </div>
-                  
 
-                  <div className="col-span-12 w-full ">
-                    <h2 className="text-gray-600 text-md italic text-center ">
-                      (Activity inspired by “Fresh & Fun Critical-Thinking Activities” By Laurie Rozakis)
-                    </h2>
+                <div className="col-span-6 w-full min-h-[100px] flex flex-col justify-center items-center ">
+                  <ul className="list-disc space-y-2">
+                    {SlideData.slice(0, visibleCount).map((item, index) => (
+                      <li key={index} className="text-black text-xl  ">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="col-span-12 text-center w-full">
+                    {SlideData.length > visibleCount && (
+                      <p className="text-gray-800 mt-3 text-center italic font-normal">
+                        (Enter to show more points)
+                      </p>
+                    )}
                   </div>
                 </div>
-              </SwiperSlide>
 
-
-               <SwiperSlide >
-                <div className="grid grid-cols-12 w-full  gap-5 place-items-center p-2">
-                  <div className="col-span-6 w-full min-h-[100px] flex justify-center items-center ">
-                    <MyImage path="/C53Image" />
-                  </div>
-
-                  <div className="col-span-6 w-full min-h-[100px] flex flex-col justify-center items-center ">
-                    <ul className="list-disc space-y-2">
-                      {Slide2Data.slice(0, visibleCount2).map((item, index) => (
-                        <li key={index} className="text-black text-lg ">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-
-                       <div className="col-span-12 text-center w-full">
-                  {Slide2Data.length > visibleCount2 && (
-                    <p className="text-gray-800 mt-3 text-center italic font-normal">
-                      (Enter to show more points)
-                    </p>
-                  )}
+                <div className="col-span-12 w-full ">
+                  <h2 className="text-gray-600 text-md italic text-center ">
+                    (Activity inspired by “Fresh & Fun Critical-Thinking
+                    Activities” By Laurie Rozakis)
+                  </h2>
                 </div>
-                  </div>
-                  
+              </div>
+            </SwiperSlide>
 
-                  <div className="col-span-12 w-full ">
-                    <h2 className="text-gray-600 text-md italic text-center ">
-                      (Activity inspired by “Fresh & Fun Critical-Thinking Activities” By Laurie Rozakis)
-                    </h2>
+            <SwiperSlide>
+              <div className="grid grid-cols-12 w-full  gap-5 place-items-center p-2">
+                <div className="col-span-6 w-full min-h-[100px] flex justify-center items-center ">
+                  <MyImage path="/C53Image" />
+                </div>
+
+                <div className="col-span-6 w-full min-h-[100px] flex flex-col justify-center items-center ">
+                  <ul className="list-disc space-y-2">
+                    {Slide2Data.slice(0, visibleCount2).map((item, index) => (
+                      <li key={index} className="text-black text-xl ">
+                        {item}
+                      </li>
+                    ))}
+
+                    {Slide2Data.length-1 < visibleCount2 && (
+                      <p className="text-xl my-3 text-black/90 font-medium">
+                       <span className="font-bold">Example : </span>Take right from your home, then turn left at the grocery
+                        store. Go around the roundabout then take a right at the
+                        florist shop. The bank will be on your left.
+                      </p>
+                    )}
+                  </ul>
+
+                  <div className="col-span-12 text-center w-full">
+                    {Slide2Data.length > visibleCount2 && (
+                      <p className="text-gray-800 mt-3 text-center italic font-normal">
+                        (Enter to show more points)
+                      </p>
+                    )}
                   </div>
                 </div>
-              </SwiperSlide>
+
+                <div className="col-span-12 w-full ">
+                  <h2 className="text-gray-600 text-md italic text-center ">
+                    (Activity inspired by “Fresh & Fun Critical-Thinking
+                    Activities” By Laurie Rozakis)
+                  </h2>
+                </div>
+              </div>
+            </SwiperSlide>
           </Swiper>
         </div>
 

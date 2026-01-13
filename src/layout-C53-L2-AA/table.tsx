@@ -2,6 +2,7 @@ import Image from "next/image";
 import FoodData from "@/src/layout-C53-L2-AA/food.json";
 import CLOTHESData from "@/src/layout-C53-L2-AA/CLOTHES.json";
 import SHOESSData from "@/src/layout-C53-L2-AA/SHOES.json";
+import STATIONARY from "@/src/layout-C53-L2-AA/STATIONARY.json"
 import { FaRegCheckCircle } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { SwiperClass } from "swiper/react";
@@ -81,6 +82,52 @@ const Table = ({ swiperRef }: myProps) => {
   return (
     <div className="grid grid-cols-12 place-items-start w-full   gap-3">
       <div className="col-span-6  grid grid-cols-12 gap-y-10  w-full rounded-lg   shadow p-2">
+
+          <div className="col-span-12 grid grid-cols-12 gap-3   w-full ">
+          <div className="col-span-12  w-full border-b  border-black p-1 text-center font-bold text-xl text-black">
+            STATIONARY
+          </div>
+
+          {STATIONARY.map((item, index) => (
+            <div className="col-span-6 w-[80%] mx-auto " key={index}>
+              <div
+                onClick={() => handleClick(item, item.id)}
+                className={` ${
+                  activeIndex.includes(item.id)
+                    ? "border-2 border-black shadow-lg w-full shadow-black"
+                    : ""
+                } shadow cursor-pointer  relative   overflow-hidden rounded-lg`}
+              >
+                <div className="w-full h-25 relative border  bg-amber-200">
+                  <Image src={item.image} objectFit="cover" fill alt="image" />
+                </div>
+
+                  <div className="bg-violet-900 px-1 min-h-20 flex justify-center items-center flex-col">
+                  <h3 className=" text-md  text-white text-center font-bold">
+                    {" "}
+                    {item.text}
+                  </h3>
+                  <h3 className=" text-xs font-normal text-white text-center">
+                    {" "}
+                    {item.val}
+                  </h3>
+                  <h3 className="text-white text-center font-bold  text-md">
+                    {" "}
+                    {item.price}$
+                  </h3>
+                </div>
+
+                <span
+                  className={` ${
+                    activeIndex.includes(item.id) ? "block" : "hidden"
+                  } absolute top-0 z-20  right-0.5`}
+                >
+                  <FaRegCheckCircle className="bg-black text-white rounded-full text-lg" />
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
         <div className="col-span-12 grid grid-cols-12 gap-3   w-full ">
           <div className="col-span-12  w-full border-b  border-black p-1 text-center font-bold text-xl text-black">
             Food

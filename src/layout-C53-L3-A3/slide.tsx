@@ -70,11 +70,11 @@ const Slide = () => {
             ? "FORMULATING QUESTIONS"
             : ""}
         </h4>
-        <p className="text-black text-lg text-center ">
+        {/* <p className="text-black text-lg text-center ">
           {activeSlide === 1
             ? "List questions you can ask sales to ensure that you’re buying what you need."
             : ""}
-        </p>
+        </p> */}
       </div>
 
       <div className="w-full flex justify-center items-center flex-col gap-3">

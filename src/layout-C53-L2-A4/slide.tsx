@@ -13,16 +13,17 @@ import Slide3Data from "@/src/layout-C53-L2-A4/pointers3.json";
 import Slide4Data from "@/src/layout-C53-L2-A4/pointers4.json";
 
 import MyImage from "@/components/myImage";
+import Welldone from "./wellDone";
 
 const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
+  const [open, setOpen] = useState(false);
 
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(0);
-  const [visibleCount2, setVisibleCount2] = useState(0);
-  const [visibleCount3, setVisibleCount3] = useState(0);
-  const [visibleCount4, setVisibleCount4] = useState(0);
-
+  const [activeSlide, setActiveSlide] = useState(1);
+  const [visibleCount, setVisibleCount] = useState(1);
+  const [visibleCount2, setVisibleCount2] = useState(1);
+  const [visibleCount3, setVisibleCount3] = useState(1);
+  const [visibleCount4, setVisibleCount4] = useState(1);
 
   const handlePrev = () => {
     swiperRef.current?.slidePrev();
@@ -52,7 +53,7 @@ const Slide = () => {
 
       if (current === 1) {
         setVisibleCount2((prev) =>
-          prev < Slide2Data.length * 2? prev + 1 : prev
+          prev < Slide2Data.length * 2 ? prev + 1 : prev
         );
       }
 
@@ -67,8 +68,6 @@ const Slide = () => {
           prev < Slide4Data.length * 2 ? prev + 1 : prev
         );
       }
-
-    
     };
 
     window.addEventListener("keydown", handleKeyPress);
@@ -86,18 +85,18 @@ const Slide = () => {
   // Auto height update
   useEffect(() => {
     swiperRef.current?.updateAutoHeight();
-  }, [
-    visibleCount,
-    visibleCount2,
-    visibleCount3,
-    visibleCount4,
-    activeSlide,
-  ]);
+  }, [visibleCount, visibleCount2, visibleCount3, visibleCount4, activeSlide]);
+
+  useEffect(() => {
+    if (Slide4Data.length * 2 === visibleCount4) {
+      setOpen(true);
+    }
+  }, [visibleCount4]);
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex justify-center items-center p-5 flex-col gap-5">
       <div>
-        <h4 className="text-2xl font-bold text-center text-black">
+        {/* <h4 className="text-2xl font-bold text-center text-black">
           {activeSlide === 0
             ? "WHAT TO CONSIDER BEFORE PURCHASE"
             : activeSlide === 1
@@ -107,6 +106,18 @@ const Slide = () => {
             : activeSlide === 3
             ? "Watch this video "
             :""}
+        </h4> */}
+
+        <h4 className="text-2xl font-bold text-center text-black">
+          {activeSlide === 0
+            ? "TIPS & TRICKS OF ADVERTISING"
+            : activeSlide === 1
+            ? "TIPS & TRICKS OF ADVERTISING"
+            : activeSlide === 2
+            ? "TIPS & TRICKS OF ADVERTISING"
+            : activeSlide === 3
+            ? "Watch this video "
+            : "TIPS & TRICKS OF ADVERTISIN1"}
         </h4>
 
         <p className="text-black text-lg text-center ">
@@ -139,12 +150,16 @@ const Slide = () => {
                 {SlideData.slice(0, visibleCount).map((item, index) => (
                   <React.Fragment key={index}>
                     <div className="col-span-6 w-full flex justify-center items-center">
-                      <MyImage path={item.img} />
+                      {index === SlideData.length - 1 ? (
+                        ""
+                      ) : (
+                        <MyImage path={item.img} />
+                      )}
                     </div>
                     <div className="col-span-6 w-full flex flex-col  justify-center items-center gap-2">
                       <div className="w-full ">
                         <ul className="list-disc w-full">
-                          <li className="text-lg  text-black animate-fadeIn">
+                          <li className="text-xl  text-black/90 animate-fadeIn">
                             <span className="font-bold">{item.text} : </span>
                             {item.answer}
                           </li>
@@ -179,13 +194,13 @@ const Slide = () => {
                     return (
                       <div className="w-full " key={index}>
                         {showQuestion && (
-                          <h3 className="text-xl font-bold text-black animate-fadeIn">
+                          <h3 className="text-2xl font-bold text-black animate-fadeIn">
                             {item.text}
                           </h3>
                         )}
 
                         {showAnswer && (
-                          <h3 className="text-md font-bold mb-3 text-black/60 animate-fadeIn">
+                          <h3 className="text-xl font-bold my-2 text-black/60 animate-fadeIn">
                             {" "}
                             Answer : {item.subText}
                           </h3>
@@ -207,7 +222,6 @@ const Slide = () => {
 
             <SwiperSlide>
               <div className="grid grid-cols-12 w-full place-items-center p-2">
-                
                 <div className="col-span-6 w-full flex justify-center items-center">
                   <MyImage path="/C53Images/Shipping.png" />
                 </div>
@@ -221,13 +235,13 @@ const Slide = () => {
                     return (
                       <div className="w-full " key={index}>
                         {showQuestion && (
-                          <h3 className="text-xl font-bold text-black animate-fadeIn">
+                          <h3 className="text-2xl font-bold text-black animate-fadeIn">
                             {item.text}
                           </h3>
                         )}
 
                         {showAnswer && (
-                          <h3 className="text-md font-bold mb-3 text-black/60 animate-fadeIn">
+                          <h3 className="text-xl font-bold my-2 text-black/60 animate-fadeIn">
                             {" "}
                             Answer : {item.subText}
                           </h3>
@@ -249,15 +263,22 @@ const Slide = () => {
 
             <SwiperSlide>
               <div className="grid grid-cols-12 gap-y-5 w-full place-items-center p-2">
-               <div className="col-span-12 flex justify-center items-center">
-                <iframe width="600" height="400" src="https://www.youtube.com/embed/g7031Ty6hqw?si=8vqJlx2tb5nVz8ru" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-               </div>
+                <div className="col-span-12 flex justify-center items-center">
+                  <iframe
+                    width="600"
+                    height="400"
+                    src="https://www.youtube.com/embed/g7031Ty6hqw?si=8vqJlx2tb5nVz8ru"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                </div>
               </div>
             </SwiperSlide>
 
-             <SwiperSlide>
+            <SwiperSlide>
               <div className="grid grid-cols-12 w-full place-items-center p-2">
-                
                 <div className="col-span-6 w-full flex justify-center items-center">
                   <MyImage path="/C53Images/Nike.png" />
                 </div>
@@ -271,13 +292,13 @@ const Slide = () => {
                     return (
                       <div className="w-full " key={index}>
                         {showQuestion && (
-                          <h3 className="text-xl font-bold text-black animate-fadeIn">
+                          <h3 className="text-2xl font-bold text-black animate-fadeIn">
                             {item.text}
                           </h3>
                         )}
 
                         {showAnswer && (
-                          <h3 className="text-md font-bold mb-3 text-black/60 animate-fadeIn">
+                          <h3 className="text-xl font-bold my-2 text-black/60 animate-fadeIn">
                             {" "}
                             Answer : {item.subText}
                           </h3>
@@ -296,8 +317,6 @@ const Slide = () => {
                 </div>
               </div>
             </SwiperSlide>
-
-         
           </Swiper>
         </div>
 
@@ -322,6 +341,7 @@ const Slide = () => {
           </span>
         </div>
       </div>
+      <Welldone open={open} setOpen={setOpen} msg="Activity Completed" />
     </div>
   );
 };

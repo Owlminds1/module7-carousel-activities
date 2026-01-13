@@ -8,12 +8,19 @@ import { BsCartDash } from "react-icons/bs";
 import Welldone from "./wellDone";
 
 
+type tableDataType = {
+  image: string;
+  text: string;
+  price: number;
+  val:string
+};
+
 type myProps = {
   swiperRef: React.RefObject<SwiperClass | null>;
 };
 const Table = ({ swiperRef }: myProps) => {
   const [activeIndex, setActiveIndex] = useState<number[]>([]);
-  const [cartArry, setCartArry] = useState<typeof TableData>([]);
+  const [cartArry, setCartArry] = useState<tableDataType[]>([]);
   const [count, setCount] = useState(0);
   const [open, setOpen] = useState(false);
   const [text, setText] = useState("");
@@ -21,9 +28,17 @@ const Table = ({ swiperRef }: myProps) => {
   const moneySpent = cartArry.reduce((total, item) => total + item.price, 0);
   const remainingMoney = 50 - moneySpent;
 
-  const handleClick = (data: any, index: number) => {
+  const handleClick = (data: tableDataType, index: number) => {
     const isItemalreadyInCart = cartArry.some((i) => i.text === data.text);
+
+
+    
     if (!isItemalreadyInCart) {
+
+      if(data.val==="not recommended"){
+        setOpen(true);
+        setText("This item is not based on needs, so it is not recommended.");
+      }
       const newTotal = moneySpent + data.price;
       if (newTotal > 50) {
         setText("You cannot add more items !");

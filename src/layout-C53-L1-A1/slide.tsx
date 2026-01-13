@@ -14,6 +14,7 @@ const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
 
   const [activeSlide, setActiveSlide] = useState(0);
+  const [show,setShow] = useState(false);
 
   const [open, setOpen] = useState(false);
 
@@ -27,6 +28,7 @@ const Slide = () => {
 
   const handleSlideChange = (swiper: SwiperClass) => {
     setActiveSlide(swiper.activeIndex);
+    setShow(false);
   };
 
   // Auto height update
@@ -71,10 +73,22 @@ const Slide = () => {
             {SlideData.map((i, index) => (
               <SwiperSlide key={index}>
                 <div className="grid grid-cols-12 w-full place-items-center p-2">
-                  <div className="col-span-12  w-full  flex min-h-[100px]  justify-center items-center gap-8">
+                  <div className="col-span-12 flex-col  w-full  flex min-h-[100px]  justify-center items-center gap-8">
                     <h3 className="text-2xl text-center font-bold text-black">
                       {i.text}
                     </h3>
+
+{
+  show ?  <h3 className="text-2xl animate-fadeIn text-center font-medium text-violet-900">
+                      {i.answer}
+                    </h3>
+
+                    : <button className="bg-violet-900 px-8 py-2 rounded-lg cursor-pointer text-white  " onClick={() => setShow(true)}>Show Answer</button>
+}
+
+                    
+
+
                   </div>
                 </div>
               </SwiperSlide>

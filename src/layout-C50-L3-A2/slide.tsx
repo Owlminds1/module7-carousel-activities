@@ -21,13 +21,13 @@ import RatingTable from "./ratingTable";
 
 const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(0);
-  const [visibleCount2, setVisibleCount2] = useState(0);
-  const [visibleCount3, setVisibleCount3] = useState(0);
-  const [visibleCount4, setVisibleCount4] = useState(0);
-  const [visibleCount5, setVisibleCount5] = useState(0);
-  const [visibleCount6, setVisibleCount6] = useState(0);
+  const [activeSlide, setActiveSlide] = useState(1);
+  const [visibleCount, setVisibleCount] = useState(1);
+  const [visibleCount2, setVisibleCount2] = useState(1);
+  const [visibleCount3, setVisibleCount3] = useState(1);
+  const [visibleCount4, setVisibleCount4] = useState(1);
+  const [visibleCount5, setVisibleCount5] = useState(1);
+  const [visibleCount6, setVisibleCount6] = useState(1);
 
   const handlePrev = () => {
     swiperRef.current?.slidePrev();
@@ -107,7 +107,7 @@ const Slide = () => {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex justify-center items-center p-5 flex-col gap-5">
-      <div>
+      <div className="flex justify-center items-center gap-3 flex-col">
         <h4 className="text-3xl font-bold text-center text-black">
           {activeSlide === 0
             ? "ASSESSING VALUE (MONEY) "
@@ -125,7 +125,9 @@ const Slide = () => {
             ? "PRODUCT REVIEW"
             : activeSlide === 7
             ? "PRODUCT REVIEW EXAMPLE"
-            : activeSlide >= 8 ? "PRODUCT REVIEW": ""}
+            : activeSlide >= 8
+            ? "PRODUCT REVIEW"
+            : ""}
         </h4>
 
         <p className="text-black text-lg ">
@@ -135,11 +137,13 @@ const Slide = () => {
             ? "Here is a list of products. The same product is sold by multiple brands. You will see the following against each brand"
             : activeSlide === 7
             ? "For example: If this is what you know about a phone brand:"
-            : activeSlide > 7 ? "Now let’s select based on preferences. You will have to justify each choice. There’s no right answer, just a reasonable response would suffice.": ""}
+            : activeSlide > 7
+            ? "Now let’s select based on preferences. You will have to justify each choice. There’s no right answer, just a reasonable response would suffice."
+            : ""}
         </p>
       </div>
 
-      <div className=" w-[90%] flex justify-center items-center flex-col gap-3  ">
+      <div className=" w-[95%] flex justify-center items-center flex-col gap-3  ">
         <div className="w-full shadow-md p-3 min-h-[200px]  ">
           <Swiper
             loop={false}
@@ -372,7 +376,7 @@ const Slide = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className="grid grid-cols-12 gap-8 w-full place-items-center p-2">
+              <div className="grid grid-cols-12 gap-8 gap-y-20 mt-15 w-full place-items-center p-2">
                 {Slide7Data.map((i, index) => (
                   <React.Fragment key={index}>
                     <div className="col-span-6 flex justify-center items-center gap-2  w-full">
@@ -425,131 +429,129 @@ const Slide = () => {
                   <MyImage path="/C50Images/Phones.jpg" />
                 </div>
 
-                <div className="col-span-12     w-[70%]">
-                 
-                 <div className="grid grid-cols-12">
-                   <div className="col-span-3 w-full bg-violet-900 text-white text-center border">
-                    BRAND
-                  </div>
+                <div className="col-span-12  flex justify-center items-center gap-y-6 flex-col   w-[70%]">
+                  <div className="grid grid-cols-12 ">
+                    <div className="col-span-3 p-2 w-full bg-violet-900 text-white text-center border">
+                      BRAND
+                    </div>
 
-                   <div className="col-span-3 w-full bg-violet-900 text-white text-center border">
-                    Service
-                  </div>
+                    <div className="col-span-3 p-2 w-full bg-violet-900 text-white text-center border">
+                      Service
+                    </div>
 
-                   <div className="col-span-3 w-full bg-violet-900 text-white text-center border">
-                    Quality
-                  </div>
+                    <div className="col-span-3 p-2 w-full bg-violet-900 text-white text-center border">
+                      Quality
+                    </div>
 
-                   <div className="col-span-3 w-full bg-violet-900 text-white text-center border">
-                    Upgrades 
-                  </div>
+                    <div className="col-span-3 p-2 w-full bg-violet-900 text-white text-center border">
+                      Upgrades
+                    </div>
 
-                   <div className="col-span-3 w-full text-black text-center border p-2">
-                    XYZ 
-                  </div>
+                    <div className="col-span-3  w-full text-black text-center border p-2">
+                      XYZ
+                    </div>
 
-                   <div className="col-span-3 w-full text-black text-center border p-2">
-                    Amazing  
-                  </div>
-                  
-                  
                     <div className="col-span-3 w-full text-black text-center border p-2">
-                    Amazing  
-                  </div> 
-                  
-                   <div className="col-span-3 w-full text-black text-center border p-2">
-                    every 3 years or so  
-                  </div>
+                      Amazing
+                    </div>
 
-
-                   <div className="col-span-3 w-full text-black text-center border p-2">
-                  EFG
-                  </div>
-                  
                     <div className="col-span-3 w-full text-black text-center border p-2">
-                  Poor 
+                      Amazing
+                    </div>
+
+                    <div className="col-span-3 w-full text-black text-center border p-2">
+                      every 3 years or so
+                    </div>
+
+                    <div className="col-span-3 w-full text-black text-center border p-2">
+                      EFG
+                    </div>
+
+                    <div className="col-span-3 w-full text-black text-center border p-2">
+                      Poor
+                    </div>
+
+                    <div className="col-span-3 w-full text-black text-center border p-2">
+                      Decent
+                    </div>
+
+                    <div className="col-span-3 w-full text-black text-center border p-2">
+                      Every 2 years or so
+                    </div>
+
+                    <div className="col-span-3 w-full text-black text-center border p-2">
+                      LMN
+                    </div>
+
+                    <div className="col-span-3 w-full text-black text-center border p-2">
+                      Decent
+                    </div>
+
+                    <div className="col-span-3 w-full text-black text-center border p-2">
+                      Amazing
+                    </div>
+
+                    <div className="col-span-3 w-full text-black text-center border p-2">
+                      Every 2 years or so
+                    </div>
                   </div>
-                  
-                  <div className="col-span-3 w-full text-black text-center border p-2">
-                 Decent  
+
+                  <div className="col-span-12 w-full text-black text-center  p-2">
+                    This is the rating you’d give to each brand based on
+                    service, quality, and upgrades
                   </div>
-                  
-                   <div className="col-span-3 w-full text-black text-center border p-2">
-                 Every 2 years or so  
+                  <div className="col-span-12 w-full text-black flex flex-col gap-2  p-2">
+                    <h4 className="font-bold text-black text-lg">
+                      Here’s the final question:
+                    </h4>
+                    <h4 className="font-bold text-black text-xl">
+                      Which product would you choose?
+                    </h4>
+                    <p className="text-black">
+                      In this example, while all the categories should have the
+                      highest stars, the reality isn’t that. So here you have to
+                      prioritise what’s most important to you: service, quality,
+                      or upgrades.
+                    </p>
+
+                    <ul className="list-disc space-y-3 px-5 w-full">
+                      <li className="text-black">
+                        If you are service oriented, you’d choose XYZ
+                      </li>
+
+                      <li className="text-black">
+                        If you’re quality oriented, you’d choose the best of
+                        two: XYZ OR LMN
+                      </li>
+
+                      <li className="text-black">
+                        If you’re upgrade oriented, you’d choose either EFG or
+                        LMN
+                      </li>
+                    </ul>
                   </div>
-
-
-                   <div className="col-span-3 w-full text-black text-center border p-2">
-               LMN
-                  </div>
-                  
-                  <div className="col-span-3 w-full text-black text-center border p-2">
-             Decent 
-                  </div>
-                  
-                   <div className="col-span-3 w-full text-black text-center border p-2">
-             Amazing  
-                  </div> 
-                  
-                  
-                  <div className="col-span-3 w-full text-black text-center border p-2">
-             Every 2 years or so  
-                  </div>
-                  
-                  
-                   <div className="col-span-12 w-full text-black text-center  p-2">
-            This is the rating you’d give to each brand based on service, quality, and upgrades
-                  </div>
-  <div className="col-span-12 w-full text-black flex flex-col gap-2  p-2">
-           <h4 className="font-bold text-black text-lg">Here’s the final question:</h4>
-           <h4 className="font-bold text-black text-xl">Which product would you choose?</h4>
-           <p className="text-black" >
-            In this example, while all the categories should have the highest stars, the reality isn’t that. So here you have to prioritise what’s most important to you: service, quality, or upgrades.
-           </p>
-
-
-           <ul className="list-disc space-y-3 px-5 w-full">
-            <li className="text-black">If you are service oriented, you’d choose XYZ</li> 
-            
-            <li className="text-black">If you’re quality oriented, you’d choose the best of two: XYZ OR LMN</li>
-            
-            
-            <li className="text-black">If you’re upgrade oriented, you’d choose either EFG or LMN</li>
-           </ul>
-                  </div>
-                 </div>
-
-
-                
-                                 </div>
-
-
-
-                
-
-
+                </div>
               </div>
             </SwiperSlide>
-{
-  Slide9Data.map((i,index)=>(
+            {Slide9Data.map((i, index) => (
+              <SwiperSlide key={index}>
+                <div className="grid grid-cols-12 w-full">
+                  <div className="col-span-6 w-full flex justify-center items-center ">
+                    <MyImage path={i.image} />
+                  </div>
 
-            <SwiperSlide key={index}>
-<div className="grid grid-cols-12 w-full">
-  <div className="col-span-6 w-full flex justify-center items-center ">
-    <MyImage path={i.image}/>
-  </div>
-
-  <div className="col-span-6 w-full flex flex-col gap-5 justify-start items-center">
-    <h4 className="text-xl font-bold text-black">Set {i.set} : {i.name}</h4>
-<RatingTable ratingTable={i.ratingTable}/>
-    <h4 className="text-lg font-bold text-black">Which product would you choose?</h4>
-  </div>
-</div>
-
-            </SwiperSlide>
-  ))
-
-}
+                  <div className="col-span-6 w-full flex flex-col gap-5 justify-start items-center">
+                    <h4 className="text-xl font-bold text-black">
+                      Set {i.set} : {i.name}
+                    </h4>
+                    <RatingTable ratingTable={i.ratingTable} />
+                    <h4 className="text-lg font-bold text-black">
+                      Which product would you choose?
+                    </h4>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
 

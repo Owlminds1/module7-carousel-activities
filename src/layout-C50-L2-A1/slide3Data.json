@@ -2,28 +2,35 @@
     {
         "title":"Cheque book",
         "text":"A book of cheques i.e. “a printed form, used instead of money, to make payments from your bank account”",
-        "img":"/C50Images/",
+        "img":"/C50Images/Check.jpg",
          "suggestion":""
     },
 
     {
         "title":"Coupon",
-        "text":"“A stock is a share in the ownership of a company.”",
-        "img":"/C50Images/",
+        "text":"“A piece of paper that can be used to get something without paying for it, or at a reduced price.”",
+        "img":"/C50Images/Coupon.jpg",
+         "suggestion":""
+    },
+    
+    {
+        "title":"Stocks",
+        "text":" “A stock is a share in the ownership of a company.”",
+        "img":"/C50Images/stocks.png",
          "suggestion":""
     },
     
     {
         "title":"Bonds",
         "text":"“A bond is an agreement to lend money to a company for a certain amount of time.”",
-        "img":"/C50Images/",
+        "img":"/C50Images/Bonds.png",
         "suggestion":"“Companies sell securities to people to get the money they need to grow. People buy securities as investments, or ways of possibly earning money.”"
     },
 
      {
         "title":"Mutual Funds",
         "text":"“a service where financial experts invest the money of many people in many different companies.”",
-        "img":"/C50Images/",
+        "img":"/C50Images/Mutual_Funds.jpeg",
         "suggestion":"“Companies sell securities to people to get the money they need to grow. People buy securities as investments, or ways of possibly earning money.”"
     }
 ]

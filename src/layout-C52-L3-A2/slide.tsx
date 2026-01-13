@@ -104,6 +104,12 @@ const Slide = () => {
                     </p>
                   )}
                 </div>
+
+                <div className="col-span-12 w-full">
+                    <p className="text-gray-800 mt-3 text-center italic font-normal">
+                     All definitions are directly quoted from the Merriam Webster or Cambridge dictionary.
+                    </p>
+                </div>
               </div>
             </SwiperSlide>
 
@@ -124,7 +130,9 @@ const Slide = () => {
                     <p className="text-gray-800 mt-3 text-center italic font-normal">
                       All definitions are directly quoted from the Merriam
                       Webster or Cambridge dictionary.
-                    </p>
+                    </p> 
+                    
+                   
                 
 
                 
@@ -198,7 +206,7 @@ const Slide = () => {
           <span
             onClick={handleNext}
             className={`${
-              activeSlide < 8 ? "visible" : "invisible"
+              activeSlide < 3 ? "visible" : "invisible"
             } cursor-pointer text-black text-4xl border border-black rounded-full p-3 bg-yellow-400`}
           >
             <FaArrowRight />
