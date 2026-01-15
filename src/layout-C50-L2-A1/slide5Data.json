@@ -1,0 +1,20 @@
+[
+    {
+        "text":"What is a common thread between all four users?",
+        "answer":["All users don’t save or invest, but three users don’t give either."],
+        "img":"/C50Images/Common.png"
+    },
+
+     {
+        "text":"How does the author suggest making changes to using money?",
+        "answer":["The author suggests the users teach each other how to manage money for today and the future."],
+        "img":"/C50Images/Mimi_and_JJ.png"
+    },
+    
+    
+    {
+        "text":"What do the four money bears do after following the author’s advice?",
+        "answer":["The users decide to start a program called the budget to teach each other how to manage money. They work together to follow the four money bear rules: spend cautiously, save diligently, invest wisely, give generously."],
+        "img":"/C50Images/Mimi_and_JJ.png"
+    }
+]

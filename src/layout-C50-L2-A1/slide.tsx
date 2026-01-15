@@ -4,18 +4,21 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import MyImage from "@/components/myImage";
 
 import SlideData from "@/src/layout-C50-L2-A1/pointers.json";
 import Slide3Data from "@/src/layout-C50-L2-A1/slide3Data.json";
 import Slide4Data from "@/src/layout-C50-L2-A1/slide4Data.json";
+import Slide5Data from "@/src/layout-C50-L2-A1/slide5Data.json";
 import QuestionData from "@/src/layout-C50-L2-A1/Question.json";
 import DragSlide from "./dragSlide";
 const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(1);
+  const [visibleCount4, setVisibleCount4] = useState(1);
+  const [visibleCount5, setVisibleCount5] = useState(1);
 
   const handlePrev = () => {
     swiperRef?.current?.slidePrev();
@@ -25,19 +28,44 @@ const Slide = () => {
   };
   const handleSlideChange = (swiper: SwiperClass) => {
     setActiveSlide(swiper.activeIndex);
-    scroll(0,0)
+    scroll(0, 0);
   };
 
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.key === "Enter") {
-        setVisibleCount((prev) => (prev < SlideData.length ? prev + 1 : prev));
+      if (e.key !== "Enter" && e.code !== "Enter") return;
+
+      const current = swiperRef.current?.activeIndex ?? activeSlide;
+
+      // Slide 0
+      if (current === 0) {
+        setVisibleCount((prev) =>
+          prev < SlideData.length  ? prev + 1 : prev
+        );
+      }
+
+
+       if (current === 3) {
+        setVisibleCount4((prev) =>
+          prev < Slide4Data.length *2 ? prev + 1 : prev
+        );
+      }
+
+       if (current === 5) {
+        setVisibleCount5((prev) =>
+          prev < Slide5Data.length *2 ? prev + 1 : prev
+        );
       }
     };
 
     window.addEventListener("keydown", handleKeyPress);
     return () => window.removeEventListener("keydown", handleKeyPress);
-  }, []);
+  }, [, visibleCount4, activeSlide]);
+
+  // Auto height update
+  useEffect(() => {
+    swiperRef.current?.updateAutoHeight();
+  }, [visibleCount4,visibleCount5, activeSlide]);
 
   const [selected, setSelected] = useState<(string | null)[]>(
     Array(QuestionData.length).fill(null)
@@ -63,17 +91,17 @@ const Slide = () => {
             ? "FOUR MONEY BEARS Q&A"
             : activeSlide === 4
             ? "FOUR MONEY BEARS Q&A"
-            :  activeSlide === 5
+            : activeSlide === 5
             ? "FOUR MONEY BEARS Q&A"
-            : activeSlide === 6 ? "Drag and place each action into columns relating to user profiles." :""}
+            : activeSlide === 6
+            ? "FOUR MONEY BEARS"
+            : ""}
         </h4>
 
-        <p className="text-black py-2 text-lg font-normal">
-          {activeSlide === 2
+        <p className="text-black py-2 text-center text-lg font-normal">
+          {activeSlide === 1
             ? "Here are some terms you will see in the video:"
-            : activeSlide === 4
-            ? "Select the correct title for the definition of each user."
-            : ""}
+            : activeSlide === 6 ? "Drag and place each action into columns relating to user profiles.": ""}
         </p>
       </div>
 
@@ -90,23 +118,7 @@ const Slide = () => {
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             onSlideChange={handleSlideChange}
           >
-            <SwiperSlide>
-              <div className="grid grid-cols-12 w-full place-items-center">
-                <div className="col-span-12 w-full flex justify-center items-center">
-                  <iframe
-                    width="600"
-                    height="400"
-                    src="https://www.youtube.com/embed/HBegTK7G5vE?si=SVZUrKvqS1WJnMz5"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
-            </SwiperSlide>
-
-
+            
             <SwiperSlide>
               <div className="grid grid-cols-12 place-items-center p-2">
                 <div className="col-span-6 w-full flex justify-center items-center ">
@@ -117,7 +129,7 @@ const Slide = () => {
                     {SlideData.slice(0, visibleCount).map((i, index) => (
                       <li
                         key={index}
-                        className="text-lg font-medium text-black"
+                        className="text-lg font-medium text-black animate-fadeIn"
                       >
                         {i}
                       </li>
@@ -133,7 +145,7 @@ const Slide = () => {
               </div>
             </SwiperSlide>
 
-            <SwiperSlide>
+             <SwiperSlide>
               {Slide3Data.map((i, index) => (
                 <div
                   key={index}
@@ -153,31 +165,80 @@ const Slide = () => {
               ))}
             </SwiperSlide>
 
-            <SwiperSlide>
-              {Slide4Data.map((i, index) => (
-                <div
-                  key={index}
-                  className="grid grid-cols-12 place-items-center p-2"
-                >
-                  <div className="col-span-6 w-full flex justify-center items-center ">
-                    <MyImage path={i.img} />
-                  </div>
-                  <div className=" col-span-6 w-full flex justify-start items-start flex-col gap-5 ">
-                    <h3 className="text-xl font-bold text-black">{i.text}</h3>
-                    <ul className="list-disc space-y-3 p-3">
-                      {i.answer.map((list, list_index) => (
-                        <li key={list_index} className="text-lg text-black ">
-                          {list}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+             <SwiperSlide>
+              <div className="grid grid-cols-12 w-full place-items-center">
+                <div className="col-span-12 w-full flex justify-center items-center">
+                  <iframe
+                    width="600"
+                    height="400"
+                    src="https://www.youtube.com/embed/HBegTK7G5vE?si=SVZUrKvqS1WJnMz5"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
                 </div>
-              ))}
+              </div>
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className="p-6 space-y-10 flex justify-center items-center flex-col">
+               <div className="grid grid-cols-12 place-items-center p-2">
+              {Slide4Data.map((i, index) => {
+                const stepIndex = index * 2;
+                const showQuestion = visibleCount4 > stepIndex;
+                const showImage = visibleCount4 > stepIndex;
+                const showAnswer = visibleCount4 > stepIndex + 1;
+
+                return (
+                  <React.Fragment key={index}>
+                   
+                      <div className="col-span-6 w-full flex justify-center items-center ">
+                        {showImage && <MyImage path={i.img} />}
+                      </div>
+                      <div className=" col-span-6 w-full flex justify-start items-start flex-col gap-5 ">
+                        {showQuestion && (
+                          <h3 className="text-xl animate-fadeIn font-bold text-black">
+                            {i.text}
+                          </h3>
+                        )}
+                        {showQuestion && (
+                          <textarea
+                            placeholder="write here..."
+                            rows={2}
+                            className="border animate-fadeIn text-black p-2 focus:ring-1 border-black rounded-lg  outline-0 w-[70%] "
+                          />
+                        )}
+
+                        {showAnswer && (
+                          <ul className="list-disc space-y-3 p-3">
+                            {i.answer.map((list, list_index) => (
+                              <li
+                                key={list_index}
+                                className="text-lg text-violet-900 animate-fadeIn "
+                              >
+                                {list}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                      
+                   
+                  </React.Fragment>
+                );
+              })}
+              <div className="col-span-12 text-center w-full">
+                        {Slide4Data.length * 2 > visibleCount4 && (
+                          <p className="text-gray-800 mt-3 text-center italic font-normal">
+                            (Enter to show more points)
+                          </p>
+                        )}
+                      </div>
+                      </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className=" flex justify-center items-center flex-col">
                 <MyImage path="/C50Images/Four_MB.png" />
 
                 {QuestionData.map((item, qIndex) => (
@@ -203,7 +264,7 @@ const Slide = () => {
                               key={i}
                               onClick={() => handleClick(qIndex, opt)}
                               className={`
-                        w-full py-3 min-w-[200px] rounded-lg text-white font-semibold transition cursor-pointer
+                        w-full py-2 min-w-[200px] active:scale-95  duration-300 rounded-lg text-white font-semibold transition cursor-pointer
                         ${
                           userChoice
                             ? isCorrect
@@ -226,66 +287,66 @@ const Slide = () => {
               </div>
             </SwiperSlide>
 
-            <SwiperSlide>
-             <div className="flex justify-center items-center flex-col gap-8">
-               <div className="grid border grid-cols-12 gap-y-5 place-items-center w-full p-5">
-                <div className="col-span-6 w-full flex justify-center items-center ">
-                  <MyImage path="/C50Images/Common.png" />
-                </div>
-                <div className=" col-span-6 w-full flex justify-start items-start flex-col gap-5 ">
-                  <h3 className="text-xl font-bold text-black">
-                    What is a common thread between all four users?
-                  </h3>
-                  <ul className="list-disc space-y-3 p-3">
-                    <li className="text-lg text-black ">
-                      All users don’t save or invest, but three users don’t give
-                      either.
-                    </li>
-                  </ul>
-                </div>
-              </div>
+             <SwiperSlide>
+               <div className="grid grid-cols-12 place-items-center p-2">
+              {Slide5Data.map((i, index) => {
+                const stepIndex = index * 2;
+                const showQuestion = visibleCount5 > stepIndex;
+                const showImage = visibleCount5 > stepIndex;
+                const showAnswer = visibleCount5 > stepIndex + 1;
 
-              <div className="grid  border grid-cols-12 gap-y-5 place-items-center w-full p-5">
-                <div className="col-span-6 w-full flex justify-center items-center ">
-                  <MyImage path="/C50Images/Teach.png" />
-                </div>
-                <div className=" col-span-6 w-full flex justify-start items-start flex-col gap-5 ">
-                  <h3 className="text-xl font-bold text-black">
-                    How does the author suggest making changes to using money?
-                  </h3>
-                  <ul className="list-disc space-y-3 p-3">
-                    <li className="text-lg text-black ">
-                      The author suggests the users teach each other how to
-                      manage money for today and the future.
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                return (
+                  <React.Fragment key={index}>
+                   
+                      <div className="col-span-6 w-full flex justify-center items-center ">
+                        {showImage && <MyImage path={i.img} />}
+                      </div>
+                      <div className=" col-span-6 w-full flex justify-start items-start flex-col gap-5 ">
+                        {showQuestion && (
+                          <h3 className="text-xl animate-fadeIn font-bold text-black">
+                            {i.text}
+                          </h3>
+                        )}
+                        {showQuestion && (
+                          <textarea
+                            placeholder="write here..."
+                            rows={2}
+                            className="border animate-fadeIn text-black p-2 focus:ring-1 border-black rounded-lg  outline-0 w-[70%] "
+                          />
+                        )}
 
-              <div className="grid border grid-cols-12 gap-y-5 place-items-center w-full p-5 ">
-                <div className="col-span-6 w-full flex justify-center items-center ">
-                  <MyImage path="/C50Images/Teach.png" />
-                </div>
-                <div className=" col-span-6 w-full flex justify-start items-start flex-col gap-5 ">
-                  <h3 className="text-xl font-bold text-black">
-                    What do the four money bears do after following the author’s
-                    advice?
-                  </h3>
-                  <ul className="list-disc space-y-3 p-3">
-                    <li className="text-lg text-black ">
-                      The users decide to start a program called the budget to
-                      teach each other how to manage money. They work together
-                      to follow the four money bear rules: spend cautiously,
-                      save diligently, invest wisely, give generously.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-             </div>
+                        {showAnswer && (
+                          <ul className="list-disc space-y-3 p-3">
+                            {i.answer.map((list, list_index) => (
+                              <li
+                                key={list_index}
+                                className="text-lg text-violet-900 animate-fadeIn "
+                              >
+                                {list}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                      
+                   
+                  </React.Fragment>
+                );
+              })}
+              <div className="col-span-12 text-center w-full">
+                        {Slide5Data.length * 2 > visibleCount5 && (
+                          <p className="text-gray-800 mt-3 text-center italic font-normal">
+                            (Enter to show more points)
+                          </p>
+                        )}
+                      </div>
+                      </div>
             </SwiperSlide>
 
-             <SwiperSlide>
-           <DragSlide/>
+            
+
+            <SwiperSlide>
+              <DragSlide />
             </SwiperSlide>
           </Swiper>
         </div>
