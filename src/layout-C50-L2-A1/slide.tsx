@@ -19,6 +19,13 @@ const Slide = () => {
   const [visibleCount, setVisibleCount] = useState(1);
   const [visibleCount4, setVisibleCount4] = useState(1);
   const [visibleCount5, setVisibleCount5] = useState(1);
+  const [show, setShow] = useState<boolean[]>(
+    Array(Slide4Data.length).fill(false)
+  );
+
+  const [showSuggestion5, setShowSuggestion5] = useState<boolean[]>(
+    Array(Slide5Data.length).fill(false)
+  );
 
   const handlePrev = () => {
     swiperRef?.current?.slidePrev();
@@ -39,21 +46,18 @@ const Slide = () => {
 
       // Slide 0
       if (current === 0) {
-        setVisibleCount((prev) =>
-          prev < SlideData.length  ? prev + 1 : prev
-        );
+        setVisibleCount((prev) => (prev < SlideData.length ? prev + 1 : prev));
       }
 
-
-       if (current === 3) {
+      if (current === 3) {
         setVisibleCount4((prev) =>
-          prev < Slide4Data.length *2 ? prev + 1 : prev
+          prev < Slide4Data.length * 2 ? prev + 1 : prev
         );
       }
 
-       if (current === 5) {
+      if (current === 5) {
         setVisibleCount5((prev) =>
-          prev < Slide5Data.length *2 ? prev + 1 : prev
+          prev < Slide5Data.length * 2 ? prev + 1 : prev
         );
       }
     };
@@ -65,7 +69,7 @@ const Slide = () => {
   // Auto height update
   useEffect(() => {
     swiperRef.current?.updateAutoHeight();
-  }, [visibleCount4,visibleCount5, activeSlide]);
+  }, [visibleCount4, visibleCount5, activeSlide]);
 
   const [selected, setSelected] = useState<(string | null)[]>(
     Array(QuestionData.length).fill(null)
@@ -75,6 +79,22 @@ const Slide = () => {
     const newSelected = [...selected];
     newSelected[qIndex] = option;
     setSelected(newSelected);
+  };
+
+  const handleShow = (index: number) => {
+    setShow((prev) => {
+      const copy = [...prev];
+      copy[index] = true;
+      return copy;
+    });
+  };
+
+  const handleShowSuggestion5 = (index: number) => {
+    setShowSuggestion5((prev) => {
+      const copy = [...prev];
+      copy[index] = true;
+      return copy;
+    });
   };
 
   return (
@@ -101,7 +121,9 @@ const Slide = () => {
         <p className="text-black py-2 text-center text-lg font-normal">
           {activeSlide === 1
             ? "Here are some terms you will see in the video:"
-            : activeSlide === 6 ? "Drag and place each action into columns relating to user profiles.": ""}
+            : activeSlide === 6
+            ? "Drag and place each action into columns relating to user profiles."
+            : ""}
         </p>
       </div>
 
@@ -118,7 +140,6 @@ const Slide = () => {
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             onSlideChange={handleSlideChange}
           >
-            
             <SwiperSlide>
               <div className="grid grid-cols-12 place-items-center p-2">
                 <div className="col-span-6 w-full flex justify-center items-center ">
@@ -145,7 +166,7 @@ const Slide = () => {
               </div>
             </SwiperSlide>
 
-             <SwiperSlide>
+            <SwiperSlide>
               {Slide3Data.map((i, index) => (
                 <div
                   key={index}
@@ -165,7 +186,7 @@ const Slide = () => {
               ))}
             </SwiperSlide>
 
-             <SwiperSlide>
+            <SwiperSlide>
               <div className="grid grid-cols-12 w-full place-items-center">
                 <div className="col-span-12 w-full flex justify-center items-center">
                   <iframe
@@ -182,16 +203,15 @@ const Slide = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-               <div className="grid grid-cols-12 place-items-center p-2">
-              {Slide4Data.map((i, index) => {
-                const stepIndex = index * 2;
-                const showQuestion = visibleCount4 > stepIndex;
-                const showImage = visibleCount4 > stepIndex;
-                const showAnswer = visibleCount4 > stepIndex + 1;
+              <div className="grid grid-cols-12 place-items-center p-2">
+                {Slide4Data.map((i, index) => {
+                  const stepIndex = index * 2;
+                  const showQuestion = visibleCount4 > stepIndex;
+                  const showImage = visibleCount4 > stepIndex;
+                  const showAnswer = visibleCount4 > stepIndex + 1;
 
-                return (
-                  <React.Fragment key={index}>
-                   
+                  return (
+                    <React.Fragment key={index}>
                       <div className="col-span-6 w-full flex justify-center items-center ">
                         {showImage && <MyImage path={i.img} />}
                       </div>
@@ -209,32 +229,38 @@ const Slide = () => {
                           />
                         )}
 
-                        {showAnswer && (
-                          <ul className="list-disc space-y-3 p-3">
-                            {i.answer.map((list, list_index) => (
-                              <li
-                                key={list_index}
-                                className="text-lg text-violet-900 animate-fadeIn "
-                              >
-                                {list}
-                              </li>
-                            ))}
-                          </ul>
-                        )}
+                        {showAnswer &&
+                          (show[index] ? (
+                            <ul className="list-disc space-y-3 p-3">
+                              {i.answer.map((list, list_index) => (
+                                <li
+                                  key={list_index}
+                                  className="text-lg text-violet-900 animate-fadeIn "
+                                >
+                                  {list}
+                                </li>
+                              ))}
+                            </ul>
+                          ) : (
+                            <button
+                              onClick={() => handleShow(index)}
+                              className="bg-violet-900 text-white px-5 py-2 rounded-lg cursor-pointer active:scale-95"
+                            >
+                              Show Suggestion
+                            </button>
+                          ))}
                       </div>
-                      
-                   
-                  </React.Fragment>
-                );
-              })}
-              <div className="col-span-12 text-center w-full">
-                        {Slide4Data.length * 2 > visibleCount4 && (
-                          <p className="text-gray-800 mt-3 text-center italic font-normal">
-                            (Enter to show more points)
-                          </p>
-                        )}
-                      </div>
-                      </div>
+                    </React.Fragment>
+                  );
+                })}
+                <div className="col-span-12 text-center w-full">
+                  {Slide4Data.length * 2 > visibleCount4 && (
+                    <p className="text-gray-800 mt-3 text-center italic font-normal">
+                      (Enter to show more points)
+                    </p>
+                  )}
+                </div>
+              </div>
             </SwiperSlide>
 
             <SwiperSlide>
@@ -287,17 +313,16 @@ const Slide = () => {
               </div>
             </SwiperSlide>
 
-             <SwiperSlide>
-               <div className="grid grid-cols-12 place-items-center p-2">
-              {Slide5Data.map((i, index) => {
-                const stepIndex = index * 2;
-                const showQuestion = visibleCount5 > stepIndex;
-                const showImage = visibleCount5 > stepIndex;
-                const showAnswer = visibleCount5 > stepIndex + 1;
+            <SwiperSlide>
+              <div className="grid grid-cols-12 place-items-center p-2">
+                {Slide5Data.map((i, index) => {
+                  const stepIndex = index * 2;
+                  const showQuestion = visibleCount5 > stepIndex;
+                  const showImage = visibleCount5 > stepIndex;
+                  const showAnswer = visibleCount5 > stepIndex + 1;
 
-                return (
-                  <React.Fragment key={index}>
-                   
+                  return (
+                    <React.Fragment key={index}>
                       <div className="col-span-6 w-full flex justify-center items-center ">
                         {showImage && <MyImage path={i.img} />}
                       </div>
@@ -315,35 +340,39 @@ const Slide = () => {
                           />
                         )}
 
-                        {showAnswer && (
-                          <ul className="list-disc space-y-3 p-3">
-                            {i.answer.map((list, list_index) => (
-                              <li
-                                key={list_index}
-                                className="text-lg text-violet-900 animate-fadeIn "
-                              >
-                                {list}
-                              </li>
-                            ))}
-                          </ul>
-                        )}
+                        {showAnswer &&
+                          (showSuggestion5[index] ? (
+                            <ul className="list-disc space-y-3 p-3">
+                              {i.answer.map((list, list_index) => (
+                                <li
+                                  key={list_index}
+                                  className="text-lg text-violet-900 animate-fadeIn "
+                                >
+                                  {list}
+                                </li>
+                              ))}
+                            </ul>
+                          ) : (
+                            <button
+                              onClick={() => handleShowSuggestion5(index)}
+                              className="bg-violet-900 text-white px-5 py-2 rounded-lg cursor-pointer active:scale-95"
+                            >
+                              Show Suggestion
+                            </button>
+                          ))}
                       </div>
-                      
-                   
-                  </React.Fragment>
-                );
-              })}
-              <div className="col-span-12 text-center w-full">
-                        {Slide5Data.length * 2 > visibleCount5 && (
-                          <p className="text-gray-800 mt-3 text-center italic font-normal">
-                            (Enter to show more points)
-                          </p>
-                        )}
-                      </div>
-                      </div>
+                    </React.Fragment>
+                  );
+                })}
+                <div className="col-span-12 text-center w-full">
+                  {Slide5Data.length * 2 > visibleCount5 && (
+                    <p className="text-gray-800 mt-3 text-center italic font-normal">
+                      (Enter to show more points)
+                    </p>
+                  )}
+                </div>
+              </div>
             </SwiperSlide>
-
-            
 
             <SwiperSlide>
               <DragSlide />
