@@ -74,7 +74,7 @@ const Slide = () => {
             <SwiperSlide>
               <div className="grid grid-cols-12 w-full  gap-5 place-items-center p-2">
                 <div className="col-span-6 w-full min-h-[100px] flex justify-center items-center ">
-                  <MyImage path="/C53Image" />
+                  <MyImage path="/C53Images/Directions.jpg" />
                 </div>
 
                 <div className="col-span-6 w-full min-h-[100px] flex flex-col justify-center items-center ">
@@ -107,7 +107,7 @@ const Slide = () => {
             <SwiperSlide>
               <div className="grid grid-cols-12 w-full  gap-5 place-items-center p-2">
                 <div className="col-span-6 w-full min-h-[100px] flex justify-center items-center ">
-                  <MyImage path="/C53Image" />
+                 <MyImage path="/C53Images/Directions.jpg" />
                 </div>
 
                 <div className="col-span-6 w-full min-h-[100px] flex flex-col justify-center items-center ">

@@ -6,7 +6,7 @@ const SecondSlide = () => {
   return (
     <div className="grid grid-cols-12 w-full p-3">
       <div className="col-span-6 w-full flex justify-center items-center">
-        <MyImage path="/C53Images" />
+        <MyImage path="/C53Images/Questions2.jpg" />
       </div>
 
       <div className="col-span-6 w-full flex flex-col gap-2">

@@ -1,9 +1,13 @@
+import MyImage from "@/components/myImage";
 import TableData from "@/src/layout-C53-L3-A2/tableData.json";
 import Image from "next/image";
 import React from "react";
 const ThirdSlide = () => {
   return (
     <div className="grid grid-cols-12 w-full p-5 ">
+      <div className="col-span-12 w-full flex justify-center items-center ">
+        <MyImage path="/C53Images/Supermarket.jpg" />
+      </div>
       <div className="col-span-3 w-full bg-violet-900 text-white p-2 text-center font-bold">
         ITEMS
       </div>

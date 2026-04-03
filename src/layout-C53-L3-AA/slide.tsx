@@ -91,7 +91,7 @@ const handleDel = (index: number) => {
             <SwiperSlide>
               <div className="grid grid-cols-12 w-full  gap-5 place-items-center p-2">
                 <div className="col-span-6 w-full flex justify-center items-center ">
-                  <MyImage path="/C53Images/" />
+                  <MyImage path="/C53Images/Shopping_List.jpg" />
                 </div>
 
                 <div className="col-span-6  w-full grid grid-cols-12  ">
@@ -190,7 +190,7 @@ const handleDel = (index: number) => {
             <SwiperSlide>
               <div className="grid grid-cols-12 w-full  gap-5 place-items-center p-2">
                 <div className="col-span-5 w-full flex justify-center items-center ">
-                  <MyImage path="/C53Images/" />
+                   <MyImage path="/C53Images/Shopping_List.jpg" />
                 </div>
 
                 <div className="col-span-7  w-full grid grid-cols-12  ">

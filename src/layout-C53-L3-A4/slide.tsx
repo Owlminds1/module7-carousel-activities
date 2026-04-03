@@ -78,7 +78,7 @@ const Slide = () => {
                   Note: You can buy one or more quanitity of each item.
                 </p>
                 <div>
-                  <MyImage path="/C53Images/" />
+                  <MyImage path="/C53Images/Shopping_Birthday.jpg" />
                 </div>
                 
               </div>

@@ -1,28 +1,28 @@
 [
   {
     "id": "STATIONARY-1",
-    "image": "/C53Images/",
+    "image": "/C53Images/stationary.jpg",
     "text": "10% off on pens (25$ per piece)",
     "val": "",
     "price": 50
   },
   {
     "id": "STATIONARY-2",
-    "image": "/C53Images/",
+    "image": "/C53Images/stationary.jpg",
     "text": "Sharpeners(10$ per piece)",
     "val": "",
     "price": 150
   },
   {
     "id": "STATIONARY-3",
-    "image": "/C53Images/",
+    "image": "/C53Images/stationary.jpg",
     "text": "Compass (Buy 1 get one free; 10$ per piece)",
     "val": "",
     "price": 100
   },
   {
     "id": "STATIONARY-4",
-    "image": "/C53Images/",
+    "image": "/C53Images/stationary.jpg",
     "text": "Color Pencils (20$ per piece)",
     "val": "",
     "price": 100

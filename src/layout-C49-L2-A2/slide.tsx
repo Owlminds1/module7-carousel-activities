@@ -87,7 +87,7 @@ setCorrect(()=>new Audio("/sound/correct.mp3"))
         </h4>
         <p className="text-black text-lg text-center ">
           {activeSlide === 3
-            ? "Answer the Questions (orally)."
+            ? "Answer the questions (orally) show answers when 'enter' is clicked and then go to next question."
             :  ""}
         </p>
       </div>
@@ -183,7 +183,7 @@ setCorrect(()=>new Audio("/sound/correct.mp3"))
             <SwiperSlide>
               <div className="grid grid-cols-12 gap-8 w-full place-items-center p-2">
                 <div className="col-span-6 w-full flex flex-col gap-3">
-                  <MyImage path="/C49Images"/>
+                  <MyImage path="/C49Images/jorden_2.png"/>
                   <MyImage path="/C49Images/Michael_Jordan.jpg"/>
                 </div>
                 <div
@@ -198,7 +198,7 @@ setCorrect(()=>new Audio("/sound/correct.mp3"))
                   return (
                      <React.Fragment     key={index}>
                        {showQuestion && (
-                        <h4 className="font-bold text-lg  text-black ">
+                        <h4 className="font-bold text-xl  text-black ">
                           {i.text}
                         </h4>
                       )}
@@ -208,7 +208,7 @@ setCorrect(()=>new Audio("/sound/correct.mp3"))
                       
                             <p
                              
-                              className="font-medium text-lg  text-black/70"
+                              className="font-medium text-xl  text-black/70"
                             >
                               {i.subText}
                             </p>
