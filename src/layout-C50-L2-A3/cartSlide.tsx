@@ -1,58 +1,119 @@
 import SlideData from "@/src/layout-C50-L2-A3/slide1.json";
 import React, { useState } from "react";
 import { FaCartPlus } from "react-icons/fa";
+import Welldone from "./wellDone";
+
+const joyCoIndexes = SlideData
+  .map((item, index) => (item.col5 === "JoyCo" ? index : null))
+  .filter((i) => i !== null) as number[];
 
 
 const CartSlide = () => {
+  const [cartItms, setCartItems] = useState<number[]>([]);
+  const [massge, setMassge] = useState<string>("");
+  const [open, setOpen] = useState(false);
+const handelInputChange = (
+  index: number,
+  val: string,
+  checked: boolean
+) => {
+  // ❌ uncheck par popup nahi
+  if (!checked) {
+    setCartItems((prev) => prev.filter((i) => i !== index));
+    return;
+  }
 
-    const [cartItms ,setCartItems] =useState<number[]>([])
+  // ❌ HighCo select
+  if (val !== "JoyCo") {
+    setOpen(true);
+    setMassge(
+      "Not the best choice."
+    );
+    return;
+  }
+
+  // ✅ JoyCo select
+  const updatedCart = [...cartItms, index];
+  setCartItems(updatedCart);
+
+  // ✅ check: all JoyCo selected?
+  const allJoyCoSelected = joyCoIndexes.every((i) =>
+    updatedCart.includes(i)
+  );
+
+  if (allJoyCoSelected) {
+    setOpen(true);
+    setMassge(
+      "🎉 Well done!"
+    );
+  } else {
+    setOpen(true);
+    setMassge(
+      "Correct choice! "
+    );
+  }
+};
 
 
-    const handelInputChange = (index:number)=>{
-setCartItems((prev)=> 
-    prev.includes(index)
-? prev.filter((idx) => index !== idx) : [...prev,index]
 
-
-)
-
-
-    }
   return (
     <div className="grid grid-cols-12 w-full">
-        <div className="col-span-2 border w-full text-center text-black font-bold flex items-center justify-center">ITEM</div>
-        <div className="col-span-2 border w-full text-center text-black font-bold flex items-center justify-center">COST</div>
-        <div className="col-span-2 border w-full text-center text-black font-bold flex items-center justify-center">TAX</div>
-        <div className="col-span-2 border w-full text-center text-black font-bold flex items-center justify-center">DISCOUNT</div>
-        <div className="col-span-2 border w-full text-center text-black font-bold flex items-center justify-center">BRAND</div>
-        <div className="col-span-2 uppercase border  w-full text-center flex items-center justify-center text-black font-bold">
-             Cart 
-            <div className="relative  p-4"><FaCartPlus className="text-2xl text-violet-900"/> <span className="absolute top-0 right-2 text-violet-900 font-bold">{cartItms.length}</span></div>
+      <div className="col-span-2 border w-full text-center text-black font-bold flex items-center justify-center">
+        ITEM
+      </div>
+      <div className="col-span-2 border w-full text-center text-black font-bold flex items-center justify-center">
+        COST
+      </div>
+      <div className="col-span-2 border w-full text-center text-black font-bold flex items-center justify-center">
+        TAX
+      </div>
+      <div className="col-span-2 border w-full text-center text-black font-bold flex items-center justify-center">
+        DISCOUNT
+      </div>
+      <div className="col-span-2 border w-full text-center text-black font-bold flex items-center justify-center">
+        BRAND
+      </div>
+      <div className="col-span-2 uppercase border  w-full text-center flex items-center justify-center text-black font-bold">
+        Cart
+        <div className="relative  p-4">
+          <FaCartPlus className="text-2xl text-violet-900" />{" "}
+          <span className="absolute top-0 right-2 text-violet-900 font-bold">
+            {cartItms.length}
+          </span>
         </div>
-{
-    SlideData.map((i,index)=>(
+      </div>
+      {SlideData.map((i, index) => (
         <React.Fragment key={index}>
-
-        <div className="col-span-2  w-full text-center text-black border p-2 font-bold ">{i.col1}</div>
-        <div className="col-span-2  w-full text-center text-black border p-2  ">{i.col2}</div>
-        <div className="col-span-2  w-full text-center text-black border p-2  ">{i.col3}</div>
-        <div className="col-span-2  w-full text-center text-black border p-2  ">{i.col4}</div>
-        <div className="col-span-2  w-full text-center text-black border p-2  ">{i.col5}</div>
-        <div className="col-span-2  w-full text-center text-black border p-2  ">
-            <input type="checkbox" name="cart" title="add to cart"
-            checked={cartItms.includes(index)}
-            onChange={()=>handelInputChange(index)}
-            className="cursor-pointer accent-violet-900 w-5 h-5"
-            
+          <div className="col-span-2  w-full text-center text-black border p-2 font-bold ">
+            {i.col1}
+          </div>
+          <div className="col-span-2  w-full text-center text-black border p-2  ">
+            {i.col2}
+          </div>
+          <div className="col-span-2  w-full text-center text-black border p-2  ">
+            {i.col3}
+          </div>
+          <div className="col-span-2  w-full text-center text-black border p-2  ">
+            {i.col4}
+          </div>
+          <div className="col-span-2  w-full text-center text-black border p-2  ">
+            {i.col5}
+          </div>
+          <div className="col-span-2  w-full text-center text-black border p-2  ">
+            <input
+              type="checkbox"
+              name="cart"
+              title="add to cart"
+              checked={cartItms.includes(index)}
+              onChange={(e) => handelInputChange(index,i.col5,e.target.checked)}
+              className="cursor-pointer accent-violet-900 w-5 h-5"
             />
-        </div>
-
+          </div>
         </React.Fragment>
-    ))
-}
-      
+      ))}
+      <Welldone open={open} setOpen={setOpen} msg={massge}/>
     </div>
-  )
-}
+  );
+};
 
-export default CartSlide
+export default CartSlide;

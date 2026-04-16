@@ -58,21 +58,21 @@ const Slide = () => {
       // Slide 1
       if (current === 1) {
         setVisibleCount2((prev) =>
-          prev < Slide2Data.length ? prev + 1 : prev
+          prev < Slide2Data.length *2 ? prev + 1 : prev
         );
       }
 
       // Slide 2
       if (current === 2) {
         setVisibleCount3((prev) =>
-          prev < Slide3Data.length ? prev + 1 : prev
+          prev < Slide3Data.length *2? prev + 1 : prev
         );
       }
 
       // Slide 3 (💥 Slide4 + Slide5 Logic)
       if (current === 3) {
         // First show Slide4 items
-        if (visibleCount4 < Slide4Data.length) {
+        if (visibleCount4 < Slide4Data.length *2) {
           setVisibleCount4((prev) => prev + 1);
           return;
         }
@@ -125,7 +125,24 @@ const Slide = () => {
             <SwiperSlide>
               <div className="grid grid-cols-12 w-full place-items-center p-2">
                 <div className="col-span-6 w-full">
-                 <video ref={videoRef} controls muted  autoPlay src="/C50Images/boyDream.mp4"></video>
+               <video
+  ref={videoRef}
+  controls
+  muted
+  preload="metadata"
+  onLoadedMetadata={() => {
+    swiperRef.current?.updateAutoHeight();
+  }}
+  onCanPlay={() => {
+    if (activeSlide === 0) {
+      videoRef.current?.play();
+    }
+  }}
+  className="w-full rounded-md"
+>
+  <source src="/C50Images/boyDream.mp4" type="video/mp4" />
+</video>
+
                 </div>
 
                 <div className="col-span-6 flex flex-col gap-5">
@@ -144,23 +161,44 @@ const Slide = () => {
 
             {/* SLIDE 1 */}
             <SwiperSlide>
-              {Slide2Data.slice(0, visibleCount2).map((i, index) => (
-                <div
+           {Slide2Data.map((i, index) => {
+                             const stepIndex = index * 2;
+                             const showQuestion = visibleCount2 > stepIndex;
+                             const showImage = visibleCount2 > stepIndex;
+                             const showAnswer = visibleCount2 > stepIndex + 1;
+               return (
+                 <div
                   key={index}
                   className="grid grid-cols-12 w-full place-items-center p-2"
                 >
-                  <div className="col-span-6">
-                    <MyImage path={i.img} />
-                  </div>
+                  {showImage && ( <div className="col-span-6">
+                   {
+                    index === Slide2Data.length - 1 ?"":
+                   <MyImage path={i.img} />
+                   } 
+                  </div>)}
+                 
 
                   <div className="col-span-6 flex flex-col gap-2">
+                    {showQuestion && (
+
                     <h4 className="text-black text-lg font-bold">{i.text}</h4>
-                    <p className="text-black">{i.suggestion}</p>
+                    )}
+
+                    {
+                      showAnswer && (
+
+                        <p className="text-black">{i.suggestion}</p>
+                      )
+                    }
                   </div>
                 </div>
-              ))}
+               )
 
-              {visibleCount2 < Slide2Data.length && (
+
+})}
+
+              {visibleCount2 < Slide2Data.length *2 && (
                 <p className="text-gray-800 text-center my-3 italic">
                   (Enter to show more points)
                 </p>
@@ -168,24 +206,42 @@ const Slide = () => {
             </SwiperSlide>
 
             {/* SLIDE 2 */}
-            <SwiperSlide>
-              {Slide3Data.slice(0, visibleCount3).map((i, index) => (
-                <div
+             <SwiperSlide>
+           {Slide3Data.map((i, index) => {
+                             const stepIndex = index * 2;
+                             const showQuestion = visibleCount3 > stepIndex;
+                             const showImage = visibleCount3 > stepIndex;
+                             const showAnswer = visibleCount3 > stepIndex + 1;
+               return (
+                 <div
                   key={index}
                   className="grid grid-cols-12 w-full place-items-center p-2"
                 >
-                  <div className="col-span-6">
+                  {showImage && ( <div className="col-span-6">
                     <MyImage path={i.img} />
-                  </div>
+                  </div>)}
+                 
 
                   <div className="col-span-6 flex flex-col gap-2">
+                    {showQuestion && (
+
                     <h4 className="text-black text-lg font-bold">{i.text}</h4>
-                    <p className="text-black">{i.suggestion}</p>
+                    )}
+
+                    {
+                      showAnswer && (
+
+                        <p className="text-black">{i.suggestion}</p>
+                      )
+                    }
                   </div>
                 </div>
-              ))}
+               )
 
-              {visibleCount3 < Slide3Data.length && (
+
+})}
+
+              {visibleCount3 < Slide3Data.length  *2&& (
                 <p className="text-gray-800 text-center my-3 italic">
                   (Enter to show more points)
                 </p>
@@ -195,31 +251,49 @@ const Slide = () => {
             {/* SLIDE 3 (Slide4 + Slide5 Combined) */}
             <SwiperSlide>
               {/* Slide4Data */}
-              {Slide4Data.slice(0, visibleCount4).map((i, index) => (
-                <div
+             {Slide4Data.map((i, index) => {
+                             const stepIndex = index * 2;
+                             const showQuestion = visibleCount4 > stepIndex;
+                             const showImage = visibleCount4 > stepIndex;
+                             const showAnswer = visibleCount4 > stepIndex + 1;
+               return (
+                 <div
                   key={index}
                   className="grid grid-cols-12 w-full place-items-center p-2"
                 >
-                  <div className="col-span-6">
-                    <MyImage path="/C50Images/Clean.png" />
-                  </div>
+                  {showImage && ( <div className="col-span-6">
+                    <MyImage path={i.img} />
+                  </div>)}
+                 
 
                   <div className="col-span-6 flex flex-col gap-2">
+                    {showQuestion && (
+
                     <h4 className="text-black text-lg font-bold">{i.text}</h4>
-                    <p className="text-black">{i.suggestion}</p>
+                    )}
+
+                    {
+                      showAnswer && (
+
+                        <p className="text-black">{i.suggestion}</p>
+                      )
+                    }
                   </div>
                 </div>
-              ))}
+               )
+
+
+})}
 
               {/* Slide4 Hint */}
-              {visibleCount4 < Slide4Data.length && (
+              {visibleCount4 < Slide4Data.length *2 && (
                 <p className="text-gray-800 text-center my-3 italic">
                   (Enter to show more points)
                 </p>
               )}
 
               {/* Slide5 — Only After Slide4 Completed */}
-              {visibleCount4 === Slide4Data.length && (
+              {visibleCount4 === Slide4Data.length *2 && (
                 <div className="grid grid-cols-12 w-full place-items-center p-2">
                   <div className="col-span-6">
                     <MyImage path="/C50Images/Camp.png" />

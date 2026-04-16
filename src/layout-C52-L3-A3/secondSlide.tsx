@@ -1,6 +1,7 @@
 import dropZone from "@/src/layout-C52-L3-A3/dropZone.json";
 import Image from "next/image";
 import React from "react";
+import { DropdownMenuDemo } from "./dropDown";
 const SecondSlide = () => {
   return (
     <div className="grid grid-cols-12 gap-3 w-full place-items-start ">
@@ -19,7 +20,7 @@ const SecondSlide = () => {
           RECURRING PAYMENTS?
         </div>
         <div className="col-span-2 bg-violet-900 p-2 text-sm  text-nowrap text-white text-center font-bold w-full ">
-          REFUDS?
+          REFUNDS?
         </div>
         <div className="col-span-2 bg-violet-900 p-2 text-sm  text-nowrap text-white text-center font-bold w-full ">
           CONFIRMATION
@@ -42,13 +43,13 @@ const SecondSlide = () => {
             </div>
 
             <div className="col-span-2  border flex justify-center items-center text-black text-center w-full ">
-             {drop.RECURRING_PAYMENTS}
+            <DropdownMenuDemo />
             </div>
             <div className="col-span-2  border flex justify-center items-center text-black text-center w-full ">
-             {drop.REFUDS}
+           <DropdownMenuDemo />
             </div>
             <div className="col-span-2  border flex justify-center items-center text-black text-center w-full ">
-             {drop.CONFIRMATION}
+           <DropdownMenuDemo />
             </div>
           </React.Fragment>
         ))}

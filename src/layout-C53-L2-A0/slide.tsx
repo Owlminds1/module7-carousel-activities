@@ -8,12 +8,14 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useRef, useState } from "react";
 
 import SlideData from "@/src/layout-C53-L2-A0/slide1.json";
+import Welldone from "@/components/wellDone";
 
 const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
 
   const [activeSlide, setActiveSlide] = useState(0);
   const [show, setShow] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const handlePrev = () => {
     swiperRef.current?.slidePrev();
@@ -28,14 +30,21 @@ const Slide = () => {
     setShow(false);
   };
 
+
+  const handleShow = () => {
+    setShow(true);
+
+    if(SlideData.length-1 === activeSlide ){
+      setOpen(true);
+    }
+  }
+
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex justify-center items-center p-5 flex-col gap-5">
       <div>
         <h4 className="text-3xl font-bold text-center text-black">
-         Guess the creature
+          Guess the creature
         </h4>
-
-       
       </div>
 
       <div className="w-[60%] flex justify-center items-center flex-col gap-3">
@@ -54,23 +63,30 @@ const Slide = () => {
               <SwiperSlide key={index}>
                 <div className="grid grid-cols-12 w-full  gap-5 place-items-center p-2">
                   <div className="col-span-12 w-full min-h-[100px] flex flex-col gap-5 justify-center items-center ">
-                    <h2 className="text-black text-2xl text-center ">{i.text}</h2>
+                    <h2 className="text-black text-2xl text-center ">
+                      {i.text}
+                    </h2>
 
-                    {
-                      show ? <h2 className="text-violet-900 text-2xl  italic  animate-fadeIn text-center ">{i.suggestion}</h2>:
-                      <button 
-                      onClick={()=>setShow(true)}
-                      className="bg-violet-900 text-white px-5 py-2 cursor-pointer rounded-lg">Show Suggestion</button>
-                    }
-                    
-                 
+                    {show ? (
+                      <h2 className="text-violet-900 text-2xl  italic  animate-fadeIn text-center ">
+                        {i.suggestion}
+                      </h2>
+                    ) : (
+                      <button
+                        onClick={ handleShow}
+                        className="bg-violet-900 text-white px-5 py-2 cursor-pointer rounded-lg"
+                      >
+                        Show Suggestion
+                      </button>
+                    )}
                   </div>
-                  
+
                   <div className="col-span-12 w-full ">
-                    <h2 className="text-gray-600 text-md italic text-center ">(Activity inspired by “Fresh & Fun Critical-Thinking Activities” By Laurie Rozakis)</h2>
-                 
+                    <h2 className="text-gray-600 text-md italic text-center ">
+                      (Activity inspired by “Fresh & Fun Critical-Thinking
+                      Activities” By Laurie Rozakis)
+                    </h2>
                   </div>
-                  
                 </div>
               </SwiperSlide>
             ))}
@@ -98,6 +114,7 @@ const Slide = () => {
           </span>
         </div>
       </div>
+      <Welldone open={open} setOpen={setOpen} />
     </div>
   );
 };

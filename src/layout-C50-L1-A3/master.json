@@ -1,0 +1,49 @@
+[
+    {
+         "img":"/C50Images/Water.jpg",
+          "name":"Water",
+          "val":"Water"
+    } ,
+    
+    
+    {
+         "img":"/C50Images/HW.jpg",
+          "name":"Homework",
+          "val":"Homework"
+    },
+    
+    
+    {
+         "img":"/C50Images/prep.jpg",
+          "name":"Preparing for Exams",
+           "val":"Preparing"
+    },
+    
+    
+    {
+         "img":"/C50Images/Sleep.jpg",
+          "name":"Sleeping on Time",
+           "val":"Sleeping"
+    },
+    
+    
+    {
+         "img":"/C50Images/Kind.jpg",
+          "name":"Being Kind",
+          "val":"Being"
+    },
+    
+    
+    {
+         "img":"/C50Images/planning.jpg",
+          "name":"Planning Schedule",
+          "val":"Planning"
+    },
+    
+    
+    {
+         "img":"/C50Images/Reading.jpg",
+          "name":"Reading",
+          "val":"Reading"
+    }
+]

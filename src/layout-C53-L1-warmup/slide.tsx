@@ -35,9 +35,9 @@ const Slide = () => {
           Big questions
         </h4>
 
-        <p className="text-black text-lg ">
+        {/* <p className="text-black text-lg ">
          Answer the Following Questions
-        </p>
+        </p> */}
       </div>
 
       <div className="w-[60%] flex justify-center items-center flex-col gap-3">

@@ -42,6 +42,19 @@ const Table = () => {
     setRows(newRows);
   };
 
+
+  // (a) Overall Difference (+ / -)
+const overallDiff = rows.reduce((sum, row) => {
+  return sum + (row.diff ?? 0);
+}, 0);
+
+// (b) Task Completed Count
+const completedTasks = rows.filter(
+  (row) => row.ideal !== "" && row.actual !== ""
+).length;
+
+const totalTasks = rows.length;
+
   return (
     <div className="flex flex-col gap-1 justify-start items-start w-full ">
       <div className="grid grid-cols-12 w-full  ">
@@ -195,6 +208,28 @@ const Table = () => {
 
        
       </div>
+
+
+      <div className="grid grid-cols-12 w-full border border-black mt-2">
+  <div className="col-span-6 p-3 font-bold text-center text-black">
+    Tasks Completed: {completedTasks} / {totalTasks}
+  </div>
+
+  <div
+    className={`col-span-6 p-3 font-bold text-center
+      ${
+        overallDiff > 0
+          ? "text-red-800"
+          : overallDiff < 0
+          ? "text-green-800"
+          : "text-black"
+      }
+    `}
+  >
+     Difference: {overallDiff}
+  </div>
+</div>
+
     </div>
   );
 };

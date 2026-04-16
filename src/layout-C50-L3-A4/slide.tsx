@@ -16,7 +16,7 @@ const Slide = () => {
 
   const [activeSlide, setActiveSlide] = useState(0);
 
-  const [visibleCount, setVisibleCount] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(1);
 
 
   const handlePrev = () => {

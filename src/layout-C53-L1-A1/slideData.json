@@ -1,35 +1,45 @@
 [
     {
-        "text": "Are the shoes in the first set affordable or expensive?"
+        "text": "Are the shoes in the first set affordable or expensive?",
+         "answer":"Expensive"
     },
     {
-        "text": "Is it the grandma or the sister who saves up to buy some shoes? "
+        "text": "Is it the grandma or the sister who saves up to buy some shoes? ",
+        "answer":"Grandma "
     },
     {
-        "text": "Does the first shop have the shoe he wants?"
+        "text": "Does the first shop have the shoe he wants?",
+        "answer":"No"
     },
     {
-        "text": "Are the shoes in the second set affordable or expensive?"
+        "text": "Are the shoes in the second set affordable or expensive?",
+        "answer":"Affordable"
     },
     {
-        "text": "Do the affordable shoes fit?"
+        "text": "Do the affordable shoes fit?",
+        "answer":"No"
     },
     {
-        "text": "Does grandma buy those shoes or does he?"
+        "text": "Does grandma buy those shoes or does he?",
+        "answer":"He does"
     },
     
     
     {
-        "text": "Does grandma give another pair of shoes?"
+        "text": "Does grandma give another pair of shoes?",
+        "answer":"Yes"
     },
     
     
     {
-        "text": "What does he finally do with his shoes?"
+        "text": "What does he finally do with his shoes?",
+        "answer":"He gives it to Antonio"
     } ,
     
     
     {
-        "text": "What shoes does he finally wear?"
+        "text": "What shoes does he finally wear?",
+
+        "answer":"Snow boots gifted by grandma"
     }
 ]

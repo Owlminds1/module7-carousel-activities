@@ -70,11 +70,11 @@ const Slide = () => {
             ? "FORMULATING QUESTIONS"
             : ""}
         </h4>
-        <p className="text-black text-lg text-center ">
+        {/* <p className="text-black text-lg text-center ">
           {activeSlide === 1
             ? "List questions you can ask sales to ensure that you’re buying what you need."
             : ""}
-        </p>
+        </p> */}
       </div>
 
       <div className="w-full flex justify-center items-center flex-col gap-3">
@@ -90,7 +90,7 @@ const Slide = () => {
             onSlideChange={handleSlideChange}
           >
             <SwiperSlide>
-              <div className="grid grid-cols-12 w-full place-items-center p-2">
+              <div className="grid grid-cols-12 gap-y-3 w-full place-items-center p-2">
                
                 {SlideData.map((i, index) => {
                   const stepIndex = index * 2;
@@ -140,7 +140,7 @@ const Slide = () => {
             <SwiperSlide>
              <div className="grid grid-cols-12 w-full p-3">
       <div className="col-span-6 w-full flex justify-center items-center">
-        <MyImage path="/C53Images" />
+        <MyImage path="/C53Images/Questions2.jpg" />
       </div>
 
       <div className="col-span-6 w-full flex flex-col gap-2">

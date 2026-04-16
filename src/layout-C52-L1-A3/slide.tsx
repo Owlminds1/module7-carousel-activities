@@ -111,7 +111,7 @@ const Slide = () => {
                 <div className=" w-full col-span-6 bg flex justify-center items-start flex-col gap-5 ">
                   <h4 className="text-black font-bold text-xl ">
                     The value of the product is different for different
-                    customers. For e.g. the value of football shoes to someone
+                    customers. For example the value of football shoes to someone
                     who plays the sport is higher when compared to an individual
                     who does not play.
                   </h4>
@@ -188,7 +188,7 @@ const Slide = () => {
                 <div className=" w-[60%] col-span-12 bg flex justify-center items-start flex-col gap-5 ">
                   <h4 className="text-black text-center font-bold text-xl ">
                     The value of a product also differs from one place to
-                    another. For e.g. woollen clothes are more valued in cold
+                    another. For example woollen clothes are more valued in cold
                     places than warm places.
                   </h4>
                 </div>

@@ -37,7 +37,7 @@ const Slide = () => {
 
         <p className="text-black text-lg ">
            {
-          activeSlide === 0 ? "magine you’re walking in the supermarket, but you don’t have a shopping list. What would you buy or not buy? Give reasons.":activeSlide === 1?"":""
+          activeSlide === 0 ? "Imagine you’re walking in the supermarket, but you don’t have a shopping list. What would you buy or not buy? Give reasons.":activeSlide === 1?"":""
         }
         </p>
       </div>

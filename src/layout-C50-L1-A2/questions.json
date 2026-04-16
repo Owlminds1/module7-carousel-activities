@@ -3,94 +3,66 @@
         "question":"If I see a queue at the school’s common washing area during lunch, I will push students to get ahead.",
         "image":"/C50Images/Queue.jpg",
         "val":"NO",
-        "btnVal":["YES","NO"]
+        "btnVal":["YES","NO"],
+        "Reasons":"Reasons for the ideal response: Showing respect while waiting in a queue is considered decent and polite behavior."
     },
 
-
-     {
-        "question":"Reasons for the ideal response: Showing respect while waiting in a queue is considered decent and polite behavior.",
-        "image":"",
-        "val":"",
-        "btnVal":[]
-    },
 
 
     {
         "question":"If I have a question in class, I will wait for my turn by raising my hand.",
         "image":"/C50Images/Question.jpg",
         "val":"YES",
-        "btnVal":["YES","NO"]
+        "btnVal":["YES","NO"],
+         "Reasons":"Reasons for the ideal response: Many students like speaking in class. So to give a chance to all, raising your hand is highly effective."
     },
 
 
-     {
-        "question":"Reasons for the ideal response: Many students like speaking in class. So to give a chance to all, raising your hand is highly effective.",
-        "image":"",
-        "val":"",
-        "btnVal":[]
-    },
-
+    
 
      {
         "question":"If I wear clothes that other kids don’t appreciate, I will ask my parents to buy me some other clothes.",
         "image":"/C50Images/Clothes.jpg",
         "val":"NO",
-        "btnVal":["YES","NO"]
+        "btnVal":["YES","NO"],
+        "Reasons":"Reasons for the ideal response: Buying new clothes because of others’ opinions is not ideal for self-esteem. Buy new clothes only if you personally don’t appreciate what you’re wearing."
     },
 
 
-     {
-        "question":"Reasons for the ideal response: Buying new clothes because of others’ opinions is not ideal for self-esteem. Buy new clothes only if you personally don’t appreciate what you’re wearing.",
-        "image":"",
-        "val":"",
-        "btnVal":[]
-    },
+    
 
      {
         "question":"If my parents bought me a present before my birthday, I will open it only on my birthday.",
         "image":"/C50Images/Gift.jpg",
         "val":"YES",
-        "btnVal":["YES","NO"]
+        "btnVal":["YES","NO"],
+        "Reasons":"Reasons for the ideal response: Gift-giving is an emotional process as it is bought with love and affection. Opening it on time shows respect and politeness."
     },
 
 
-     {
-        "question":"Reasons for the ideal response: Gift-giving is an emotional process as it is bought with love and affection. Opening it on time shows respect and politeness.",
-        "image":"",
-        "val":"",
-        "btnVal":[]
-    },
+    
 
      {
         "question":"If I have something to say to my friends, I will interrupt the speaker.",
         "image":"/C50Images/Talking.jpg",
         "val":"NO",
-        "btnVal":["YES","NO"]
+        "btnVal":["YES","NO"],
+        "Reasons":"Reasons for the ideal response: Communicating with friends in a friendly discussion is about listening as well as speaking."
     },
 
 
-     {
-        "question":"Reasons for the ideal response: Communicating with friends in a friendly discussion is about listening as well as speaking.",
-        "image":"",
-        "val":"",
-        "btnVal":[]
-    },
-
+    
 
      {
         "question":"If I have something I really like for dessert, I will eat it before lunch time.",
         "image":"/C50Images/Dessert.jpg",
         "val":"NO",
-        "btnVal":["YES","NO"]
+        "btnVal":["YES","NO"],
+        "Reasons":"Reasons for the ideal response: School time has a timetable. All students should respect the schedule, and practicing patience for dessert might just make it more delicious!"
     },
 
 
-     {
-        "question":"Reasons for the ideal response: School time has a timetable. All students should respect the schedule, and practicing patience for dessert might just make it more delicious!",
-        "image":"",
-        "val":"",
-        "btnVal":[]
-    },
+    
 
 
     
@@ -98,14 +70,7 @@
         "question":"When my peers make fun of my inexpensive shoes, I will practice patience and understanding.",
         "image":"/C50Images/Shoes.jpg",
         "val":"NO",
-        "btnVal":["YES","NO"]
-    },
-
-
-     {
-        "question":"Reasons for the ideal response: What others think or say does not matter. Understanding their behavior will personally help you grow further.",
-        "image":"",
-        "val":"",
-        "btnVal":[]
+        "btnVal":["YES","NO"],
+        "Reasons":"Reasons for the ideal response: What others think or say does not matter. Understanding their behavior will personally help you grow further."
     }
 ]

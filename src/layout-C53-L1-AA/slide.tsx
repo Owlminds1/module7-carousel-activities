@@ -60,7 +60,7 @@ const Slide = () => {
 
           <SwiperSlide>
             <div className=" flex justify-center items-center flex-col gap-3 p-5">
-              <h3 className="text-black font-bold w-[80%] text-center text-2xl">How will you ensure that you make wise use of your pocket money - save for items your value?</h3>
+              <h3 className="text-black font-bold w-[80%] text-center text-2xl">How will you ensure that you make wise use of your pocket money - save for items you value?</h3>
 
               <textarea placeholder="write here..." className="text-black p-2 w-[60%] outline-0 focus:ring-2 ring-1 ring-violet-900 rounded-lg transition-all duration-300 focus:ring-violet-900 " rows={3}  />
             </div>

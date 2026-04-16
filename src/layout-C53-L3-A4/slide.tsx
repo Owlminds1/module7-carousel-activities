@@ -11,6 +11,7 @@ import Decorations from "@/src/layout-C53-L3-A4/Decorations.json";
 import Foods from "@/src/layout-C53-L3-A4/food.json";
 import SecondSlide from "./secondSlide";
 import MyImage from "@/components/myImage";
+import ThirdSlide from "./thirdSlide";
 
 const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
@@ -37,13 +38,19 @@ const Slide = () => {
             ? "HAPPY BIRTHDAY PARTY!"
             : activeSlide === 1
             ? "HAPPY BIRTHDAY PARTY!"
-            : ""}
+            : "Suggestive Responses"}
         </h4>
 
-        <p className="text-black text-lg text-center ">
+        <p className="text-black text-xl text-center ">
           {activeSlide === 0
             ? "Here are the items in the market."
             : "Make your choice (ideal suggestive responses)"}
+        </p>
+
+        <p className="text-black text-xl text-center ">
+          {activeSlide === 0
+            ? "You’ve to apply all you’ve learned to ensure that you shop based on needs and budget."
+            : ""}
         </p>
       </div>
 
@@ -60,58 +67,29 @@ const Slide = () => {
             onSlideChange={handleSlideChange}
           >
             <SwiperSlide>
-             <div className=" flex justify-center flex-col gap-5 items-center">
-              <div>
-                <MyImage path="/C53Images/"/>
-              </div>
-               <div className="flex justify-center items-center gap-5">
-                <div className="grid grid-cols-12 w-full place-items-center ">
-                  <div className="col-span-6 w-full p-1 text-center text-white bg-violet-900 font-bold">
-                    Decorations Items
-                  </div>
-                  <div className="col-span-6 w-full p-1 text-center text-white bg-violet-900 font-bold">
-                    Price ($)
-                  </div>
+              <div className=" flex justify-center flex-col gap-5 items-center">
+                <p className="text-xl text-black w-[70%] text-center">
+                  You’ve to create a shopping list for a birthday party. Your
+                  budget is $400. Some 6 people are coming plus your family of
+                  four (total 10 people). Some guests are vegan, so no eggs.
+                </p>
 
-                  {Decorations.map((item, index) => (
-                    <React.Fragment key={index}>
-                      <div className="col-span-6 p-1  min-h-[60px] border w-full text-center text-black font-bold">
-                        {item.text}
-                      </div>
-
-                      <div className="col-span-6 border min-h-[60px] p-1 w-full text-center text-black ">
-                        {item.price}
-                      </div>
-                    </React.Fragment>
-                  ))}
+                <p className="text-xl text-black w-[70%] text-center">
+                  Note: You can buy one or more quanitity of each item.
+                </p>
+                <div>
+                  <MyImage path="/C53Images/Shopping_Birthday.jpg" />
                 </div>
-
-                <div className="grid grid-cols-12 w-full place-items-center ">
-                  <div className="col-span-6 w-full p-1 text-center text-white bg-violet-900 font-bold">
-                    Food Items
-                  </div>
-                  <div className="col-span-6 w-full p-1 text-center text-white bg-violet-900 font-bold">
-                    Price ($)
-                  </div>
-
-                  {Foods.map((item, index) => (
-                    <React.Fragment key={index}>
-                      <div className="col-span-6 p-1  min-h-[60px] border w-full text-center text-black font-bold">
-                        {item.text}
-                      </div>
-
-                      <div className="col-span-6 border min-h-[60px] p-1 w-full text-center text-black ">
-                        {item.price}
-                      </div>
-                    </React.Fragment>
-                  ))}
-                </div>
+                
               </div>
-             </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <SecondSlide />
+            </SwiperSlide>
+            
+              <SwiperSlide>
+             <ThirdSlide/>
             </SwiperSlide>
           </Swiper>
         </div>
@@ -130,7 +108,7 @@ const Slide = () => {
           <span
             onClick={handleNext}
             className={`${
-              activeSlide < 1 ? "visible" : "invisible"
+              activeSlide < 2 ? "visible" : "invisible"
             } cursor-pointer text-black text-4xl border border-black rounded-full p-3 bg-yellow-400`}
           >
             <FaArrowRight />

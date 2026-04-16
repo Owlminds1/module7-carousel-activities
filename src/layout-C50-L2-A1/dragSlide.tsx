@@ -1,85 +1,173 @@
 "use client";
 
-import { useRef, useState } from "react";
+import Welldone from "@/components/wellDone";
+import { useEffect, useRef, useState } from "react";
 
-type Item = {
+/* ================= TYPES ================= */
+
+type MLItem = {
   id: number;
   text: string;
-  correct: "spend" | "save" | "invest" | "give";
+  row: "spend" | "save" | "invest" | "give";
+  column: "why" | "how";
 };
 
-type Columns = {
-  spend: Item[];
-  save: Item[];
-  invest: Item[];
-  give: Item[];
+type RowState = {
+  why?: MLItem;
+  how?: MLItem;
 };
+
+type TableState = {
+  spend: RowState;
+  save: RowState;
+  invest: RowState;
+  give: RowState;
+};
+
+/* ================= DATA ================= */
+
+const INITIAL_ITEMS: MLItem[] = [
+  {
+    id: 1,
+    text: "If we spend less than what we have, we will always have money left over.",
+    row: "spend",
+    column: "why",
+  },
+  {
+    id: 2,
+    text: "Items to help buy things and budget: money, credit card, cheque book, coupon",
+    row: "spend",
+    column: "how",
+  },
+  {
+    id: 3,
+    text: "The more money we save today, the more money we will have in the future.",
+    row: "save",
+    column: "why",
+  },
+  {
+    id: 4,
+    text: "Items to help to save: Bank, Mom & Dad, Piggy Bank, Wallet",
+    row: "save",
+    column: "how",
+  },
+  {
+    id: 5,
+    text: "We can invest in businesses by buying stocks, bonds, and mutual funds.",
+    row: "invest",
+    column: "why",
+  },
+  {
+    id: 6,
+    text: "Items to help to invest: Stocks, Buildings, Gold, Bonds",
+    row: "invest",
+    column: "how",
+  },
+  {
+    id: 7,
+    text: "When we give money to others, they can help themselves and their family.",
+    row: "give",
+    column: "why",
+  },
+  {
+    id: 8,
+    text: "Places to give items as gifts: church, charity, family, school",
+    row: "give",
+    column: "how",
+  },
+];
+
+const ROWS = [
+  {
+    id: "spend",
+    label: "Spend Cautiously",
+    img: "/C50Images/Spend_Cautiously.png",
+  },
+  {
+    id: "save",
+    label: "Save Diligently",
+    img: "/C50Images/Save_Diligently.png",
+  },
+  { id: "invest", label: "Invest Wisely", img: "/C50Images/Invest_Wisely.png" },
+  {
+    id: "give",
+    label: "Give Generously",
+    img: "/C50Images/Give_Generously.png",
+  },
+] as const;
+
+/* ================= COMPONENT ================= */
 
 export default function DragSlide() {
-  const initialItems: Item[] = [
-    { id: 1, text: "If we spend less than what we have, we will always have money left over.", correct: "spend" },
-    { id: 2, text: "Items to help buy things and budget: money, credit card, cheque book, coupon.", correct: "spend" },
+  const [open,setOpen] =useState(false)
+  // shuffle ML once
+  const [available, setAvailable] = useState<MLItem[]>(
+    [...INITIAL_ITEMS].sort(() => Math.random() - 0.5)
+  );
 
-    { id: 3, text: "The more money we save today, the more money we will have in the future.", correct: "save" },
-    { id: 4, text: "Items to help to save: Bank, Mom&Dad, Piggy Bank, Wallet", correct: "save" },
-
-    { id: 5, text: "We can invest in businesses by buying stocks, bonds, and mutual funds. We can also invest in land, buildings, and gold.", correct: "invest" },
-    { id: 6, text: "Items to help to invest: Stocks, Buildings, Gold, Bonds.", correct: "invest" },
-
-    { id: 7, text: "When we give money to others, they can help themselves and their family.", correct: "give" },
-    { id: 8, text: "Places to give items as gifts: church, charity, family, school", correct: "give" },
-  ];
-
-  // Shuffle items on first load
-  const shuffled = [...initialItems].sort(() => Math.random() - 0.5);
-
-  const [available, setAvailable] = useState<Item[]>(shuffled);
-
-  const [columns, setColumns] = useState<Columns>({
-    spend: [],
-    save: [],
-    invest: [],
-    give: [],
+  const [table, setTable] = useState<TableState>({
+    spend: {},
+    save: {},
+    invest: {},
+    give: {},
   });
 
-  const draggedItem = useRef<Item | null>(null);
+  const draggedItem = useRef<MLItem | null>(null);
 
-  const onDragStart = (item: Item) => {
+  /* ============ DRAG HANDLERS ============ */
+
+  const onDragStart = (item: MLItem) => {
     draggedItem.current = item;
   };
 
-  const onDrop = (columnId: Item["correct"]) => {
+  const onDrop = (row: MLItem["row"], column: MLItem["column"]) => {
     const item = draggedItem.current;
-
     if (!item) return;
 
-    if (item.correct !== columnId) {
+    // ❌ wrong row OR wrong column
+    if (item.row !== row || item.column !== column) {
       draggedItem.current = null;
       return;
     }
 
-    setColumns((prev) => ({
+    // ❌ already filled
+    if (table[row][column]) {
+      draggedItem.current = null;
+      return;
+    }
+
+    setTable((prev) => ({
       ...prev,
-      [columnId]: [...prev[columnId], item],
+      [row]: {
+        ...prev[row],
+        [column]: item,
+      },
     }));
 
     setAvailable((prev) => prev.filter((i) => i.id !== item.id));
-
     draggedItem.current = null;
   };
 
+
+useEffect(()=>{
+if(available.length === 0 ){
+ setOpen(true)
+}
+},[available])
+
+  /* ================= UI ================= */
+
   return (
     <div className="grid grid-cols-12 gap-6 p-6 w-full">
-
-      {/* HIDE LEFT LIST WHEN EMPTY */}
+      {/* ========== LEFT : ML ========== */}
       {available.length > 0 && (
-        <div className="p-4 col-span-4 border rounded-lg bg-white shadow">
+        <div className="col-span-4 bg-white border rounded-lg p-2">
           {available.map((item) => (
             <div
               key={item.id}
               draggable
               onDragStart={() => onDragStart(item)}
-              className="p-3 mb-2 bg-violet-900 text-center text-white rounded-lg cursor-grab active:cursor-grabbing shadow"
+              className="p-3 mb-3 border  text-violet-900 font-bold text-center rounded cursor-grab active:cursor-grabbing shadow"
             >
               {item.text}
             </div>
@@ -87,41 +175,59 @@ export default function DragSlide() {
         </div>
       )}
 
-      {/* RIGHT COLUMNS FULL WIDTH WHEN LEFT EMPTY */}
-      <div className={`col-span-8 grid grid-cols-2 gap-4 ${available.length === 0 ? "col-span-12" : ""}`}>
-        <DropColumn id="spend" title="Spend Cautiously" items={columns.spend} onDrop={onDrop} />
-        <DropColumn id="save" title="Save Diligently" items={columns.save} onDrop={onDrop} />
-        <DropColumn id="invest" title="Invest Wisely" items={columns.invest} onDrop={onDrop} />
-        <DropColumn id="give" title="Give Generously" items={columns.give} onDrop={onDrop} />
-      </div>
-    </div>
-  );
-}
-
-type DropColumnProps = {
-  id: Item["correct"];
-  title: string;
-  items: Item[];
-  onDrop: (id: Item["correct"]) => void;
-};
-
-function DropColumn({ id, title, items, onDrop }: DropColumnProps) {
-  return (
-    <div
-      className="p-4 border border-dashed border-violet-900 min-h-[200px] rounded-xl"
-      onDragOver={(e) => e.preventDefault()}
-      onDrop={() => onDrop(id)}
-    >
-      <h3 className="text-black mb-3 text-center font-bold">{title}</h3>
-
-      {items.map((item) => (
-        <div
-          key={item.id}
-          className="p-2 bg-violet-900 text-white text-center rounded-lg mb-2"
-        >
-          {item.text}
+      {/* ========== RIGHT : TABLE ========== */}
+      <div
+        className={`${
+          available.length === 0 ? "col-span-12" : "col-span-8"
+        } w-full`}
+      >
+        {/* HEADER */}
+        <div className="grid grid-cols-3 bg-violet-900 font-bold text-center p-2">
+          <div>WHAT</div>
+          <div>WHY</div>
+          <div>HOW</div>
         </div>
-      ))}
+
+        {/* ROWS */}
+        {ROWS.map((row) => (
+          <div key={row.id} className="grid grid-cols-3 border-b min-h-[110px]">
+            {/* WHAT (fixed) */}
+            <div className="bg-gray-100 flex flex-col items-center justify-center p-3">
+              <span className="font-semibold text-black text-center">
+                {row.label}
+              </span>
+              <img src={row.img} alt={row.label} className="w-30 mb-2" />
+            </div>
+
+            {/* WHY (drop) */}
+            <div
+              onDragOver={(e) => e.preventDefault()}
+              onDrop={() => onDrop(row.id, "why")}
+              className="border-l p-3 text-black flex items-center justify-center text-center"
+            >
+              {table[row.id].why ? (
+                table[row.id].why!.text
+              ) : (
+                <span className="text-gray-400">Drop here</span>
+              )}
+            </div>
+
+            {/* HOW (drop) */}
+            <div
+              onDragOver={(e) => e.preventDefault()}
+              onDrop={() => onDrop(row.id, "how")}
+              className="border-l p-3 text-black flex items-center justify-center text-center"
+            >
+              {table[row.id].how ? (
+                table[row.id].how!.text
+              ) : (
+                <span className="text-gray-400">Drop here</span>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+      <Welldone open={open} setOpen={setOpen}/>
     </div>
   );
 }

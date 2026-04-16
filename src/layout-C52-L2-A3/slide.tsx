@@ -127,7 +127,7 @@ const Slide = () => {
             : activeSlide === 3 ? "SAFE CHEQUE":  activeSlide === 4 ?"ECHEQUE": activeSlide === 5 ? "DIGITAL BANKING": activeSlide ===6 ? "BANKING ACTIVITY":""}
         </h4>
 <p className="text-black text-lg ">
-  {activeSlide === 6 ? "Tick (correct) or cross (incorrect) against the following statements about banking.":""}
+  {activeSlide === 6 ? "Answer questions about banking.":""}
 </p>
        
       </div>
@@ -200,8 +200,9 @@ const Slide = () => {
 
              <SwiperSlide>
               <div className="grid grid-cols-12 w-full place-items-center p-2">
-                <div className="col-span-6 w-full flex justify-center items-center">
+                <div className="col-span-6 w-full flex justify-center items-center flex-col">
                   <MyImage path="/C52Images/Cheque.png"/>
+                  <MyImage path="/C52Images/check.png"/>
                 </div>
                 <div className="col-span-6 w-full flex flex-col  justify-center items-center gap-2">
                 

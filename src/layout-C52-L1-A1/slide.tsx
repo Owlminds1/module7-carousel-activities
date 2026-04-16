@@ -10,11 +10,13 @@ import { useEffect, useRef, useState } from "react";
 import SlideData from "@/src/layout-C52-L1-A1/pointers.json";
 import Slide3Data from "@/src/layout-C52-L1-A1/slide3Data.json";
 import MyImage from "@/components/myImage";
+import Welldone from "@/components/wellDone";
 
 const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
 
   const [activeSlide, setActiveSlide] = useState(0);
+  const [open, setOpen] = useState(false);
 
   const [visibleCount, setVisibleCount] = useState(0);
   const [visibleCount3, setVisibleCount3] = useState(0);
@@ -60,6 +62,15 @@ const Slide = () => {
   useEffect(() => {
     swiperRef.current?.updateAutoHeight();
   }, [visibleCount]);
+
+
+
+  useEffect(() => {
+  if (visibleCount3 >= Slide3Data.length * 2) {
+    setOpen(true);
+  }
+}, [visibleCount3]);
+
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex justify-center items-center p-5 flex-col gap-5">
@@ -166,6 +177,8 @@ const Slide = () => {
     );
   })}
 
+
+
   {visibleCount3 < Slide3Data.length * 2 && (
     <p className="text-gray-800 italic text-center">
       (Press Enter to show more)
@@ -197,6 +210,7 @@ const Slide = () => {
           </span>
         </div>
       </div>
+       <Welldone open={open} setOpen={setOpen}/>
     </div>
   );
 };

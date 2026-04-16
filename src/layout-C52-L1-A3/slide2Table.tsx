@@ -1,4 +1,5 @@
 import Image from "next/image";
+import BuyerDropdown from "./BuyerDropDown";
 
 
 const Slide2Table = () => {
@@ -35,7 +36,8 @@ const Slide2Table = () => {
       </div>
 
       <div className="text-black col-span-3 w-full flex  justify-center items-center gap-1 p-1 border  text-center">
-        Professional Basketball Player
+         <BuyerDropdown/>
+       
       </div>
 
       {/* ================= */}
@@ -56,7 +58,8 @@ const Slide2Table = () => {
       </div>
 
       <div className="text-black col-span-3 w-full flex  justify-center items-center gap-1 p-1 border  text-center">
-        School Goer
+       
+        <BuyerDropdown/>
       </div>
 
       {/* ================= */}
@@ -77,7 +80,8 @@ const Slide2Table = () => {
       </div>
 
       <div className="text-black col-span-3 w-full flex  justify-center items-center gap-1 p-1 border  text-center">
-        Party Attendee
+       
+          <BuyerDropdown/>
       </div>
 
       {/* ================= */}
@@ -98,7 +102,8 @@ const Slide2Table = () => {
       </div>
 
       <div className="text-black col-span-3 w-full flex  justify-center items-center gap-1 p-1 border  text-center">
-        Daily Walker
+           <BuyerDropdown/>
+     
       </div>
     </div>
   );

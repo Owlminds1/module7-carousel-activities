@@ -1,3 +1,4 @@
+import Welldone from "@/components/wellDone";
 import Table1 from "@/src/layout-C53-L1-A5/slide3.json";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -8,6 +9,7 @@ type Props = {
 };
 const Slide3 = ({ swiperRef }: Props) => {
   const [show, setShow] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(()=>{
 swiperRef.current?.updateAutoHeight();
@@ -48,7 +50,7 @@ swiperRef.current?.updateAutoHeight();
           <span className="font-bold">REASON : </span>
         Choosing Lego would be preferable to pokemon cards because Lego bricks have real, tangible benefits that have a lasting positive impact on cognitive skills. And you can always make friends with others who play Lego too!
         </p>:   <button
-          onClick={() => setShow(true)}
+          onClick={() => {setShow(true) ;setOpen(true)}}
           className="text-white bg-violet-900 px-5 py-2 rounded-lg cursor-pointer "
         >
           Suggestive Responses
@@ -59,6 +61,7 @@ swiperRef.current?.updateAutoHeight();
 
        
       </div>
+      <Welldone open={open} setOpen={setOpen} />
     </div>
   );
 };

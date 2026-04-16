@@ -1,5 +1,5 @@
 import cycleData from "@/src/layout-C52-L1-A2/cycleData.json";
-import React from "react";
+
 
 const PurchaseCycle = () => {
   return (

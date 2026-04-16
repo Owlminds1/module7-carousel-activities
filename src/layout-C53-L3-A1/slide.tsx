@@ -13,10 +13,11 @@ import Slide3Data from "@/src/layout-C53-L3-A1/pointers3.json";
 import Slide4Data from "@/src/layout-C53-L3-A1/pointers4.json";
 
 import MyImage from "@/components/myImage";
+import Welldone from "@/components/wellDone";
 
 const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
-
+const [open, setOpen] = useState(false);
   const [activeSlide, setActiveSlide] = useState(0);
   const [visibleCount, setVisibleCount] = useState(0);
   const [visibleCount2, setVisibleCount2] = useState(0);
@@ -76,6 +77,15 @@ const Slide = () => {
   useEffect(() => {
     swiperRef.current?.updateAutoHeight();
   }, [visibleCount, visibleCount2, visibleCount3, activeSlide]);
+
+
+useEffect(() => {
+if( activeSlide === 3 && visibleCount4 === Slide4Data.length * 2){
+  setTimeout(() => {
+  setOpen(true)
+  }, 1000)  }
+},[visibleCount4])
+
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex justify-center items-center p-5 flex-col gap-5">
@@ -328,6 +338,7 @@ const Slide = () => {
           </span>
         </div>
       </div>
+      <Welldone open={open}  setOpen={setOpen}/>
     </div>
   );
 };

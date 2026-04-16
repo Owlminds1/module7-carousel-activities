@@ -2,10 +2,23 @@
 import MyImage from "@/components/myImage";
 import React, { useState } from "react";
 
+/* ---------- HELPERS ---------- */
+
+const getLabel = (value: number) => {
+  if (value === 5) return "Amazing";
+  if (value === 4) return "Decent";
+  if (value === 3) return "OK";
+  if (value === 2) return "OK";
+  if (value === 1) return "Not Worth It";
+  return "";
+};
+
 type StarProps = {
   value: number;
   onChange: (num: number) => void;
 };
+
+/* ---------- STAR COMPONENT (CLICKABLE) ---------- */
 
 const StarRating = ({ value, onChange }: StarProps) => {
   return (
@@ -27,8 +40,9 @@ const StarRating = ({ value, onChange }: StarProps) => {
 
 const brands = ["DOYCE", "KILO", "PLUME"];
 
+/* ---------- MAIN COMPONENT ---------- */
+
 const TableSlide3 = () => {
-  // Each brand has 3 ratings → [service, quality, upgrade]
   const [ratings, setRatings] = useState(
     brands.map(() => ({
       service: 0,
@@ -37,87 +51,85 @@ const TableSlide3 = () => {
     }))
   );
 
-  const updateRating = (brandIndex: number, key: "service" | "quality" | "upgrade", value: number) => {
+  const updateRating = (
+    brandIndex: number,
+    key: "service" | "quality" | "upgrade",
+    value: number
+  ) => {
     const clone = [...ratings];
     clone[brandIndex][key] = value;
     setRatings(clone);
   };
 
   return (
-    <div className="grid grid-cols-12 w-full place-items-center  gap-5">
+    <div className="grid grid-cols-12 w-full place-items-center gap-5">
 
-
-<div className="col-span-6 w-full flex justify-center items-center flex-col gap-2 ">
-  
-    <MyImage path="/C53Images/Trousers.jpg" />
-</div>
-
-
-<div className="col-span-6 w-full flex justify-center items-center flex-col gap-2 ">
-     <h3 className="text-black text-xl text-center">A PAIR OF TROUSERS</h3>
-    <h3 className="text-black text-xl  w-full">Here’s how the quality is listed:</h3>
-    <ul className="list-disc">
-      <li className="text-black text-lg"><span className="font-bold">Amazing : </span>Service, Quality, and Upgrades are all top notch!</li>
-      <li className="text-black text-lg"><span className="font-bold">Decent : </span>Service, Quality, and Upgrades are all effective!</li>
-      <li className="text-black text-lg"><span className="font-bold">OK : </span>Service, Quality, and Upgrades are fine but can be improved!</li>
-      <li className="text-black text-lg"><span className="font-bold">Not Worth It : </span>Service, Quality, and Upgrades are all not worth the purchase!</li>
-    </ul>
-</div>
-<div className="col-span-12 w-[80%] grid grid-cols-12 gap-1 border  ">
-
-   {/* Headings */}
-      <div className="col-span-3 bg-violet-900 text-center text-white p-1">
-        BRAND
-      </div>
-      <div className="col-span-3 bg-violet-900 text-center text-white p-1">
-        SERVICE
-      </div>
-      <div className="col-span-3 bg-violet-900 text-center text-white p-1">
-        QUALITY
-      </div>
-      <div className="col-span-3 bg-violet-900 text-center text-white p-1">
-        UPGRADE
+      {/* IMAGE */}
+      <div className="col-span-6 flex justify-center">
+        <MyImage path="/C53Images/Trousers.jpg" />
       </div>
 
-      {/* Dynamic Rows */}
-      {brands.map((brand, index) => (
-        <React.Fragment key={index}>
-          {/* BRAND NAME */}
-          <div className="col-span-3 text-center font-bold p-1 text-black font-bold">{brand}</div>
+      {/* LEGEND */}
+      <div className="col-span-6 flex flex-col gap-3">
+        <h3 className="text-xl font-bold text-black">A PAIR OF TROUSERS</h3>
 
-          {/* SERVICE */}
-          <div className="col-span-3 text-center p-1">
-            <StarRating
-              value={ratings[index].service}
-              onChange={(val) => updateRating(index, "service", val)}
-            />
+        <h4 className="text-black font-medium">
+          Here’s how the quality is listed:
+        </h4>
+
+        <ul className="list-disc pl-5 text-black">
+          <li><b>Amazing</b>: Service, Quality, and Upgrades are all top notch</li>
+          <li><b>Decent</b>: Service, Quality, and Upgrades are effective</li>
+          <li><b>OK</b>: Fine but can be improved</li>
+          <li><b>Not Worth It</b>: Not worth the purchase</li>
+        </ul>
+
+     
+      </div>
+
+      {/* TABLE */}
+      <div className="col-span-12 w-[80%] grid grid-cols-12 border gap-1 mt-5">
+
+        {/* HEADERS */}
+        {["BRAND", "SERVICE", "QUALITY", "UPGRADE"].map((h) => (
+          <div
+            key={h}
+            className="col-span-3 bg-violet-900 text-white text-center p-2"
+          >
+            {h}
           </div>
+        ))}
 
-          {/* QUALITY */}
-          <div className="col-span-3 text-center p-1">
-            <StarRating
-              value={ratings[index].quality}
-              onChange={(val) => updateRating(index, "quality", val)}
-            />
-          </div>
+        {/* ROWS */}
+        {brands.map((brand, index) => (
+          <React.Fragment key={brand}>
+            <div className="col-span-3 text-lg font-normal text-black text-center  p-2">
+              {brand}
+            </div>
 
-          {/* UPGRADE */}
-          <div className="col-span-3 text-center p-1">
-            <StarRating
-              value={ratings[index].upgrade}
-              onChange={(val) => updateRating(index, "upgrade", val)}
-            />
-          </div>
-        </React.Fragment>
-      ))}
-</div>
+            {(["service", "quality", "upgrade"] as const).map((key) => (
+              <div key={key} className="col-span-3 text-center flex  items-center justify-center gap-3 p-2">
+                <StarRating
+                  value={ratings[index][key]}
+                  onChange={(val) => updateRating(index, key, val)}
+                />
+                {ratings[index][key] > 0 && (
+                  <p className="text-sm mt-1 text-gray-700">
+                    {getLabel(ratings[index][key])}
+                  </p>
+                )}
+              </div>
+            ))}
+          </React.Fragment>
+        ))}
+      </div>
 
-<div className="col-span-12 w-full flex justify-center items-center flex-col gap-2 ">
-    <h3 className="text-black text-xl text-center">Which product would you choose?</h3>
- 
-</div>
-
-   
+      {/* DECISION QUESTION */}
+      <div className="col-span-12 text-center mt-5">
+        <h3 className="text-xl text-black">
+          Which product would you choose?
+        </h3>
+      </div>
     </div>
   );
 };

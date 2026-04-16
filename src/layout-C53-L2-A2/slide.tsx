@@ -16,18 +16,21 @@ import Slide6Data from "@/src/layout-C53-L2-A2/pointers6.json";
 import Slide7Data from "@/src/layout-C53-L2-A2/pointers7.json";
 
 import MyImage from "@/components/myImage";
+import Welldone from "@/components/wellDone";
 
 const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
 
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(0);
-  const [visibleCount2, setVisibleCount2] = useState(0);
-  const [visibleCount3, setVisibleCount3] = useState(0);
-  const [visibleCount4, setVisibleCount4] = useState(0);
-  const [visibleCount5, setVisibleCount5] = useState(0);
-  const [visibleCount6, setVisibleCount6] = useState(0);
-  const [visibleCount7, setVisibleCount7] = useState(0);
+  const [open,setOpen] = useState(false);
+
+  const [activeSlide, setActiveSlide] = useState(1);
+  const [visibleCount, setVisibleCount] = useState(1);
+  const [visibleCount2, setVisibleCount2] = useState(1);
+  const [visibleCount3, setVisibleCount3] = useState(1);
+  const [visibleCount4, setVisibleCount4] = useState(1);
+  const [visibleCount5, setVisibleCount5] = useState(1);
+  const [visibleCount6, setVisibleCount6] = useState(1);
+  const [visibleCount7, setVisibleCount7] = useState(1);
 
   const handlePrev = () => {
     swiperRef.current?.slidePrev();
@@ -118,6 +121,13 @@ const Slide = () => {
     activeSlide,
   ]);
 
+useEffect(() => {
+if(Slide7Data.length *2 === visibleCount7){
+  setOpen(true);
+}
+
+}, [visibleCount7]);
+
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex justify-center items-center p-5 flex-col gap-5">
       <div>
@@ -186,11 +196,9 @@ const Slide = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className="grid grid-cols-12 w-full place-items-center p-2">
-                <div className="col-span-6 w-full flex justify-center items-center">
-                  <MyImage path="/C53Images" />
-                </div>
-                <div className="col-span-6 w-full flex flex-col  justify-center items-center gap-2">
+              <div className="grid grid-cols-12 gap-5 w-full place-items-center p-2">
+              
+                <div className="col-span-12 w-[50%] flex flex-col  justify-center items-center gap-2">
                   <ul className="list-disc w-full px-5 space-y-4">
                     {Slide2Data.slice(0, visibleCount2).map((i, index) => (
                       <li
@@ -466,6 +474,7 @@ const Slide = () => {
           </span>
         </div>
       </div>
+      <Welldone open={open} setOpen={setOpen} />
     </div>
   );
 };

@@ -92,6 +92,7 @@ const FlipCard = () => {
                   objectFit="cover"
                   objectPosition="top"
                 />
+                <h4 className="absolute bottom-0 left-0 right-0 bg-black/80 text-white text-center py-1">{item.name}</h4>
                 </div>
               </div>
 

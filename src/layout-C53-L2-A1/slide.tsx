@@ -13,9 +13,12 @@ import Slide3Data from "@/src/layout-C53-L2-A1/pointers3.json";
 
 import MyImage from "@/components/myImage";
 import SlideThree from "./slideThree";
+import Welldone from "./wellDone";
 
 const Slide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
+  const bottomRef = useRef<HTMLDivElement | null>(null);
+const [open,setOpen]=useState(false);
 
   const [activeSlide, setActiveSlide] = useState(0);
   const [visibleCount, setVisibleCount] = useState(0);
@@ -35,41 +38,68 @@ const Slide = () => {
   };
 
   // FIXED ENTER LOGIC
-  useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.key !== "Enter" && e.code !== "Enter") return;
+ useEffect(() => {
+  const handleKeyPress = (e: KeyboardEvent) => {
+    if (e.key !== "Enter") return;
 
-      const current = swiperRef.current?.activeIndex ?? activeSlide;
+    const current = swiperRef.current?.activeIndex ?? activeSlide;
 
-      // Slide 0
-      if (current === 0) {
-        setVisibleCount((prev) =>
-          prev < SlideData.length * 2 ? prev + 1 : prev
-        );
-      }
+    if (current === 0) {
+      setVisibleCount((prev) =>
+        prev < SlideData.length * 2 ? prev + 1 : prev
+      );
 
-      if (current === 1) {
-        setVisibleCount2((prev) =>
-          prev < Slide2Data.length * 2 ? prev + 1 : prev
-        );
-      }
-      
-      if (current === 3) {
-        setVisibleCount3((prev) =>
-          prev < Slide3Data.length * 2 ? prev + 1 : prev
-        );
-      }
-    };
+      // 👇 SCROLL
+      setTimeout(() => {
+        bottomRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "end",
+        });
+      }, 100);
+    }
 
-    window.addEventListener("keydown", handleKeyPress);
-    return () => window.removeEventListener("keydown", handleKeyPress);
-  }, [, visibleCount, visibleCount2, visibleCount3, activeSlide]);
+    if (current === 1) {
+      setVisibleCount2((prev) =>
+        prev < Slide2Data.length * 2 ? prev + 1 : prev
+      );
+
+      setTimeout(() => {
+        bottomRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "end",
+        });
+      }, 100);
+    }
+
+    if (current === 3) {
+      setVisibleCount3((prev) =>
+        prev < Slide3Data.length * 2 ? prev + 1 : prev
+      );
+
+      setTimeout(() => {
+        bottomRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "end",
+        });
+      }, 100);
+    }
+  };
+
+  window.addEventListener("keydown", handleKeyPress);
+  return () => window.removeEventListener("keydown", handleKeyPress);
+}, [activeSlide, visibleCount, visibleCount2, visibleCount3]);
 
   // Auto height update
   useEffect(() => {
     swiperRef.current?.updateAutoHeight();
   }, [visibleCount, visibleCount2, visibleCount3, activeSlide]);
 
+
+useEffect(() => {
+  if (visibleCount3 === Slide3Data.length * 2) {
+   setOpen(true);
+  }
+}, [visibleCount3]);
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex justify-center items-center p-5 flex-col gap-5">
       <div>
@@ -142,6 +172,8 @@ const Slide = () => {
                     </p>
                   )}
                 </div>
+
+                <div ref={bottomRef} />
               </div>
             </SwiperSlide>
 
@@ -209,6 +241,8 @@ const Slide = () => {
                     </p>
                   )}
                 </div>
+
+                 <div ref={bottomRef} />
               </div>
             </SwiperSlide>
 
@@ -253,6 +287,8 @@ const Slide = () => {
                     </p>
                   )}
                 </div>
+
+                 <div ref={bottomRef} />
               </div>
             </SwiperSlide>
           </Swiper>
@@ -279,6 +315,7 @@ const Slide = () => {
           </span>
         </div>
       </div>
+      <Welldone open={open} setOpen={setOpen} mag="Bravo! You understand how deals and offers work!"/>
     </div>
   );
 };

@@ -1,8 +1,9 @@
 "use client";
+import Welldone from "@/components/wellDone";
 import DragData from "@/src/layout-C53-L1-A3/dragList.json";
 import DropZone from "@/src/layout-C53-L1-A3/drop.json";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type dragDataType = {
   item: string;
@@ -15,6 +16,8 @@ const DragSlide = () => {
   const [dragItems, setDragItems] = useState<{
     [key: number]: string[];
   }>({});
+
+const [open ,setOpen]=useState(false)
 
   const handleDrag = (
     e: React.DragEvent<HTMLHeadingElement>,
@@ -43,12 +46,23 @@ const DragSlide = () => {
       e.currentTarget.classList.add("shake");
     }
   };
+  
 
-
+  useEffect(()=>{
+if(managDragData.length===0){
+  
+setOpen(true)
+}
+  },[managDragData])
   return (
     <div className=" grid grid-cols-12 w-full p-2 gap-4">
       <div className="col-span-5  shadow w-full flex flex-col gap-5 justify-center items-center p-2">
-        <Image src="/C53Images/Matching.jpg" width={300} height={100} alt="image" />
+        <Image
+          src="/C53Images/Matching.jpg"
+          width={300}
+          height={100}
+          alt="image"
+        />
         <div className="flex justify-center  flex-wrap gap-2">
           {managDragData.map((item, index) => (
             <h3
@@ -85,13 +99,13 @@ const DragSlide = () => {
                   <h3 className=" px-5 py-2 rounded-lg  text-black font-bold">
                     {dropItem}
                   </h3>
-               
                 </div>
               ))}
             </div>
           </div>
         ))}
       </div>
+      <Welldone open={open} setOpen={setOpen} />
     </div>
   );
 };

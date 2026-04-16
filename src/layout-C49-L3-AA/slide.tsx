@@ -79,15 +79,15 @@ const Slide = () => {
             <SwiperSlide>
               <div className="grid grid-cols-12 place-items-center p-2">
                 <div className="col-span-6 w-full flex justify-center items-center flex-col">
-                  <MyImage path="/C49Images/" />
-                  <MyImage path="/C49Images/" />
+                  <MyImage path="/C49Images/Shoes.jpg" />
+                  <MyImage path="/C49Images/clock.jpg" />
                 </div>
                 <div className=" col-span-6 w-full flex justify-start items-start flex-col gap-5 ">
-                  <p className="text-lg text-gray-900 italic">
+                  <p className="text-2xl text-gray-900 italic">
                     EXAMPLE : A Need or A Want?
                   </p>
 
-                  <p className="text-lg text-black ">
+                  <p className="text-xl text-black ">
                     I thought I needed{" "}
                     <input
                       type="text"
@@ -116,18 +116,18 @@ const Slide = () => {
 
             <SwiperSlide>
               <div className="grid grid-cols-12 place-items-center p-2">
-                <div className="col-span-6 w-full flex justify-center items-center flex-col">
-                  <MyImage path="/C49Images/" />
-                  <MyImage path="/C49Images/" />
-                </div>
-                <div className=" col-span-6 w-full flex justify-start items-start flex-col gap-5 ">
-                  <p className="text-lg text-gray-900 italic">
+                {/* <div className="col-span-6 w-full flex justify-center items-center flex-col">
+                 <MyImage path="/C49Images/Shoes.jpg" />
+                  <MyImage path="/C49Images/clock.jpg" />
+                </div> */}
+                <div className=" col-span-12 w-[60%] flex justify-start items-start flex-col gap-5 ">
+                  <p className="text-2xl text-gray-900 italic">
                     A Need or A Want?
                   </p>
 
                   
 
-                  <p className="text-lg text-black ">
+                  <p className="text-xl text-black ">
                     I thought I needed  <input
                       type="text"
                       className="outline-0 border-b border-black  text-center p-1"
