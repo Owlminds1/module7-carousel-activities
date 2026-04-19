@@ -100,13 +100,13 @@ const CupSlide = () => {
         <div
           onDragOver={(e) => e.preventDefault()}
           onDrop={handleDrop}
-          className="  bg-[url('/C49Images/Kindness2.jpg')] bg-cover bg-no-repeat bg-center  absolute top-[10%] left-[15%]  flex flex-col justify-center  rounded-lg border border-violet-900  border-dashed w-[400px] h-[300px] p-3"
+          className="  bg-[url('/C49Images/cup.jpeg')] bg-cover bg-no-repeat bg-center  absolute top-[-25%] left-[15%]  flex flex-col justify-center  rounded-lg  w-[450px] h-[600px] p-3"
         >
-          <ul className="space-y-2">
+          <ul className="space-y-2   w-full h-[70%]   flex justify-end items-center flex-col">
             {cupItems.map((item, index) => (
               <li
                 key={index}
-                className="flex justify-between border items-center bg-white/30 backdrop-blur-sm px-2 py-1 rounded shadow"
+                className="flex justify-between w-[60%] border items-center bg-white/30 backdrop-blur-sm px-2 py-1 rounded shadow"
               >
                 <span className="text-black text-md font-bold">
                   {item.text}
