@@ -35,9 +35,9 @@ const Slide = () => {
       <div>
         <h4 className="text-3xl font-bold text-center text-black">
           {activeSlide === 0
-            ? "HAPPY BIRTHDAY PARTY!"
+            ? " BIRTHDAY PARTY!"
             : activeSlide === 1
-            ? "HAPPY BIRTHDAY PARTY!"
+            ? " BIRTHDAY PARTY!"
             : "Suggestive Responses"}
         </h4>
 

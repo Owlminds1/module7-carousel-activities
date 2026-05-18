@@ -49,13 +49,7 @@ const [open,setOpen]=useState(false);
         prev < SlideData.length * 2 ? prev + 1 : prev
       );
 
-      // 👇 SCROLL
-      setTimeout(() => {
-        bottomRef.current?.scrollIntoView({
-          behavior: "smooth",
-          block: "end",
-        });
-      }, 100);
+     
     }
 
     if (current === 1) {
@@ -63,12 +57,7 @@ const [open,setOpen]=useState(false);
         prev < Slide2Data.length * 2 ? prev + 1 : prev
       );
 
-      setTimeout(() => {
-        bottomRef.current?.scrollIntoView({
-          behavior: "smooth",
-          block: "end",
-        });
-      }, 100);
+     
     }
 
     if (current === 3) {
@@ -76,12 +65,7 @@ const [open,setOpen]=useState(false);
         prev < Slide3Data.length * 2 ? prev + 1 : prev
       );
 
-      setTimeout(() => {
-        bottomRef.current?.scrollIntoView({
-          behavior: "smooth",
-          block: "end",
-        });
-      }, 100);
+     
     }
   };
 
